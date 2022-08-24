@@ -1,0 +1,17 @@
+$('.ticker-1').slick({
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    arrows: false,
+    easing: 'linear',
+    cssEase: 'linear',
+    waitForAnimate: true,
+    speed: 30000,
+    centerMode: false,
+    edgeFriction: 0,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    pauseOnDotsHover: false,
+    autoSlidesToShow: true,
+    variableWidth: true,
+  });

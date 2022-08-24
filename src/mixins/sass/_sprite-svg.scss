@@ -1,0 +1,51 @@
+@use "sass:math";
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+.icon-arrow-up {
+    width: math.div(32, 32) * 1em;
+}
+.icon-closebtn {
+    width: math.div(44, 48) * 1em;
+}
+.icon-download {
+    width: math.div(20, 27) * 1em;
+}
+.icon-footerlogo {
+    width: math.div(150, 84) * 1em;
+}
+.icon-help {
+    width: math.div(24, 24) * 1em;
+}
+.icon-lc {
+    width: math.div(38, 34) * 1em;
+}
+.icon-logo {
+    width: math.div(140, 75) * 1em;
+}
+.icon-logo_mobil {
+    width: math.div(134, 26) * 1em;
+}
+.icon-phone {
+    width: math.div(18, 24) * 1em;
+}
+.icon-tv {
+    width: math.div(45, 38) * 1em;
+}
+.icon-tv-icon {
+    width: math.div(40, 28) * 1em;
+}
+.icon-up {
+    width: math.div(34, 35) * 1em;
+}
+.icon-wifi {
+    width: math.div(45, 37) * 1em;
+}
+.icon-wifi-icon {
+    width: math.div(33, 25) * 1em;
+}

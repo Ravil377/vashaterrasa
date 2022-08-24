@@ -1,0 +1,197 @@
+.modal {
+    overflow-y: auto;
+    height: 0;
+    opacity: 0;
+    z-index: -2;
+    position: fixed;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(102, 102, 102, 0.8);
+    // transition: .4s, height 0s 0.5s;
+    padding: 20px;
+}
+
+.modal_opened {
+    height: 100vh;
+    opacity: 1;
+    transition: opacity 0.5s;
+    z-index: 130;
+}
+.modal__container {
+    display: flex;
+    z-index: 5;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin: auto;
+    max-width: 636px;
+    width: 100%;
+    background-image: url(../images/formbg.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 200px 179px;
+    & > img {
+        display: block;
+        display: none;
+        width: 100%;
+        object-fit: contain;
+        margin: auto;
+    }
+}
+.modal__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 52px 25px 47px;
+
+}
+.modal__close-button {
+    z-index: 5;
+    border: none;
+    position: absolute;
+    top: 18px;
+    right: 28px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    // border: 1px solid red;
+    transition: .7s;
+    &:hover {
+        opacity: .7;
+    }
+    &::after {
+        content: '';
+        background: #000;
+        top: 50%;
+        left: -4px;
+        width: 30px;
+        height: 2px;
+        transition: all .3s ease 0s;
+        position: absolute;
+        transform: rotate(45deg) translateY(-50%);
+    }
+    &::before {
+        content: '';
+        background: #000;
+        top: 50%;
+        left: -3px;
+        width: 30px;
+        height: 2px;
+        transition: all .3s ease 0s;
+        position: absolute;
+        transform: rotate(-45deg) translateY(-50%);
+    }
+}
+.modal__form {
+    width: 100%;
+    margin-top: 42px;
+    p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 21px;
+        color: #6C7B92;
+        text-align: center;
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+    button {
+        margin: 0 auto;
+        margin-top: 54px;
+    }
+}
+.modal__title, .modal__equipment-title {
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 32px;
+    color: $black;
+}
+.modal__equipment-title {
+    display: none;
+}
+.modal__content.modal__content-message {
+    background-image: unset;
+    background: #0AC382;
+    min-height: 524px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        left: 0;
+        z-index: -1;
+    }
+    p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 27px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+    a {
+        margin-top: auto;
+        background: #9710FF;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        padding: 19px 50px;
+    }
+}
+.modal__content-message.modal__content-message_purple {
+    background: #900AC3;
+}
+.modal__equipment-description {
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    margin-top: 30px;
+    display: none;
+}
+.modal.modal_equipment {
+
+    .modal__container {
+        flex-direction: column-reverse;
+        gap: 0;
+        max-width: 100%;
+        @media (min-width: 992px) {
+            display: grid;
+            grid-template-columns: 582px 1fr;    
+            gap: 37px;
+        }
+        & > img {
+            display: block;
+            @media (max-width: 992px) {
+                height: 333px;
+            }
+            
+        }
+    }
+    .modal__equipment-description {
+        display: block;
+    }
+    .modal__title {
+        display: none;
+    }
+    .modal__equipment-title {
+        display: block;
+    }
+    .modal__content {
+        align-items: unset;
+        @media (max-width: 992px) {
+            padding-top: 0;
+        }
+    }
+}

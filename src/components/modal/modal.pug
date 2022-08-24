@@ -1,0 +1,26 @@
+.modal.modal-js
+    .inner(style="margin: auto;")
+        .modal__container.modal__container-js
+            .modal__close-button.modal__close-js
+            .modal__content
+                .modal__title Заявка на подключение
+                .modal__equipment-title МX Q PRO 4K
+                .modal__equipment-description 
+                    | MXQ Pro 4K - смарт ТВ приставка и мультимедиа плеер на Android для просмотра интернет-ТВ, онлайн видео и воспроизведения медиафайлов с флешки или жесткого диска.<br><br>Имеет мощный 4-х ядерный процессор и пяти-ядерный графический ускоритель, может воспроизводить видео формата 4K Ultra HD с частотой 60 кадров в секудну без задержек. Быстро считывает даже большие видео-файлы размером больше 10Гбайт с внешнего жесткого диска или флешки. 
+
+                form(method="POST" novalidate).modal__form.modal__form--js
+                    +input(`Ф.И.О<span>*</span>`, 'text', 'fio')
+                    +input(`Телефон<span>*</span>`, 'phone', 'phone').phone-mask2--js
+                    p Нажимая кнопку «Отправить», вы подтверждаете свое согласие на <a href="#">обработку персональных данных</a>
+                    button(type="submit" data-id="connection").form__btn--js Отправить заявку
+            img(src='./images/213.png' alt="Оборудование")
+            .modal__content.modal__content-message(style="display: none;")
+                p Спасибо!<br>Ваша заявка успешно отправлена
+                img(src="./images/success.png" alt="удачно")
+                a(href="/").modal__close-js Вернуться на сайт
+            .modal__content.modal__content-message.modal__content-message_purple(style="display: none;")
+                p Ой! Произошла ошибка!<br>Пожалуйста, повторите отправку
+                img(src="./images/unsuccess.png" alt="Ошибка")
+                a(href="/").modal__close-js Вернуться на сайт
+
+                

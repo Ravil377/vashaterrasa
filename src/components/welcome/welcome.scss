@@ -1,0 +1,76 @@
+.welcome {
+    background: #960FF5;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.welcome__ticker {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.welcome__container {
+    background: var(--bg-1, 0 0) no-repeat center bottom;
+    background-size: auto 37vh;
+    background-repeat: no-repeat;
+    min-height: 627px;
+    display: flex;
+    min-height: calc(100vh - 64px);
+    @media (min-width:768px) {
+        background: var(--bg-1, 0 0) no-repeat calc(100% - 5px) bottom;
+        background-size: 50%;
+        min-height: 627px;
+    }
+}
+.welcome__content {
+    max-width: 550px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    @media (min-width: 768px) {
+        margin: auto 0;
+        padding-bottom: 0;
+    }
+    h1 {
+        font-weight: 400;
+        font-size: 64px;
+        // line-height: 72px;
+        color: #FFF;
+        @include responsive-tlt(44px, 64px)
+    }
+    p {
+        margin: 0;
+        margin-top: 18px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFF;
+    }
+    button {
+        margin-top: 44px;
+        @media (max-width: 576px) {
+            max-width: 100% !important;
+        }
+    }
+}
+
+button[data-id="connection"] {
+    display: block;
+    background: #0AC282;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+    padding: 19px;
+    max-width: 240px;
+    width: 100%;
+    border: none;
+    height: fit-content;
+    transition: .4s;
+    &:hover {
+        background: $purple;
+    }
+}

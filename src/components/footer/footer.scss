@@ -1,0 +1,109 @@
+.footer {
+    background: #0B2349;
+    padding-top: 28px;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 992px) {
+        justify-content: space-between;
+        flex-direction: row;      
+        align-items: unset;  
+    }
+}
+.footer__logo {
+    width: fit-content;
+    .icon {
+        width: 150px;
+        height: 84px;
+    }
+}
+.footer__nav {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: fit-content;
+    justify-content: center;
+    @media (min-width: 992px) {
+        justify-content: unset;
+        display: grid;
+        max-width: 600px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1200px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    a {
+        width: fit-content;
+        display: block;
+        font-weight: 600;
+        font-size: 15px;
+        white-space: nowrap;
+        line-height: 48px;
+        color: #fff;
+        transition: .4s;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.footer__menu {
+    width: 201px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+    a[data-id="link"] {
+        background: #071D3F;
+        height: 48px;
+        padding: 11px;
+        display: flex;
+        align-items: center;
+        color: white;
+        justify-content: center;
+        position: relative;
+        &:first-child {
+            padding-left: 30px;
+        }
+        svg {
+            position: absolute;
+            left: 11px;
+            fill: $green;
+        }
+    }
+}
+.footer__content {
+    display: flex;
+    flex-direction: column;
+}
+.footer__bottom {
+    margin-top: 40px;
+    background: #02183B;
+    padding-top: 30px;
+    padding-bottom: 32px;
+
+    p {
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 24px;
+        color: #BCC1CB;
+        span {
+            font-weight: 600;
+        }
+
+    }
+}
+.footer__copyright {
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #CED3DB;
+}

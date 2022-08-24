@@ -1,0 +1,42 @@
+.form {
+    padding-top: 105px;
+    padding-bottom: 105px;
+}
+.form__container {
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        background: #FFFFFF;
+        padding: 56px 25px;
+        gap: 64px;
+        position: relative;
+        z-index: 2;
+        @media (min-width: 992px) {
+            grid-template-columns: 592px 1fr;
+        }
+        button {
+            margin-top: 45px;
+        }
+        img {
+            display: none;
+            @media (min-width: 576px) {
+                display: block;
+                object-fit: contain;
+                width: 100%;
+                position: absolute;
+                bottom: 25px;
+                right: 25px;
+                width: 170px;
+                z-index: -1;
+            }
+            @media (min-width: 992px) {
+                position: unset;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.form__btn_inactive {
+    background: rgba(10, 194, 130, .2) !important;
+}

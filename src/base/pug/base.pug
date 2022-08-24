@@ -1,0 +1,38 @@
+include ../../mixins/pug/svg-icon
+include ../../mixins/pug/modal
+include ../../mixins/pug/input
+//- include ../../components/slider/slider
+
+block variables
+    -
+        var baseDir = './';
+
+doctype html
+html(lang="ru")
+    //- Include head
+    include ./head
+
+    body(class=pageClass)
+        include ../../components/header/header
+        main
+            //- block welcome
+            //- block connection
+            //- block tariff
+            //- block business
+            //- block equipment
+            //- block documents
+            //- block payment
+            //- block form
+            //- block contacts
+        //- Include footer
+        //- include ../../components/footer/footer
+        //- include ../../components/modal/modal
+
+        a.go-top.go-top--js(href='#')
+            +icon('up')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+        script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+        
+        script(src=`${baseDir}js/main.js`)
+
+        block script
