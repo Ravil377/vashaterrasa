@@ -1,0 +1,161 @@
+.article {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.article__container {
+    margin-top: 46px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 80px;
+    ul {
+        li {
+            display: flex;
+            flex-direction: column;
+            max-width: 440px;
+            img {
+                width: 100%;
+                height: 350px;
+                object-fit: cover;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+            a {
+                margin-left: 25px;
+                margin-top: 16px;
+                margin-right: 40px;
+                color: black;
+                position: relative;
+                transition: .4s;
+                &:hover {
+                    color: $blue;
+                    p {
+                        span {
+                            color: $blue;
+                        }
+                    }
+                    div {
+                        background: $blue;
+                        border: 1px solid $blue;
+                        svg {
+                            fill: white;
+                        }
+                    }
+                }
+                div {
+                    position: absolute;
+                    right: 0;
+                    top: 5px;
+                    width: 40px;
+                    height: 33px;
+                    border: 1px solid #000000;
+                    border-radius: 5px;
+                    display: flex;
+                    transition: .4s;
+                    svg {
+                        transition: .4s;
+                        margin: auto;
+                        fill: #000000;
+                        width: 7px;
+                        height: 7px;
+                    }
+                }
+                p {
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 100%;
+                    max-width: 215px;
+                    transition: .4s;
+                    span {
+                        transition: .4s;
+                        margin-top: 13px;
+                        display: block;
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 120%;
+                        color: #5F5F61;
+                    }
+                }
+                
+            }
+        }
+    }
+    .article__navigation {
+        width: fit-content;
+        
+        margin: auto;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 26px;
+    }
+    .article__navigation-container {
+        position: relative;
+        height: 100%;
+        width: fit-content;
+        margin: auto;
+        padding: 0 50px;
+        .article__button {
+            position: absolute;
+            width: 14px;
+            top: 0;           
+            height: 26px;
+            cursor: pointer;
+            &:hover {
+                svg {
+                    fill: $blue;
+                }
+            }
+            &.article__button-prev {
+                left: 0;
+            }
+            &.article__button-next {
+                right: 0;
+                transform: scale(-1);
+            }
+            svg {
+                transition: .4s;
+                fill: #000000;
+            }
+        }
+    }
+    .swiper-pagination {
+        width: fit-content !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        position: relative;
+        height: 100%;
+        bottom: unset !important;
+    }
+    .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+        background: #E9E9E9;
+        opacity: 1;
+        position: relative;
+        transition: .4s;
+        &::after {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: -2px;
+            transition: .4s;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+        }
+        &.swiper-pagination-bullet-active {
+            transition: .4s;
+            background: transparent;
+            &::after {
+                border: 1px solid #000000;
+                left: -2px;
+                top: -2px;
+                width: 10px;
+                height: 10px;
+            }
+            
+        }
+    }
+}

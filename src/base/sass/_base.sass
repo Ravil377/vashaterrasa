@@ -3,12 +3,11 @@
 *::after
 	box-sizing: border-box
 
-
+p
+	margin: 0
+	
 a
 	text-decoration: none
-main
-	position: relative
-	background: #F5F5F5
 
 .flex
 	display: flex
@@ -16,24 +15,25 @@ main
 	justify-content: flex-start
 
 .outer
-	padding-left: 12px
-	padding-right: 12px
+	padding-left: 24px
+	padding-right: 24px
 
 
 .inner
-	max-width: 1260px
+	max-width: 1400px
 	margin-left: auto
 	margin-right: auto
 
 
 body
-	font-family: "Mont", sans-serif
+	font-family: "ProximaNova", sans-serif
 	font-style: normal
 	font-size: 16px
 	font-weight: 400
-	color: $black
+	color: black
 	min-width: 375px
 	overflow: auto
 	z-index: 100
 	&.is-active
 		overflow: hidden
+

@@ -1,17 +1,19 @@
-$('.ticker-1').slick({
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 0,
-    arrows: false,
-    easing: 'linear',
-    cssEase: 'linear',
-    waitForAnimate: true,
-    speed: 30000,
-    centerMode: false,
-    edgeFriction: 0,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    pauseOnDotsHover: false,
-    autoSlidesToShow: true,
-    variableWidth: true,
-  });
+import Swiper, { Navigation } from "swiper";
+Swiper.use([Navigation]);
+
+const welcome = '.welcome-js';
+
+if(document.querySelector(welcome)) {
+    const welcomeSlider = new Swiper(welcome, {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true
+        },
+        navigation: {
+            nextEl: '.welcome__button-next-js',
+            prevEl: '.welcome__button-prev-js',
+        },
+    })
+}

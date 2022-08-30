@@ -7,3 +7,367 @@ append variables
     - var pageClass = 'homepage'
     - var menuHref = '/'
 
+block welcome
+    .welcome
+        .welcome__container.welcome-js 
+            .swiper-wrapper 
+                .welcome__slide.swiper-slide(style="--bg-1:url(../images/slide1-overlay.png);")
+                    img(src="./images/slide1.png" alt="Слайд 1")
+                    .outer 
+                        .inner
+                            h1 Террасная доска, заборы, ограждения&nbsp;и ступени из ДПК 
+                                span от производителя
+                            ul.welcome__list
+                                li 
+                                    +icon('check')
+                                    | Проектирование
+                                li 
+                                    +icon('check')
+                                    | Монтаж “под ключ”
+                                li 
+                                    +icon('check')
+                                    | Частные и коммерческие объекты
+                            .welcome__slide-bottom
+                                p Доставка по всей территории
+                                    span.rus
+                                    | РФ
+                                +btn('Перейти в каталог', '', true).invert
+                .welcome__slide.swiper-slide(style="--bg:url(../images/slide2.png);")
+                    img(src="./images/decor.svg" alt="Слайд 2")
+                    .outer 
+                        .inner
+                            h2 Дополнительная скидка на монтаж 
+                                span 10%
+                            ul.welcome__list
+                                li 
+                                    +icon('check')
+                                    | При покупке террасной доски Deckard
+                            .welcome__product
+                                .welcome__product-content
+                                    img(src='./images/skidka.png' alt="товар")
+                                    +icon('decor')
+                                    .welcome__product-decor
+                                    .welcome__product-decor1
+                                    .welcome__product-price 
+                                        .welcome__product-price-new
+                                            | 1 990
+                                            div ₽
+                                            div м
+                                                sup 2
+                                        .welcome__product-price-old
+                                            | 2 590
+                                            div ₽
+                                            div м
+                                                sup 2
+                            .welcome__slide-bottom
+                                p Доставка по всей территории
+                                    span.rus
+                                    | РФ
+                                +btn('Узнать подробнее', '', true).invert
+        .outer(style="height: 100px;position: absolute;left:0;top:50%;width:100%;transform:translateY(-50%);z-index: 4;")        
+            .inner(style="position: relative;position: relative;height: 100%;")
+                .slider__button._white.slider__button-prev.welcome__button-prev-js
+                    <svg width="16" height="31" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.2725 30.8029L16 30.0814L1.45441 15.645L16 1.20862L15.2725 0.487127L0 15.645L15.2725 30.8029Z"/>
+                    </svg>
+                .slider__button._white.slider__button-next.welcome__button-next-js
+                    <svg width="16" height="31" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.2725 30.8029L16 30.0814L1.45441 15.645L16 1.20862L15.2725 0.487127L0 15.645L15.2725 30.8029Z"/>
+                    </svg>
+block advantages
+//-     .advantages 
+//-         .outer 
+//-             .inner 
+//-                 ul
+//-                     li 
+//-                         +icon('warehouse')
+//-                         | В наличии на складе более 150 вариантов террасной доски из ДПК
+//-                     li 
+//-                         +icon('quality')
+//-                         | Официальная гарантия на материалы - 3 года  и монтаж - 1 год
+//-                     li
+//-                         +icon('measuring-tape')
+//-                         | Бесплатный выезд на замер и индивидуальный расчет проекта
+//-                     li
+//-                         +icon('express-delivery')
+//-                         | Быстрая доставка в любой регион РФ
+//- block links 
+//-     section.links 
+//-         .outer 
+//-             .inner 
+//-                 .title__container
+//-                     h2.title Все для строительства террас
+//-                     p Всегда в наличии на складе центрального офиса и у представителей в регионах
+//-                 ul 
+//-                     li 
+//-                         .link__img 
+//-                             img(src='./images/doska.png' alt="Террасная доска из ДПК")
+//-                         p Террасная доска из ДПК
+//-                             span более 29 вариантов
+//-                         +btn('Смотреть', '', true)
+//-                     li 
+//-                         .link__img 
+//-                             img(src='./images/ogragdenie-full.png' alt="Ограждения из ДПК")
+//-                         p Ограждения из ДПК
+//-                             span более 120 вариантов
+//-                         +btn('Смотреть', '', true)
+//-                     li 
+//-                         .link__img 
+//-                             img(src='./images/zabor-link.png' alt="Заборы")
+//-                         p Заборы
+//-                             span более 78 вариантов
+//-                         +btn('Смотреть', '', true)
+//-                     li 
+//-                         .link__img 
+//-                             img(src='./images/stupen.png' alt="Ступени из ДПК")
+//-                         p Ступени из ДПК
+//-                             span более 29 вариантов
+//-                         +btn('Смотреть', '', true)
+//-                     li 
+//-                         .link__img 
+//-                             img(src='./images/brus.png' alt="Лавочный брус")
+//-                         p Лавочный брус
+//-                             span более 29 вариантов
+//-                         +btn('Смотреть', '', true)
+//-                     li 
+//-                         .link__img 
+//-                             img(src='./images/compl.png' alt="Комплектующие")
+//-                         p Комплектующие
+//-                             span более 29 вариантов
+//-                         +btn('Смотреть', '', true)
+//- block hit 
+//-     section.hit
+//-         .outer 
+//-             .inner.hit__container 
+//-                 .title__container
+//-                     h2.title Хиты продаж
+//-                 .hit-slider.hit-slider-js
+//-                     ul.swiper-wrapper
+//-                         li.swiper-slide.card 
+//-                             .card__gallery.card__gallery-js
+//-                                 img(src='./images/1.png' data-src='./images/1.png' alt="Террасная доска").card__img-js
+//-                                 .card__preview.card__preview-js
+//-                                     img(src='./images/1-1.png' data-src="./images/1-1.png" alt="Террасная доска")
+//-                                     img(src='./images/1-2.png' data-src="./images/1-2.png" alt="Террасная доска")
+//-                                     img(src='./images/1-3.png' data-src="./images/1-3.png" alt="Террасная доска")
+//-                                     img(src='./images/1-4.png' data-src="./images/1-4.png" alt="Террасная доска")
+//-                                     img(src='./images/1-5.png' data-src="./images/1-5.png" alt="Террасная доска")
+//-                                 .card__label
+//-                                     p._yellow Новинка
+//-                             .card__content 
+//-                                 h3 Террасная доска из ДПК Praktik New Орех
+//-                                 p Есть в наличии
+//-                                 ul 
+//-                                     li
+//-                                         +icon('houses')
+//-                                         | Для дома и дачи
+//-                                     li
+//-                                         +icon('swimming-pool')
+//-                                         | Для бассейнов и пирсов
+//-                                 .card__size 
+//-                                     p Длина:
+//-                                     ul
+//-                                         li 3м
+//-                                         li._disabled 4м
+//-                                         li 5м
+//-                                         li 6м
+//-                                     p Размер: 150х25 мм
+//-                                 .card__order
+//-                                     .card__price
+//-                                         .card__price-new
+//-                                             | 1 990
+//-                                             div ₽
+//-                                             div м
+//-                                                 sup 2
+//-                                         .card__price-old
+//-                                             | 2 590
+//-                                             div ₽
+//-                                             div м
+//-                                                 sup 2
+//-                                     .card__calc.card__calc-js 
+//-                                         button.card__remove-js -
+//-                                         p.card__calc-num-js 1
+//-                                         button.card__add-js +
+//-                             .card__buttons 
+//-                                 +btn('Купить в 1 клик', 'buy')
+//-                                 button
+//-                                     +icon('basket')
+//-                                     p Добавлено
+//-                         li.swiper-slide.card 
+//-                             .card__gallery.card__gallery-js
+//-                                 img(src='./images/2.png' data-src='./images/2.png' alt="Террасная доска").card__img-js
+//-                                 .card__preview.card__preview-js
+//-                                     img(src='./images/2-1.png' data-src="./images/2-1.png" alt="Террасная доска")
+//-                                     img(src='./images/2-2.png' data-src="./images/2-2.png" alt="Террасная доска")
+//-                                     img(src='./images/2-3.png' data-src="./images/2-3.png" alt="Террасная доска")
+//-                                     img(src='./images/2-4.png' data-src="./images/2-4.png" alt="Террасная доска")
+//-                                     img(src='./images/2-5.png' data-src="./images/2-5.png" alt="Террасная доска")
+//-                                 .card__label
+//-                                     p._purple Выгодно!
+//-                             .card__content 
+//-                                 h3 Ступень из ДПК WoodVex Select Кофе
+
+//-                                 p Есть в наличии
+//-                                 ul 
+//-                                     li
+//-                                         +icon('houses')
+//-                                         | Для дома и дачи
+//-                                 .card__size 
+//-                                     p Длина:
+//-                                     ul
+//-                                         li 3м
+//-                                         li._disabled 4м
+//-                                         li 5м
+//-                                         li 6м
+//-                                     p Размер: 150х25 мм
+//-                                 .card__order
+//-                                     .card__price
+//-                                         .card__price-new
+//-                                             | 4 870
+//-                                             div ₽
+//-                                             div м
+//-                                                 sup 2
+//-                                         .card__price-old
+//-                                             | 9 590
+//-                                             div ₽
+//-                                             div м
+//-                                                 sup 2
+//-                                     .card__calc.card__calc-js 
+//-                                         button.card__remove-js -
+//-                                         p.card__calc-num-js 1
+//-                                         button.card__add-js +
+//-                             .card__buttons 
+//-                                 +btn('Купить в 1 клик', 'buy')
+//-                                 button
+//-                                     +icon('basket')
+//-                                     p Добавлено
+//-                         li.swiper-slide.card 
+//-                             .card__gallery.card__gallery-js
+//-                                 img(src='./images/3.png' data-src='./images/3.png' alt="Террасная доска").card__img-js
+//-                                 .card__preview.card__preview-js
+//-                                     img(src='./images/3-1.png' data-src="./images/3-1.png" alt="Террасная доска")
+//-                                     img(src='./images/3-2.png' data-src="./images/3-2.png" alt="Террасная доска")
+//-                                     img(src='./images/3-3.png' data-src="./images/3-3.png" alt="Террасная доска")
+//-                                     img(src='./images/3-4.png' data-src="./images/3-4.png" alt="Террасная доска")
+//-                                     img(src='./images/3-5.png' data-src="./images/3-5.png" alt="Террасная доска")
+//-                                 .card__label
+//-                             .card__content 
+//-                                 h3 Ступень из ДПК WoodVex Select Кофе
+
+//-                                 p Есть в наличии
+//-                                 ul 
+//-                                     li
+//-                                         +icon('houses')
+//-                                         | Для дома и дачи
+//-                                 .card__size 
+//-                                     p Длина:
+//-                                     ul
+//-                                         li 3м
+//-                                         li._disabled 4м
+//-                                         li 5м
+//-                                         li 6м
+//-                                     p Размер: 150х25 мм
+//-                                 .card__order
+//-                                     .card__price
+//-                                         .card__price-new
+//-                                             | 4 870
+//-                                             div ₽
+//-                                             div м
+//-                                                 sup 2
+//-                                         .card__price-old
+//-                                             | 9 590
+//-                                             div ₽
+//-                                             div м
+//-                                                 sup 2
+//-                                     .card__calc.card__calc-js 
+//-                                         button.card__remove-js -
+//-                                         p.card__calc-num-js 1
+//-                                         button.card__add-js +
+//-                             .card__buttons 
+//-                                 +btn('Купить в 1 клик', 'buy')
+//-                                 button
+//-                                     +icon('basket')
+//-                                     p Добавлено
+//-                 .slider__button.slider__button-prev.hit__button-prev-js
+//-                     <svg width="16" height="31" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                         <path d="M15.2725 30.8029L16 30.0814L1.45441 15.645L16 1.20862L15.2725 0.487127L0 15.645L15.2725 30.8029Z"/>
+//-                     </svg>
+//-                 .slider__button.slider__button-next.hit__button-next-js
+//-                     <svg width="16" height="31" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                         <path d="M15.2725 30.8029L16 30.0814L1.45441 15.645L16 1.20862L15.2725 0.487127L0 15.645L15.2725 30.8029Z"/>
+//-                     </svg>
+//- block article
+//-     section.article 
+//-         .outer 
+//-             .inner 
+//-                 .title__container
+//-                     h2.title Строительство террас
+//-                     p Спроектируем и смонтируем террасы любой сложности “под ключ”
+//-                 .article__container.article-js 
+//-                     ul.swiper-wrapper  
+//-                         li.swiper-slide
+//-                             img(src="./images/article1.jpg" alt="Террассы для дома и дачи")
+//-                             a(href="#") 
+//-                                 p Террассы для дома и дачи
+//-                                     span проектирование и монтаж
+//-                                 div 
+//-                                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.0206 0.5C7.09795 0.5 7.17214 0.530727 7.22683 0.585423C7.28153 0.640118 7.31226 0.714301 7.31226 0.791651L7.31226 4.29147C7.31226 4.36882 7.28153 4.443 7.22683 4.4977C7.17214 4.55239 7.09795 4.58312 7.0206 4.58312C6.94325 4.58312 6.86907 4.55239 6.81438 4.4977C6.75968 4.443 6.72895 4.36882 6.72895 4.29147L6.72895 1.4957L0.810765 7.41447C0.783648 7.44159 0.751456 7.4631 0.716027 7.47777C0.680597 7.49245 0.642624 7.5 0.604276 7.5C0.565927 7.5 0.527954 7.49245 0.492524 7.47777C0.457095 7.4631 0.424903 7.44159 0.397786 7.41447C0.37067 7.38735 0.34916 7.35516 0.334485 7.31973C0.319809 7.2843 0.312256 7.24633 0.312256 7.20798C0.312256 7.16963 0.319809 7.13166 0.334485 7.09623C0.34916 7.0608 0.37067 7.02861 0.397786 7.00149L6.31656 1.0833L3.52079 1.0833C3.44344 1.0833 3.36926 1.05258 3.31456 0.99788C3.25986 0.943185 3.22914 0.869002 3.22914 0.791652C3.22914 0.714301 3.25986 0.640118 3.31456 0.585423C3.36926 0.530727 3.44344 0.5 3.52079 0.5L7.0206 0.5Z"/>
+//-                                     </svg>    
+//-                         li.swiper-slide
+//-                             img(src="./images/article2.png" alt="Террассы для дома и дачи")
+//-                             a(href="#") 
+//-                                 p Террассы для дома и дачи
+//-                                     span проектирование и монтаж
+//-                                 div 
+//-                                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.0206 0.5C7.09795 0.5 7.17214 0.530727 7.22683 0.585423C7.28153 0.640118 7.31226 0.714301 7.31226 0.791651L7.31226 4.29147C7.31226 4.36882 7.28153 4.443 7.22683 4.4977C7.17214 4.55239 7.09795 4.58312 7.0206 4.58312C6.94325 4.58312 6.86907 4.55239 6.81438 4.4977C6.75968 4.443 6.72895 4.36882 6.72895 4.29147L6.72895 1.4957L0.810765 7.41447C0.783648 7.44159 0.751456 7.4631 0.716027 7.47777C0.680597 7.49245 0.642624 7.5 0.604276 7.5C0.565927 7.5 0.527954 7.49245 0.492524 7.47777C0.457095 7.4631 0.424903 7.44159 0.397786 7.41447C0.37067 7.38735 0.34916 7.35516 0.334485 7.31973C0.319809 7.2843 0.312256 7.24633 0.312256 7.20798C0.312256 7.16963 0.319809 7.13166 0.334485 7.09623C0.34916 7.0608 0.37067 7.02861 0.397786 7.00149L6.31656 1.0833L3.52079 1.0833C3.44344 1.0833 3.36926 1.05258 3.31456 0.99788C3.25986 0.943185 3.22914 0.869002 3.22914 0.791652C3.22914 0.714301 3.25986 0.640118 3.31456 0.585423C3.36926 0.530727 3.44344 0.5 3.52079 0.5L7.0206 0.5Z"/>
+//-                                     </svg>  
+//-                         li.swiper-slide
+//-                             img(src="./images/article3.png" alt="Террассы для дома и дачи")
+//-                             a(href="#") 
+//-                                 p Террассы для дома и дачи
+//-                                     span проектирование и монтаж
+//-                                 div 
+//-                                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.0206 0.5C7.09795 0.5 7.17214 0.530727 7.22683 0.585423C7.28153 0.640118 7.31226 0.714301 7.31226 0.791651L7.31226 4.29147C7.31226 4.36882 7.28153 4.443 7.22683 4.4977C7.17214 4.55239 7.09795 4.58312 7.0206 4.58312C6.94325 4.58312 6.86907 4.55239 6.81438 4.4977C6.75968 4.443 6.72895 4.36882 6.72895 4.29147L6.72895 1.4957L0.810765 7.41447C0.783648 7.44159 0.751456 7.4631 0.716027 7.47777C0.680597 7.49245 0.642624 7.5 0.604276 7.5C0.565927 7.5 0.527954 7.49245 0.492524 7.47777C0.457095 7.4631 0.424903 7.44159 0.397786 7.41447C0.37067 7.38735 0.34916 7.35516 0.334485 7.31973C0.319809 7.2843 0.312256 7.24633 0.312256 7.20798C0.312256 7.16963 0.319809 7.13166 0.334485 7.09623C0.34916 7.0608 0.37067 7.02861 0.397786 7.00149L6.31656 1.0833L3.52079 1.0833C3.44344 1.0833 3.36926 1.05258 3.31456 0.99788C3.25986 0.943185 3.22914 0.869002 3.22914 0.791652C3.22914 0.714301 3.25986 0.640118 3.31456 0.585423C3.36926 0.530727 3.44344 0.5 3.52079 0.5L7.0206 0.5Z"/>
+//-                                     </svg>
+//-                     .article__navigation 
+//-                         .article__navigation-container
+//-                             .swiper-pagination
+//-                             .article__button.article__button-prev.article__button-prev-js
+//-                                 <svg width="14" height="26" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                                     <path d="M15.2725 30.8029L16 30.0814L1.45441 15.645L16 1.20862L15.2725 0.487127L0 15.645L15.2725 30.8029Z"/>
+//-                                 </svg>
+//-                             .article__button.article__button-next.article__button-next-js
+//-                                 <svg width="14" height="26" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                                     <path d="M15.2725 30.8029L16 30.0814L1.45441 15.645L16 1.20862L15.2725 0.487127L0 15.645L15.2725 30.8029Z"/>
+//-                                 </svg>
+//- block company
+//-     section.company
+//-         .outer 
+//-             .inner 
+//-                 .company__container 
+                    
+//-                     .company__content
+//-                         h2.title Компания ТМ «Deckart»
+//-                         p.company__about Компания ТМ «Deckart» является производителем изделий из ДПК: террасной доски, ступеней, ограждений, заборной доски.
+//-                         .company__text
+//-                             p Качество продукции, широкий ассортимент, разнообразие цветов позволило завоевать признание покупателей.<br><br>
+//-                             p Одна из основополагающий целей ТМ «Deckart» —является высокое качество выпускаемой продукции и уникальная технология нанесения 3D текстуры.
+//-                             p Технологами компании был тщательно изучен зарубежный опыт производства изделий из древесно-полимерного композита производителей Китая, США, Европы, Южной Кореи, благодаря чему была разработана политика в области качества, а так же требования к поставщикам оборудования, сырья и материалов.
+//-                         ul 
+//-                             li 3 500+
+//-                                 span Довольных клиентов
+//-                             li 250 000м
+//-                                 sup 2
+//-                                 span Смонтировано террас
+//-                             li 30+
+//-                                 span Точек продаж по всей территории России
+//-                         p Производство продукции осуществляется строго в соответствии с ТУ, которые разработаны по ГОСТ, что подтверждено Сертификатом Соответствия.
+//-                         +btn('Подробнее', '', true)
+//- block form
+//-     section.form 
+//-         .outer 
+//-             .inner
+//-                 .form__container

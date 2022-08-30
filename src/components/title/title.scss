@@ -1,0 +1,26 @@
+.title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 100%;
+    margin: 0;
+}
+.title__container {
+    @media (min-width: 1200px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: $grey;
+        
+        display: block;
+        height: fit-content;
+        @media (min-width: 1200px) {
+            max-width: 406px;
+            margin-left: 20px;
+        }
+    }
+}

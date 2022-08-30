@@ -1,0 +1,64 @@
+.company {
+    overflow: hidden;
+    padding-bottom: 70px;
+}
+.company__container {
+    display: flex;
+    min-height: 756px;
+    background: url('../images/bg.png') no-repeat left top/540px;
+}
+
+.company__content {
+    padding-top: 89px;
+    max-width: 800px;
+    width: 100%;
+    margin-left: auto;
+    a {
+        margin-top: 34px;
+        max-width: 161px;
+        width: 100%;
+    }
+    & > p:last-child {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        color: black;
+    }
+    .company__text {
+        margin-top: 28px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        color: black;
+    }
+    ul {
+        padding-top: 65px;
+        padding-bottom: 44px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        li {
+            font-weight: 300;
+            font-size: 50px;
+            line-height: 100%;
+            color: $blue;
+            span {
+                max-width: 235px;
+                margin-top: 15px;
+                display: block;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 130%;
+                color: $grey;
+            }
+        }
+    }
+}
+.company__about {
+    margin-top: 28px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: black;
+}
