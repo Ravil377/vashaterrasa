@@ -7,6 +7,9 @@
     fill: currentColor;
 }
 
+.icon-Frame {
+    width: math.div(55, 54) * 1em;
+}
 .icon-ar {
     width: math.div(6, 4) * 1em;
 }
@@ -37,11 +40,20 @@
 .icon-decor-card {
     width: math.div(185, 185) * 1em;
 }
+.icon-decor2 {
+    width: math.div(375, 224) * 1em;
+}
 .icon-express-delivery {
     width: math.div(52, 52) * 1em;
 }
 .icon-houses {
     width: math.div(15, 16) * 1em;
+}
+.icon-left-ar {
+    width: math.div(8, 16) * 1em;
+}
+.icon-location {
+    width: math.div(11, 12) * 1em;
 }
 .icon-logo {
     width: math.div(252, 38) * 1em;

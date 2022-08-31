@@ -1,8 +1,11 @@
 .title {
     font-weight: 600;
-    font-size: 50px;
+    font-size: 27px;
     line-height: 100%;
     margin: 0;
+    @media (min-width: 768px) {
+        font-size: 50px;
+    }
 }
 .title__container {
     @media (min-width: 1200px) {
@@ -12,13 +15,15 @@
     }
     p {
         font-weight: 400;
-        font-size: 18px;
         line-height: 120%;
-        color: $grey;
-        
+        color: $grey;        
         display: block;
         height: fit-content;
+        margin-top: 11px;
+        font-size: 15px;
         @media (min-width: 1200px) {
+            font-size: 18px;
+            margin-top: 0;
             max-width: 406px;
             margin-left: 20px;
         }

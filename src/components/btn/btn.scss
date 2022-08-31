@@ -59,6 +59,9 @@
     background-repeat: no-repeat;
     display: flex;
     transition: .4s;
+    @media (max-width: 1600px) {
+        display: none;
+    }
     svg {
         margin: auto;
         width: 16px;
@@ -87,9 +90,15 @@
     }
 }
 .slider__button-prev {
-    left: -208px;
+    left: -96px;
+    @media (min-width: 1900px) {
+        left: -208px;
+    }
 }
 .slider__button-next {
-    right: -208px;
+    right: -96px;
+    @media (min-width: 1900px) {
+        right: -208px;    
+    }
     transform: translateY(-50%) scale(-1);
 }

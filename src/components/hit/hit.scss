@@ -1,7 +1,17 @@
 .hit {
     background: #F8F8F8;
-    padding-top: 62px;
-    padding-bottom: 62px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @media (min-width: 992px) {
+        padding-top: 62px;
+        padding-bottom: 62px;
+    }
+    .outer {
+        @media (max-width: 992px) {
+            padding-right: 0;    
+        }
+        
+    }
 }
 .hit__container {
     position: relative;

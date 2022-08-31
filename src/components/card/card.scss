@@ -1,27 +1,31 @@
 .card {
-    max-width: 441px;
+    max-width: 291px;
     width: 100%;
-    padding: 23px 27px;
+    padding: 15px;
+    padding-bottom: 32px;
     background: white;
     border-radius: 20px;
+    @media (min-width: 992px) {
+        max-width: 441px;
+        padding: 23px 27px;
+    }
     .card__gallery {
         display: grid;
         position: relative;
         border-radius: 10px;
         overflow: hidden;
-        grid-template-columns: 1fr 42px;
-        gap: 17px;
-        min-height: 247px;
+        grid-template-columns: 1fr 27px;
+        gap: 11px;
+        height: 163px;
+        @media (min-width: 992px) {
+            grid-template-columns: 1fr 42px;
+            gap: 17px;
+            height: 247px;
+        }
         .card__preview  {
             display: flex;
             flex-direction: column;
             gap: 9px;
-            li {
-                width: 42px;
-                height: 42px;
-                border-radius: 5px;
-                overflow: hidden;
-            }
         }
         & > img {
             width: 100%;
@@ -57,57 +61,89 @@
             
     }
     .card__content {
-        padding-top: 25px;
+        padding-top: 16px;
+        @media (min-width: 992px) {
+            padding-top: 25px;
+        }
         h3 {
             font-weight: 600;
-            font-size: 24px;
+            font-size: 18px;
             line-height: 100%; 
             color: #000000;
             margin: 0;
+            @media (min-width: 992px) {
+                font-size: 24px;
+            }
         }
         & > p {
-            margin-top: 13px;
+            margin-top: 8px;
             font-weight: 400;
-            font-size: 12px;
+            font-size: 11px;
             line-height: 120%;
             color: $green;
+            @media (min-width: 992px) {
+                margin-top: 13px;
+                font-size: 12px;
+            }
         }
         ul {
-            margin-top: 16px;
+            margin-top: 14px;
             display: flex;
-            gap:  18px;
+            column-gap: 18px;
             flex-wrap: wrap;
+            @media (min-width: 992px) {
+                margin-top: 16px;
+            }
             li {
                 font-weight: 400;
-                font-size: 12px;
+                font-size: 11px;
                 line-height: 100%;
+                @media (min-width: 992px) {
+                    font-size: 12px;
+                }
                 .icon {
-                    width: 15px;
-                    height: 15px;
-                    margin-right: 10px;
+                    width: 10px;
+                    height: 10px;
+                    margin-right: 6px;
+                    @media (min-width: 992px) {
+                        margin-right: 10px;
+                        width: 15px;
+                        height: 15px;
+                    }
                 }
             }
         }
         .card__size {
-            margin-top: 20px;
-            padding-top: 20px;
+            margin-top: 12px;
+            padding-top: 12px;
             border-top: 1px solid #EFEFEF;
+            @media (min-width: 992px) {
+                margin-top: 20px;
+                padding-top: 20px;
+            }
             p {
                 font-weight: 600;
-                font-size: 14px;
+                font-size: 11px;
                 line-height: 100%;
+                @media (min-width: 992px) {
+                    font-size: 14px;
+                }
             }
             ul {
                 display: flex;
                 gap: 15px;
                 li {
-                    padding: 9.5px 8px;
+                    padding: 7.5px 6px;
                     background: #F1EEEB;
                     border-radius: 5px;
                     font-weight: 400;
-                    font-size: 14px;
+                    font-size: 12px;
                     line-height: 100%;
                     transition: .4s;
+                    @media (min-width: 992px) {
+                        padding: 9.5px 8px;
+                        font-size: 14px;
+                    }
                     &:hover {
                         background: #EFE9E4;
                     }
@@ -122,17 +158,25 @@
                 }
             }
             p:last-child {
-                margin-top: 13px;
+                margin-top: 10px;
                 font-weight: 400;
-                font-size: 14px;
+                font-size: 11px;
                 line-height: 100%;
                 color: $grey;
+                @media (min-width: 992px) {
+                    margin-top: 13px;
+                    font-size: 14px;
+                }
             }
         }
         .card__order {
-            margin-top: 15px;
+            margin-top: 11px;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            @media (min-width: 992px) {
+                margin-top: 15px;
+            }
             .card__price {
                 display: flex;
                 flex-direction: column;
@@ -140,31 +184,45 @@
                     display: flex;
                     align-items: center;
                     font-weight: 600;
-                    font-size: 27px;
+                    font-size: 18px;
                     line-height: 120%;
-                    div:nth-child(1) {
-                        font-weight: 600;
-                        font-size: 27px;
-                        line-height: 120%;
-                        padding: 0 6px;
+                    @media (min-width: 992px) {
+                        font-size: 27px; 
                     }
-                    div:nth-child(2) {
+                    div:nth-child(1) {
                         font-weight: 600;
                         font-size: 18px;
                         line-height: 120%;
+                        padding: 0 2px;
+                        @media (min-width: 992px) {
+                            font-size: 27px;
+                            padding: 0 6px;
+                        }
+                    }
+                    div:nth-child(2) {
+                        font-weight: 600;
+                        font-size: 12px;
+                        line-height: 120%;
+                        @media (min-width: 992px) {
+                            font-size: 18px;
+                        }
                     }
                 }
                 .card__price-old {
-                    margin-top: -8px;
+                    margin-top: -4px;
                     display: flex;
                     align-items: center;
                     font-weight: 600;
-                    font-size: 16px;
+                    font-size: 11px;
                     line-height: 120%;
                     color: #5F5F61;
                     width: fit-content;
                     padding: 0 3px;
                     position: relative;
+                    @media (min-width: 992px) {
+                        font-size: 16px;
+                        margin-top: -8px;
+                    }
                     &::after {
                         content: '';
                         position: absolute;
@@ -177,16 +235,22 @@
                     }
                     div:nth-child(1) {
                         font-weight: 600;
-                        font-size: 16px;
+                        font-size: 11px;
                         line-height: 120%;
                         padding: 0 3px;
                         color: #5F5F61;
+                        @media (min-width: 992px) {
+                            font-size: 16px;
+                        }
                     }
                     div:nth-child(2) {
                         font-weight: 600;
-                        font-size: 12px;
+                        font-size: 8px;
                         line-height: 120%;
                         color: #5F5F61;
+                        @media (min-width: 992px) {
+                            font-size: 12px;
+                        }
                     }
                 }
             }
@@ -196,10 +260,15 @@
                 button {
                     background: #F4F4F4;
                     border-radius: 50%;
-                    width: 36px;
-                    height: 36px;
+                    width: 28px;
+                    height: 28px;
                     border: none;
                     transition: .4s;
+
+                    @media (min-width: 992px) {
+                        width: 36px;
+                        height: 36px;
+                    }
                     &:hover {
                         background: $blue;
                         color: white;
@@ -207,9 +276,13 @@
                 }
                 p {
                     font-weight: 600;
-                    font-size: 18px;
+                    font-size: 12px;
                     line-height: 120%;
-                    padding: 0 24px;
+                    padding: 0 19px;
+                    @media (min-width: 992px) {
+                        font-size: 18px;
+                        padding: 0 24px;
+                    }
                 }
             }
         }
@@ -217,8 +290,11 @@
 }
 .card__buttons {
     display: flex;
-    gap: 25px;
+    gap: 16px;
     margin-top: 25px;
+    @media (min-width: 992px) {
+        gap: 25px;
+    }
     button:first-child {
         width: -webkit-fill-available;
         justify-content: center;
@@ -229,10 +305,13 @@
         padding: 10.5px;
         border: none;
         transition: .4s;
-        max-width: 112px;
+        max-width: 78px;
         width: 100%;
         display: flex;
         justify-content: center;
+        @media (min-width: 992px) {
+            max-width: 112px;
+        }
         p {
             display: none;
             font-weight: 700;
