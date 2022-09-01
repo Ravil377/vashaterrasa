@@ -12,6 +12,7 @@ import './hit/hit'
 import './card/card'
 import './article/article'
 import './header/header'
+import './feedback/feedback'
 
 
 
