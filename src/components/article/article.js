@@ -5,8 +5,9 @@ const article = '.article-js ';
 
 if(document.querySelector(article)) {
     const articleSlider = new Swiper(article, {
-        slidesPerView: 3,
-        spaceBetween: 40,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        centeredSlidesBounds: true,
         effect: "fade",
         loop: true,
         fadeEffect: {
@@ -15,6 +16,12 @@ if(document.querySelector(article)) {
         pagination: {
             el: '.swiper-pagination',
         },
+        // breakpoints: {
+        //     992: {
+        //         slidesPerView: 3,
+        //         spaceBetween: 40,
+        //     }
+        // },
         navigation: {
             nextEl: '.article__button-next-js',
             prevEl: '.article__button-prev-js',

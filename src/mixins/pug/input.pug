@@ -27,7 +27,7 @@ mixin checkbox(labeltext, idinput)
         var links = links || '';
 
     .form__checkbox.form__placeholder-container--js
-        input(type='checkbox' name="" placeholder=" " required="required" id=`${idinput}` class="form__input--js")&attributes(attributes)
+        input(type='checkbox' name="" placeholder=" " required="required" id=`${idinput}` class="form__input--js" checked )&attributes(attributes)
         label(for=`${idinput}`)!=labeltext
         span(class=`input__error ${idinput}-error`)
 
