@@ -8,6 +8,9 @@
     }
 }
 .title__container {
+    @media (max-width: 576px) {
+        max-width: 230px;
+    }
     @media (min-width: 1200px) {
         display: flex;
         justify-content: space-between;
