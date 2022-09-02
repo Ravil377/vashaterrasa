@@ -1,10 +1,10 @@
-const modalOpenBtns = document.querySelectorAll('[data-modal="1"]');
+const modalOpenBtns = document.querySelectorAll('[data-id="callme"]');
 const modalCloseBtns = document.querySelectorAll('.modal__close-js');
 const modal = document.querySelector('.modal-js');
 const title = modal.querySelector('.modal__title');
 
 const closeModal = () => {
-    const form = document.querySelector('.modal__form').reset();
+    document.querySelector('.modal__form-js').reset();
     modal.classList.remove('modal_opened');
 }
 
@@ -20,10 +20,7 @@ const checkPressOverlay = (e) => {
     }
 };
   
-const openModal = (e) => {
-    e.preventDefault();
-    const equipment = e.target.dataset.more;
-    if(equipment) modal.classList.add('modal_equipment')
+const openModal = () => {
     modal.classList.add('modal_opened');
     
 }

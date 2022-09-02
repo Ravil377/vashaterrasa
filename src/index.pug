@@ -376,7 +376,7 @@ block form
                     form(action="")
                         +input('Имя','text','name')
                         p Пожалуйста представьтесь, как можно к вам обращаться
-                        +input('Номер телефона','text','phone')#phone
+                        +input('Номер телефона','text','phone').phone-mask1--js
                         +checkbox('Я выражаю свое согласие с Политикой конфиденциальности сайта и разрешаю обработку своих персональных данных', true)
                         button(type="submit") Перезвонить мне
 block feedback 
