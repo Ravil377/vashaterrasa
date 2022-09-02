@@ -12,5 +12,4 @@ catalog.addEventListener('click', (e) => {
         catalog.classList.toggle('_menu_open');
         link.closest('LI').classList.toggle('_open');
     }
-    
 })

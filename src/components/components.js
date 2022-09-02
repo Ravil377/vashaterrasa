@@ -14,6 +14,6 @@ import './article/article'
 import './header/header'
 import './feedback/feedback'
 import './useful/useful'
-
+import './footer/footer'
 
 // import './header/header'

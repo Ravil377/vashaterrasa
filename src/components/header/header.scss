@@ -477,21 +477,7 @@ a.dropdown {
                         background:  #DFDFDF;
                     }
                 }
-                .connection__mobil {
-                    display: flex;
-                    justify-content: space-between;
-                    & > p._mobil {
-                        span {
-                            font-weight: 400;
-                            font-size: 12px;
-                            line-height: 110%;
-                        }
-                    }
-                    div {
-                        display: flex;
-                        gap: 15px;
-                    }
-                }
+                
                 
                 @media (min-width: 1300px) {
                     &:hover {
@@ -667,5 +653,21 @@ a.dropdown {
             line-height: 120%;
             margin-left: 3px;
         }
+    }
+}
+
+.connection__mobil {
+    display: flex;
+    justify-content: space-between;
+    & > p._mobil {
+        span {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 110%;
+        }
+    }
+    div {
+        display: flex;
+        gap: 15px;
     }
 }
