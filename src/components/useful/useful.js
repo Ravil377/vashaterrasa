@@ -14,7 +14,8 @@ if(document.querySelector(useful)) {
           crossFade: true
         },
         breakpoints: {
-            992: {
+            1200: {
+                slidesPerView: 3,
                 spaceBetween: 40,
             }
         },

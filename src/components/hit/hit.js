@@ -22,7 +22,8 @@ if(document.querySelector(hit)) {
                 spaceBetween: 40,  
             },
             1300: {
-              spaceBetween: 40,
+                slidesPerView: 3,
+                spaceBetween: 40,
             }
         },
         navigation: {

@@ -16,12 +16,12 @@ if(document.querySelector(article)) {
         pagination: {
             el: '.swiper-pagination',
         },
-        // breakpoints: {
-        //     992: {
-        //         slidesPerView: 3,
-        //         spaceBetween: 40,
-        //     }
-        // },
+        breakpoints: {
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            }
+        },
         navigation: {
             nextEl: '.article__button-next-js',
             prevEl: '.article__button-prev-js',
