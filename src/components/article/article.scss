@@ -2,10 +2,9 @@
     padding-top: 31px;
     padding-bottom: 31px;
     .outer {
-        @media (max-width: 992px) {
+        @media (max-width: 768px) {
             padding-right: 0;
         }
-        
     }
     @media (min-width: 992px) {
         padding-top: 70px;
@@ -24,9 +23,8 @@
         li {
             display: flex;
             flex-direction: column;
-            max-width: 292px;
-            @media (min-width: 992px) {
-                max-width: 440px;
+            @media (max-width: 768px) {
+                max-width: 292px;
             }
             img {
                 width: 100%;
@@ -112,6 +110,22 @@
                     }
                 }
                 
+            }
+        }
+    }
+}
+
+.article_mini {
+    padding-top: 35px;
+    .article__container {
+        ul {
+            li {
+                @media (max-width: 992px) {
+                    max-width: 326px;
+                }
+                img {
+                    height: 258px;
+                }
             }
         }
     }

@@ -7,6 +7,24 @@
         }
     }
 }
+.feedback.feedback_mini {
+    padding-bottom: 35px;
+    .feedback__container {
+        ul {
+            li {
+                @media (min-width: 768px) {
+                    max-width: 179px;
+                }
+                .feedback__image, .feedback__video {
+                    height: 241px;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
 .feedback__container {
     overflow: hidden;
     position: relative;

@@ -7,6 +7,101 @@
         }
     }
 }
+.welcome__action {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 9px 25px;
+    color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    border: 1px solid rgba(156, 156, 156, 0.5);
+border-radius: 5px;
+}
+.welcome.welcome_mini {
+    grid-area: banner;
+    & > .outer {
+        @media (max-width: 1625px) {
+            display: unset;
+        }
+    }
+    .welcome__container {
+        .welcome__slide {
+            min-height: 145px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            .outer {
+                width: 100%;
+            }
+            .inner {
+                z-index: 2;
+                padding-left: 192px;
+
+            }
+            h2 {
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 100%;
+                span::after {
+                    bottom: 0;
+                }
+            }
+            .welcome__product {
+                right: 220px;
+                width: 213px;
+                height: 160px;
+                object-fit: cover;
+                min-width: unset;
+                top: -37px;
+                min-height: unset;
+                .welcome__product-price {
+                    border-radius: 8px;
+                    padding: 0px 12px;
+                    bottom: 69px;
+                    left: -77px;
+                    .welcome__product-price-new {
+                        font-size: 28px;
+                        div:first-child {
+                            font-size: 28px;
+                        }
+                        div:last-child {
+                            font-size: 10px;
+                        }
+                    }
+                }
+                .welcome__product-price-old {
+                    font-size: 9px;
+                    transform: translateY(-4px);
+                    div:first-child {
+                        font-size: 9px;
+                    }
+                    div:last-child {
+                        font-size: 6px;
+                    }
+                }
+            }
+            .welcome__list {
+                margin-top: 14px;
+                margin-bottom: 0;
+                li {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 120%;
+                }
+            }
+            a.btn {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                min-width: 182px;
+            }
+        }    
+    }    
+}
 .welcome__container {
     .welcome__slide {
         background: var(--bg-1, 0 0) no-repeat, var(--bg, 0 0) no-repeat;
@@ -152,8 +247,8 @@
                 margin-bottom: 53px;
             }
             li {
-                color: #fff;
-                font-weight: 400;
+                color: #D9D9D9;
+                font-weight: 600;
                 font-size: 18px;
                 line-height: 120%;
                 .icon {

@@ -15,25 +15,35 @@ html(lang="ru")
 
     body(class=pageClass)
         include ../../components/header/header
-        main
-            block welcome
-            block advantages
-            block links
-            block hit
-            block article
-            block company
-            block form
-            block feedback
-            block useful
-            block banner 
-            //- block connection
-            //- block tariff
-            //- block business
-            //- block equipment
-            //- block documents
-            //- block payment
-            //- block form
-            //- block contacts
+        block welcome
+        if (pageClass !== 'homepage')
+            .wrapper.outer.inner
+                main
+                    nav.breadcrumbs
+                        ul.breadcrumbs__list
+                            li
+                                a(href="/") Главная
+                                span.breadcrumbs__divider \
+                            li.is-active #{title}
+                    block links
+                    block article
+                    block advantages
+                    block form
+                    block feedback
+                    block company
+                aside
+        else
+            main
+                block category
+                block advantages
+                block links
+                block hit
+                block article
+                block company
+                block form
+                block feedback
+                block useful
+                block banner 
         //- Include footer
         include ../../components/footer/footer
         include ../../components/modal/modal

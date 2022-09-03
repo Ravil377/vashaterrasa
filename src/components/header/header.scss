@@ -439,7 +439,7 @@ a.dropdown {
     .inner {
         width: 100%;
         position: relative;
-        overflow-y: scroll;
+        overflow-y: auto;
         padding-right: 24px;
         & > ul {
             width: fit-content;

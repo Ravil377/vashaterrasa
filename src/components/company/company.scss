@@ -5,6 +5,19 @@
         padding-bottom: 70px;
     }
 }
+.company.company_mini {
+    padding-top: 35px;
+    padding-bottom: 175px;
+    .company__container {
+        background: unset;
+        min-height: unset;
+    }    
+    .company__content {
+        max-width: unset;
+        margin-left: 0;
+        padding-top: 0;
+    }
+}
 .company__container {
     display: flex;
     min-height: 756px;
