@@ -82,8 +82,9 @@
         }
     }
     &.links_mini  {
-        padding-top: 8px;
-        padding-bottom: 35px;
+        padding-top: unset;
+        padding-bottom: unset;
+        margin-top: -55px;
         ul {
             padding-top: 25px;
             display: flex;

@@ -17,5 +17,5 @@ import './useful/useful'
 import './footer/footer'
 import './modal/modal'
 import './menu/menu'
-
+import './accordion/accordion'
 // import './header/header'

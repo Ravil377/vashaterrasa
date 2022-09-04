@@ -53,6 +53,12 @@ body.category {
 		grid-template-columns: 320px minmax(320px, 1038px);
 		column-gap: 40px;
 		grid-template-areas: "sidebar content";
+		main {
+			padding-bottom: 157px;
+			display: flex;
+			flex-direction: column;
+			gap: 70px;
+		}
 	}
 }
 	

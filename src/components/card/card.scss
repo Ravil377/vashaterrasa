@@ -57,8 +57,6 @@
             }
 
         }
-            
-            
     }
     .card__content {
         padding-top: 16px;
@@ -86,7 +84,7 @@
                 font-size: 12px;
             }
         }
-        ul {
+        & > ul {
             margin-top: 14px;
             display: flex;
             column-gap: 18px;
@@ -130,6 +128,7 @@
                 }
             }
             ul {
+                margin-top: 10px;
                 display: flex;
                 gap: 15px;
                 li {
@@ -332,3 +331,85 @@
         }
     }
 }
+
+.card.card__mini {
+    max-width: 320px;
+    width: 100%;
+    padding: 22px 24px;
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    border-radius: 20px;
+    .card__gallery {
+        height: auto;
+        grid-template-columns: 1fr 29px;
+    }
+    .card__label {
+        left: 0;
+    }
+    .card__content {
+        padding-top: 40px;
+        h3 {
+            font-size: 20px;
+        }
+        & > ul {
+            margin-top: 22px;
+        }
+    }
+    .card__buttons {
+        button:last-child {
+            max-width: 68px;
+        }
+    }
+}
+.card__for {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 18px;
+    p {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 10px;
+        li {
+            cursor: pointer;
+            width: 35px;
+            height: 21px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #DADADA;
+            border-radius: 3px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+            transition: .4s;
+            &._active {
+                background: #82746A;
+                color: white;
+                font-weight: 600;
+            }
+        }
+    }
+    .card__order {
+        .card__calc {
+            button {
+                width: 29px;
+                height: 29px;
+                font-size: 14px;
+            }
+            p {
+                padding: 0 17px;
+                font-size: 16px;
+            }
+        }
+    }
+
+}
+
