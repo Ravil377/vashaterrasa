@@ -26,6 +26,8 @@
         transition: 0.4s;
         &::after {
             content: '+';
+            display: flex;
+            align-items: center;
         }
         &::before {
             content: '-';
@@ -42,8 +44,9 @@
         border: 1px solid $blue;
     }
 }
-.accordion._active {
+.accordion.active {
     border-bottom: unset;
+
     div {
         &::after {
             content: '+';
@@ -51,7 +54,9 @@
         }
         &::before {
             content: '-';
-            display: block;
+            display: flex;
+            align-items: center;
+            padding-bottom: 4px;
         }
     }
 }
@@ -59,13 +64,12 @@
 .panel {
     padding-left: 57px;
     padding-right: 13px;
-    padding-bottom: 33px;
     background-color: white;
-    display: none;
     font-weight: 400;
     font-size: 18px;
     line-height: 130%;
     overflow: hidden;
-    transition: 0.4s;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
     border-bottom: 1px solid #E8E8E8;
 }

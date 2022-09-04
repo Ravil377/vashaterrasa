@@ -770,34 +770,67 @@ block question
         .question__content 
             button.accordion 
                 div
-                | Вы можете воспользоваться услугами нашего монтажа?
+                | Вы можете воспользоваться услугами нашего монтажа
             .panel
-                p Lorem ipsum...
+                p Lorem ipsum...<br><br>
             button.accordion 
                 div
                 | Типы террасной доски?
             .panel
-                p Lorem ipsum...
+                p Lorem ipsum...<br><br>
             button.accordion
                 div
                 | Широкий выбор цветовых решений?
             .panel
-                p Композит из древесно-полимерной смеси имеет еще одно очевидное преимущество – возможность создать доску любого цвета и фактуры. Если древесина ограничена характерным естественным оттенком, рисунком, в искусственном материале никаких лимитов нет. 
+                p Композит из древесно-полимерной смеси имеет еще одно очевидное преимущество – возможность создать доску любого цвета и фактуры. Если древесина ограничена характерным естественным оттенком, рисунком, в искусственном материале никаких лимитов нет. <br><br>
             button.accordion 
                 div
                 | Варианты террасной доски из ДПК
             .panel
-                p Композит из древесно-полимерной смеси имеет еще одно очевидное преимущество – возможность создать доску любого цвета и фактуры. Если древесина ограничена характерным естественным оттенком, рисунком, в искусственном материале никаких лимитов нет. 
+                p Композит из древесно-полимерной смеси имеет еще одно очевидное преимущество – возможность создать доску любого цвета и фактуры. Если древесина ограничена характерным естественным оттенком, рисунком, в искусственном материале никаких лимитов нет. <br><br>
             button.accordion 
                 div
                 | Варианты террасной доски из ДПК
             .panel
-                p Террасная доска по длине
+                p Террасная доска по длине<br><br>
 block filter 
     .filter 
-
         .filter__title Подбор по параметрам
-        form(action="") 
+        form(action="")
+            .filter__price
+                p Ценовой диапазон
+                .filter__price-top
+                    .filter__placeholder-container
+                        input(type='number' name="min" placeholder=" " required="required" id='min' class="")
+                        label(for='min') ₽
+                    .filter__placeholder-container
+                        input(type='number' name="max" placeholder=" " required="required" id='max' class="")
+                        label(for='max') ₽
+                .filter__price-bottom
+                    input(type="text" class="js-range-slider" name="my_range" value=""
+                        data-type="double"
+                        data-min="4000"
+                        data-max="8500"
+                        data-from="4000"
+                        data-to="8500")
+            .filter__color 
+                p Цвет
+                +checkbox('Коричневый/венге', 'color1')
+                +checkbox('Светлосерый', 'color2')
+                +checkbox('Желтый нарцисс', 'color3')
+                +checkbox('Слоновая кость', 'color4')
+            .filter__size 
+                p Размер
+                +select('140х20 мм', 'size')
+            .filter__length
+                p Длина
+                +select('3 метра', 'length')
+            .filter__made
+                p Производитель
+                +select('Deckart (Россия)', 'length')
+            .filter__other 
+                +checkbox('Распродажа', 'sale')
+                +checkbox('Новинки', 'Новинки')
             
 block menu
     menu.menu.aside-menu-js
