@@ -16,5 +16,6 @@ import './feedback/feedback'
 import './useful/useful'
 import './footer/footer'
 import './modal/modal'
+import './menu/menu'
 
 // import './header/header'

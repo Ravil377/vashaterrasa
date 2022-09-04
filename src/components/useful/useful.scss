@@ -12,6 +12,52 @@
         }   
     }
 }
+.useful.useful_aside {
+    background: unset;
+    padding: 0;
+    .title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 100%;
+    }
+    .useful__slider {
+        padding-top: 28px;
+        ul {
+            li {
+                border-radius: 0;
+                padding-bottom: 20px;
+                img {
+                    border-radius: 15px;
+                    overflow: hidden;
+                    height: 196px;
+                }
+                .useful__content {
+                    padding: 0;
+                    padding-top: 18px;
+                    min-height: unset;
+                    .useful__date {
+                        font-size: 8px;
+                    }
+                    .useful__title {
+                        margin-top: 9px;
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
+                    .useful__except {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 130%;
+                        color: $grey;
+                        margin-bottom: 0;
+                    }
+                    .useful__link {
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
 .useful__container {
     position: relative;
 }

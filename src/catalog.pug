@@ -245,3 +245,133 @@ block company
                             p Одна из основополагающий целей ТМ «Deckart» —является высокое качество выпускаемой продукции и уникальная технология нанесения 3D текстуры.
                             p Технологами компании был тщательно изучен зарубежный опыт производства изделий из древесно-полимерного композита производителей Китая, США, Европы, Южной Кореи, благодаря чему была разработана политика в области качества, а так же требования к поставщикам оборудования, сырья и материалов.
                         +btn('Подробнее', '', true)
+block menu
+    menu.menu.aside-menu-js
+        li 
+            .catalog-link-js.dropdown._right 
+                .menu__icon._pink
+                    img(src='./images/terrasnaya.png')
+                | Террасная доска из ДПК
+            .catalog__content
+                ul 
+                    li
+                        a(href="#") Террасная доска для террасы
+                    li
+                        a(href="#") Террасная доска для бассейнов
+                    li
+                        a(href="#") Террасная доска для беседки
+                    li
+                        a(href="#") Террасная доска для пирса, причала и мостиков
+                    li
+                        a(href="#") Террасная доска для кафе и ресторанов
+        li 
+            .catalog-link-js.dropdown._right  
+                .menu__icon._grey
+                    img(src='./images/zabor.png')                            
+                | Заборы
+            .catalog__content
+                ul 
+                    li
+                        a(href="#") Забор 1
+                    li
+                        a(href="#") Забор 2
+        li 
+            .catalog-link-js.dropdown._right  
+                .menu__icon._beg
+                    img(src='./images/ogragdenie.png')                                  
+                | Ограждения из ДПК
+            .catalog__content
+                ul 
+                    li
+                        a(href="#") Ограждения из ДПК 1
+                    li
+                        a(href="#") Ограждения из ДПК 2
+        li 
+            .catalog-link-js.dropdown._right  
+                .menu__icon._beg1
+                    img(src='./images/stupeni.png')
+                | Ступени из ДПК
+            .catalog__content
+                ul 
+                    li
+                        a(href="#") Ступени из ДПК 1
+                    li
+                        a(href="#") Ступени из ДПК 2
+        li 
+            .catalog-link-js.dropdown._right  
+                .menu__icon._pink1
+                    img(src='./images/fasad.png')
+                | Фасадные панели из ДПК
+            .catalog__content
+                ul 
+                    li
+                        a(href="#") Фасадные панели из ДПК 1
+                    li
+                        a(href="#") Фасадные панели из ДПК 2
+        li 
+            .catalog-link-js.dropdown._right  
+                .menu__icon._grey1
+                    img(src='./images/lavochniy.png')
+                | Лавочный брус
+            .catalog__content
+                ul 
+                    li
+                        a(href="#") Лавочный брус 1
+                    li
+                        a(href="#") Лавочный брус 2
+        li 
+            .catalog-link-js.dropdown._right  
+                .menu__icon._grey2
+                    img(src='./images/kompl.png')
+                | Комплектующие
+            .catalog__content
+                ul 
+                    li
+                        a(href="#") Комплектующие 1
+                    li
+                        a(href="#") Комплектующие 2
+        li 
+            a(href="#") 
+                .menu__icon._yellow %
+                | Распродажа %
+block asideform
+    section.form.form_aside
+        .form__container
+            .form__content
+                .form__title Получите предварительный расчет вашей террасы уже через 15 минут
+            form(action="")
+                +input('Имя','text','name')
+                p Пожалуйста представьтесь, как можно к вам обращаться
+                +input('Номер телефона','text','phone').phone-mask2--js
+                +checkbox('Я выражаю свое согласие с Политикой конфиденциальности сайта и разрешаю обработку своих персональных данных', 'true2')
+                button(type="submit") Перезвонить мне
+block asideuseful
+    .useful.useful_aside
+        .useful__container 
+            .title__container
+                h2.title Полезные статьи и новости
+            .useful__slider
+                ul
+                    li
+                        img(src="./images/useful1.jpg" alt="Как выбрать террасную доску?")
+                        .useful__content 
+                            .useful__date Опубликовано 5 минут назад
+                            .useful__title Как выбрать террасную доску?
+                            .useful__except Приятно летом пройтись босиком по теплому деревянному полу террасы, веранды или беседки. А каким будет этот пол? Давайте разбираться!
+                            +btn('подробнее','', true).useful__link
+                    li
+                        img(src="./images/useful2.png" alt="Укладка террасной доски, уeстойчивость к колебаниям влажности и температур")
+                        .useful__content 
+                            .useful__date Опубликовано 2 января 2022
+                            .useful__title Укладка террасной доски, уeстойчивость к колебаниям влажности и температур
+                            .useful__except Террасная доска (дёкинг) из древесно-полимерного композита — красивое и долговечное напольное покрытие для террас, беседок  ...
+                            +btn('подробнее','', true).useful__link
+block asideformSubscribe
+    section.form.form_aside.form_aside_subscribe
+        .form__container
+            .form__content
+                .form__title Подпишитесь на нашу рассылку и будьте в курсе актуальных акций и распродаж
+            form(action="")
+                +input('Email','email','email')
+                p Никакого спама не будет, только полезные новости
+                button(type="submit") Подписаться

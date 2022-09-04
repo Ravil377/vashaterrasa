@@ -50,7 +50,7 @@ body.category {
 	.wrapper {
 		display: grid;
 		width: 100%;
-		grid-template-columns: 247px minmax(320px, 1038px);
+		grid-template-columns: 320px minmax(320px, 1038px);
 		column-gap: 40px;
 		grid-template-areas: "sidebar content";
 	}
@@ -58,6 +58,10 @@ body.category {
 	
 aside {
 	grid-area: sidebar;
+	padding-top: 33px;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
 }	
 
 main {
