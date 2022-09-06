@@ -20,10 +20,20 @@
     border-radius: 0 0 20px 20px;
     transform: translateY(-30px);
     border-top: unset;
-    padding-right: 77px;
+    
     margin-top: -55px;
+    @media (min-width: 1400px) {
+        padding-right: 77px;
+    }
     .form__container {
         gap: 59px;
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 1400px) {
+            gap: 40px;
+            display: grid;
+            grid-template-columns: minmax(400px, 593px) 410px;
+        }
     }
     .form__content {
         .form__title {

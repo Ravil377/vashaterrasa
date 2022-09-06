@@ -17,17 +17,23 @@ html(lang="ru")
     body(class=pageClass)
         include ../../components/header/header
         block welcome
+        block filter-mobil
+        block detail
         if (pageClass !== 'homepage')
             .outer
                 .inner
                     .wrapper
                         main
-                            nav.breadcrumbs
-                                ul.breadcrumbs__list
-                                    li
-                                        a(href="/") Главная
-                                        span.breadcrumbs__divider \
-                                    li.is-active #{title}
+                            if (notBreadcrumbs)
+                                nav.breadcrumbs
+                                    ul.breadcrumbs__list
+                                        li
+                                            a(href="/") Главная
+                                            span.breadcrumbs__divider \
+                                        li.is-active #{title}
+                            block detailTabs
+                            block accessories
+                            block also 
                             block product
                             block links
                             block article

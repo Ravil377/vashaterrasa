@@ -33,14 +33,26 @@ if(document.querySelector(hit)) {
     })
 }
 
-const hitContainer = document.querySelector(hit);
-hitContainer && hitContainer.addEventListener('click', (e) => {
-    const target = e.target;
-    const num = target.closest('.card__calc-js') && target.closest('.card__calc-js').querySelector('.card__calc-num-js');
-    if(target.classList.contains('card__add-js')) {
-        num.textContent = Number(num.textContent) + 1;
-    }
-    if(target.classList.contains('card__remove-js') && Number(num.textContent) != 1) {
-        num.textContent = Number(num.textContent) - 1;
-    }
-})
+const calcs = document.querySelectorAll('.calc-js');
+
+
+
+
+if(calcs) {
+    calcs.forEach(calc => {
+        calc.addEventListener('click', (e) => {
+            console.log(calc);
+            const target = e.target;
+            console.log(target);
+            const num = target.closest('.card__calc') && target.closest('.card__calc').querySelector('.card__calc-num-js');
+            if(target.classList.contains('card__add-js')) {
+                num.textContent = Number(num.textContent) + 1;
+            }
+            if(target.classList.contains('card__remove-js') && Number(num.textContent) != 1) {
+                num.textContent = Number(num.textContent) - 1;
+            }
+        })
+    })
+
+    
+}

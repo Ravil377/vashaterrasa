@@ -156,95 +156,91 @@ block form
                         button(type="submit") Перезвонить мне
 block feedback 
     section.feedback.feedback_mini
-        .outer
-            .inner
-                .title__container
-                    h2.title Отзывы клиентов
-                    p 
-                        span
-                            +icon('star')
-                            | 5.0
-                        | Средняя оценка<br>наших услуг                   
-                .feedback__container.feedback1-js 
-                    ul.swiper-wrapper  
-                        li.swiper-slide
-                            .feedback__image
-                                img(src="./images/feedback1.jpg" alt="Отзыв")
-                            p АО “Виктория Орлова”
-                                span проектирование и монтаж террасы ресторана
-                            div 
-                                +icon('star') 
-                                | 5.0
-                        li.swiper-slide
-                            .feedback__image
-                                img(src="./images/feedback2.png" alt="Отзыв")
-                            p Коттеджный поселок “Савинский”
-                                span проектирование и монтаж террасы и беседки
-                            div 
-                                +icon('star') 
-                                | 5.0
-                        li.swiper-slide
-                            .feedback__video
-                                img(src="./images/feedback3.jpg" alt="Отзыв")
-                                <svg width="52" height="60" viewBox="0 0 52 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M50 26.5359C52.6667 28.0755 52.6667 31.9245 50 33.4641L6.49999 58.5788C3.83333 60.1184 0.499997 58.1939 0.499997 55.1147L0.499999 4.88526C0.5 1.80606 3.83333 -0.11844 6.5 1.42116L50 26.5359Z"/>
-                                </svg>
-                            p Ресторан “Вий”
-                                span проектирование и монтаж террасы ресторана
-                            div 
-                                +icon('star') 
-                                | 5.0
-                        li.swiper-slide
-                            .feedback__image
-                                img(src="./images/feedback4.png" alt="Отзыв")
-                            p Кафе “Столичный Дом”
-                                span проектирование и монтаж террасы
-                            div 
-                                +icon('star') 
-                                | 5.0
-                        li.swiper-slide
-                            .feedback__video
-                                img(src="./images/feedback5.jpg" alt="Отзыв")
-                                <svg width="52" height="60" viewBox="0 0 52 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M50 26.5359C52.6667 28.0755 52.6667 31.9245 50 33.4641L6.49999 58.5788C3.83333 60.1184 0.499997 58.1939 0.499997 55.1147L0.499999 4.88526C0.5 1.80606 3.83333 -0.11844 6.5 1.42116L50 26.5359Z"/>
-                                </svg>
-                            p АО “Виктория Орлова”
-                                span проектирование и монтаж террасы ресторана
-                            div 
-                                +icon('star') 
-                                | 5.0
-                        li.swiper-slide
-                            .feedback__image
-                                img(src="./images/feedback6.jpg" alt="Отзыв")
-                            p Коттеджный поселок “Савинский”
-                                span проектирование и монтаж террасы и беседки
-                            div 
-                                +icon('star') 
-                                | 5.0
-                    .navigation 
-                        .navigation-container
-                            .swiper-pagination
-                            .navigation__button.navigation__button-prev.feedback__button-prev-js
-                                <svg width="14" height="26" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.2725 30.8029L16 30.0814L1.45441 15.645L16 1.20862L15.2725 0.487127L0 15.645L15.2725 30.8029Z"/>
-                                </svg>
-                            .navigation__button.navigation__button-next.feedback__button-next-js
-                                <svg width="14" height="26" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.2725 30.8029L16 30.0814L1.45441 15.645L16 1.20862L15.2725 0.487127L0 15.645L15.2725 30.8029Z"/>
-                                </svg>
+        .title__container
+            h2.title Отзывы клиентов
+            p 
+                span
+                    +icon('star')
+                    | 5.0
+                | Средняя оценка<br>наших услуг                   
+        .feedback__container.feedback1-js 
+            ul.swiper-wrapper  
+                li.swiper-slide
+                    .feedback__image
+                        img(src="./images/feedback1.jpg" alt="Отзыв")
+                    p АО “Виктория Орлова”
+                        span проектирование и монтаж террасы ресторана
+                    div 
+                        +icon('star') 
+                        | 5.0
+                li.swiper-slide
+                    .feedback__image
+                        img(src="./images/feedback2.png" alt="Отзыв")
+                    p Коттеджный поселок “Савинский”
+                        span проектирование и монтаж террасы и беседки
+                    div 
+                        +icon('star') 
+                        | 5.0
+                li.swiper-slide
+                    .feedback__video
+                        img(src="./images/feedback3.jpg" alt="Отзыв")
+                        <svg width="52" height="60" viewBox="0 0 52 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 26.5359C52.6667 28.0755 52.6667 31.9245 50 33.4641L6.49999 58.5788C3.83333 60.1184 0.499997 58.1939 0.499997 55.1147L0.499999 4.88526C0.5 1.80606 3.83333 -0.11844 6.5 1.42116L50 26.5359Z"/>
+                        </svg>
+                    p Ресторан “Вий”
+                        span проектирование и монтаж террасы ресторана
+                    div 
+                        +icon('star') 
+                        | 5.0
+                li.swiper-slide
+                    .feedback__image
+                        img(src="./images/feedback4.png" alt="Отзыв")
+                    p Кафе “Столичный Дом”
+                        span проектирование и монтаж террасы
+                    div 
+                        +icon('star') 
+                        | 5.0
+                li.swiper-slide
+                    .feedback__video
+                        img(src="./images/feedback5.jpg" alt="Отзыв")
+                        <svg width="52" height="60" viewBox="0 0 52 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 26.5359C52.6667 28.0755 52.6667 31.9245 50 33.4641L6.49999 58.5788C3.83333 60.1184 0.499997 58.1939 0.499997 55.1147L0.499999 4.88526C0.5 1.80606 3.83333 -0.11844 6.5 1.42116L50 26.5359Z"/>
+                        </svg>
+                    p АО “Виктория Орлова”
+                        span проектирование и монтаж террасы ресторана
+                    div 
+                        +icon('star') 
+                        | 5.0
+                li.swiper-slide
+                    .feedback__image
+                        img(src="./images/feedback6.jpg" alt="Отзыв")
+                    p Коттеджный поселок “Савинский”
+                        span проектирование и монтаж террасы и беседки
+                    div 
+                        +icon('star') 
+                        | 5.0
+            .navigation 
+                .navigation-container
+                    .swiper-pagination
+                    .navigation__button.navigation__button-prev.feedback__button-prev-js
+                        <svg width="14" height="26" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.2725 30.8029L16 30.0814L1.45441 15.645L16 1.20862L15.2725 0.487127L0 15.645L15.2725 30.8029Z"/>
+                        </svg>
+                    .navigation__button.navigation__button-next.feedback__button-next-js
+                        <svg width="14" height="26" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.2725 30.8029L16 30.0814L1.45441 15.645L16 1.20862L15.2725 0.487127L0 15.645L15.2725 30.8029Z"/>
+                        </svg>
 block company
     section.company.company_mini
-        .outer 
-            .inner 
-                .company__container 
-                    .company__content
-                        h2.title Компания ТМ «Deckart»
-                        p.company__about Компания ТМ «Deckart» является производителем изделий из ДПК: террасной доски, ступеней, ограждений, заборной доски.
-                        .company__text
-                            p Качество продукции, широкий ассортимент, разнообразие цветов позволило завоевать признание покупателей.<br><br>
-                            p Одна из основополагающий целей ТМ «Deckart» —является высокое качество выпускаемой продукции и уникальная технология нанесения 3D текстуры.
-                            p Технологами компании был тщательно изучен зарубежный опыт производства изделий из древесно-полимерного композита производителей Китая, США, Европы, Южной Кореи, благодаря чему была разработана политика в области качества, а так же требования к поставщикам оборудования, сырья и материалов.
-                        +btn('Подробнее', '', true)
+        .company__container 
+            .company__content
+                h2.title Компания ТМ «Deckart»
+                p.company__about Компания ТМ «Deckart» является производителем изделий из ДПК: террасной доски, ступеней, ограждений, заборной доски.
+                .company__text
+                    p Качество продукции, широкий ассортимент, разнообразие цветов позволило завоевать признание покупателей.<br><br>
+                    p Одна из основополагающий целей ТМ «Deckart» —является высокое качество выпускаемой продукции и уникальная технология нанесения 3D текстуры.
+                    p Технологами компании был тщательно изучен зарубежный опыт производства изделий из древесно-полимерного композита производителей Китая, США, Европы, Южной Кореи, благодаря чему была разработана политика в области качества, а так же требования к поставщикам оборудования, сырья и материалов.
+                +btn('Подробнее', '', true)
 block menu
     menu.menu.aside-menu-js
         li 

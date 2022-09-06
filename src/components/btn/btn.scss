@@ -102,3 +102,42 @@
     }
     transform: translateY(-50%) scale(-1);
 }
+
+button[data-id="basket"] {
+    background: #0042A4;
+    width: 58px;
+    height: 29px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        background: #0052CC;
+    }
+    &._active {
+        background: #D6D61E;
+    }
+    svg {
+        width: 33px;
+        height: 18px;
+        fill: #fff;
+    }
+    svg:last-child {
+        display: none;
+        width: 10px;
+        height: 8px;
+        fill: #000000;
+    }
+    &._active {
+        svg:first-child {
+            display: none;
+        }
+        svg:last-child {
+            display: block;
+        }   
+    }
+    
+}

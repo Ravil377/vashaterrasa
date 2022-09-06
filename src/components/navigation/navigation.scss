@@ -62,36 +62,36 @@
     width: fit-content;
     margin: auto;
     padding: 0 50px;
-    .navigation__button {
-        position: absolute;
-        width: 11px;
-        top: 50%;
-        transform: translateY(-50%);      
-        height: 21px;
-        cursor: pointer;
-        @media (min-width: 992px) {
-            width: 14px;    
-            height: 26px;
-        }
+}
+.navigation__button {
+    position: absolute;
+    width: 11px;
+    top: 50%;
+    transform: translateY(-50%);      
+    height: 21px;
+    cursor: pointer;
+    @media (min-width: 992px) {
+        width: 14px;    
+        height: 26px;
+    }
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+    &:hover {
         svg {
-            width: 100%;
-            height: 100%;
+            fill: $blue;
         }
-        &:hover {
-            svg {
-                fill: $blue;
-            }
-        }
-        &-prev {
-            left: 0;
-        }
-        &-next {
-            right: 0;
-            transform: scaleX(-1) translateY(-50%);
-        }
-        svg {
-            transition: .4s;
-            fill: #000000;
-        }
+    }
+    &-prev {
+        left: 0;
+    }
+    &-next {
+        right: 0;
+        transform: scaleX(-1) translateY(-50%);
+    }
+    svg {
+        transition: .4s;
+        fill: #000000;
     }
 }

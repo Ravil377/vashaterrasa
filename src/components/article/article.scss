@@ -118,6 +118,9 @@
 .article_mini {
     padding-top: 0;
     padding-bottom: 0;
+    @media (max-width: 768px) {
+        margin-right: -24px;
+    }
     .article__container {
         ul {
             li {

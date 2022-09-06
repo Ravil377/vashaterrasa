@@ -5,6 +5,7 @@ extends base/pug/base
 append variables
     - var title = 'Террасная доска из ДПК'
     - var pageClass = 'category'
+    - var notBreadcrumbs = 'true'
     - var menuHref = '/'
 
 block welcome
@@ -24,7 +25,6 @@ block welcome
                         .welcome__product
                             .welcome__product-content
                                 img(src='./images/welcome-banner.png' alt="товар")
-
                                 .welcome__product-price 
                                     .welcome__product-price-new
                                         | 1 990
@@ -41,7 +41,10 @@ block product
     section.product
         h1.title Террасная доска из ДПК
         p Технологами компании был тщательно изучен зарубежный опыт производства изделий из древесно-полимерного композита производителей Китая, США, Европы, Южной Кореи, благодаря чему была разработана политика
-        ul 
+        button.filter-btn.filter-btn-js
+            +icon('filter')
+            | Подбор по параметрам
+        ul.product__items
             li 
                 +icon('sert')
                 | Продукция сертифицирована
@@ -58,10 +61,11 @@ block product
                 +icon('notneed')
                 | Не нуждается в пропитке
         .product__list 
-            ul 
-                li.card.card__mini 
+            ul.calc-js 
+                li.card.card__mini
                     .card__gallery.card__gallery-js
-                        img(src='./images/1.png' data-src='./images/1.png' alt="Террасная доска").card__img-js
+                        .card__galery-img
+                            img(src='./images/1.png' data-src='./images/1.png' alt="Террасная доска").card__img-js
                         .card__preview.card__preview-js
                             img(src='./images/1-1.png' data-src="./images/1-1.png" alt="Террасная доска")
                             img(src='./images/1-2.png' data-src="./images/1-2.png" alt="Террасная доска")
@@ -80,7 +84,7 @@ block product
                             li
                                 +icon('swimming-pool')
                                 | Для бассейнов и пирсов
-                        .card__size 
+                        .card__size
                             p Длина:
                             ul
                                 li 3м
@@ -107,7 +111,7 @@ block product
                                     div ₽
                                     div м
                                         sup 2
-                            .card__calc.card__calc-js 
+                            .card__calc
                                 button.card__remove-js -
                                 p.card__calc-num-js 1
                                 button.card__add-js +
@@ -116,7 +120,7 @@ block product
                         button
                             +icon('basket')
                             p Добавлено
-                li.card.card__mini 
+                li.card.card__mini.calc-js   
                     .card__gallery.card__gallery-js
                         img(src='./images/1.png' data-src='./images/1.png' alt="Террасная доска").card__img-js
                         .card__preview.card__preview-js
@@ -164,7 +168,7 @@ block product
                                     div ₽
                                     div м
                                         sup 2
-                            .card__calc.card__calc-js 
+                            .card__calc
                                 button.card__remove-js -
                                 p.card__calc-num-js 1
                                 button.card__add-js +
@@ -173,7 +177,7 @@ block product
                         button
                             +icon('basket')
                             p Добавлено 
-                li.card.card__mini 
+                li.card.card__mini.calc-js   
                     .card__gallery.card__gallery-js
                         img(src='./images/1.png' data-src='./images/1.png' alt="Террасная доска").card__img-js
                         .card__preview.card__preview-js
@@ -221,7 +225,7 @@ block product
                                     div ₽
                                     div м
                                         sup 2
-                            .card__calc.card__calc-js 
+                            .card__calc
                                 button.card__remove-js -
                                 p.card__calc-num-js 1
                                 button.card__add-js +
@@ -230,7 +234,7 @@ block product
                         button
                             +icon('basket')
                             p Добавлено 
-                li.card.card__mini 
+                li.card.card__mini.calc-js   
                     .card__gallery.card__gallery-js
                         img(src='./images/1.png' data-src='./images/1.png' alt="Террасная доска").card__img-js
                         .card__preview.card__preview-js
@@ -278,7 +282,7 @@ block product
                                     div ₽
                                     div м
                                         sup 2
-                            .card__calc.card__calc-js 
+                            .card__calc
                                 button.card__remove-js -
                                 p.card__calc-num-js 1
                                 button.card__add-js +
@@ -287,7 +291,7 @@ block product
                         button
                             +icon('basket')
                             p Добавлено 
-                li.card.card__mini 
+                li.card.card__mini.calc-js   
                     .card__gallery.card__gallery-js
                         img(src='./images/1.png' data-src='./images/1.png' alt="Террасная доска").card__img-js
                         .card__preview.card__preview-js
@@ -335,7 +339,7 @@ block product
                                     div ₽
                                     div м
                                         sup 2
-                            .card__calc.card__calc-js 
+                            .card__calc
                                 button.card__remove-js -
                                 p.card__calc-num-js 1
                                 button.card__add-js +
@@ -344,7 +348,7 @@ block product
                         button
                             +icon('basket')
                             p Добавлено 
-                li.card.card__mini 
+                li.card.card__mini.calc-js   
                     .card__gallery.card__gallery-js
                         img(src='./images/1.png' data-src='./images/1.png' alt="Террасная доска").card__img-js
                         .card__preview.card__preview-js
@@ -392,7 +396,7 @@ block product
                                     div ₽
                                     div м
                                         sup 2
-                            .card__calc.card__calc-js 
+                            .card__calc
                                 button.card__remove-js -
                                 p.card__calc-num-js 1
                                 button.card__add-js +
@@ -401,7 +405,7 @@ block product
                         button
                             +icon('basket')
                             p Добавлено 
-                li.card.card__mini 
+                li.card.card__mini.calc-js   
                     .card__gallery.card__gallery-js
                         img(src='./images/1.png' data-src='./images/1.png' alt="Террасная доска").card__img-js
                         .card__preview.card__preview-js
@@ -449,7 +453,7 @@ block product
                                     div ₽
                                     div м
                                         sup 2
-                            .card__calc.card__calc-js 
+                            .card__calc
                                 button.card__remove-js -
                                 p.card__calc-num-js 1
                                 button.card__add-js +
@@ -458,7 +462,7 @@ block product
                         button
                             +icon('basket')
                             p Добавлено 
-                li.card.card__mini 
+                li.card.card__mini.calc-js   
                     .card__gallery.card__gallery-js
                         img(src='./images/1.png' data-src='./images/1.png' alt="Террасная доска").card__img-js
                         .card__preview.card__preview-js
@@ -506,7 +510,7 @@ block product
                                     div ₽
                                     div м
                                         sup 2
-                            .card__calc.card__calc-js 
+                            .card__calc
                                 button.card__remove-js -
                                 p.card__calc-num-js 1
                                 button.card__add-js +
@@ -515,7 +519,7 @@ block product
                         button
                             +icon('basket')
                             p Добавлено 
-                li.card.card__mini 
+                li.card.card__mini.calc-js   
                     .card__gallery.card__gallery-js
                         img(src='./images/1.png' data-src='./images/1.png' alt="Террасная доска").card__img-js
                         .card__preview.card__preview-js
@@ -563,7 +567,7 @@ block product
                                     div ₽
                                     div м
                                         sup 2
-                            .card__calc.card__calc-js 
+                            .card__calc
                                 button.card__remove-js -
                                 p.card__calc-num-js 1
                                 button.card__add-js +
@@ -572,7 +576,7 @@ block product
                         button
                             +icon('basket')
                             p Добавлено 
-                li.card.card__mini
+                li.card.card__mini.calc-js  
                     .card__gallery.card__gallery-js
                         img(src='./images/1.png' data-src='./images/1.png' alt="Террасная доска").card__img-js
                         .card__preview.card__preview-js
@@ -620,7 +624,7 @@ block product
                                     div ₽
                                     div м
                                         sup 2
-                            .card__calc.card__calc-js 
+                            .card__calc
                                 button.card__remove-js -
                                 p.card__calc-num-js 1
                                 button.card__add-js +
@@ -629,7 +633,7 @@ block product
                         button
                             +icon('basket')
                             p Добавлено 
-                li.card.card__mini 
+                li.card.card__mini.calc-js   
                     .card__gallery.card__gallery-js
                         img(src='./images/1.png' data-src='./images/1.png' alt="Террасная доска").card__img-js
                         .card__preview.card__preview-js
@@ -677,7 +681,7 @@ block product
                                     div ₽
                                     div м
                                         sup 2
-                            .card__calc.card__calc-js 
+                            .card__calc
                                 button.card__remove-js -
                                 p.card__calc-num-js 1
                                 button.card__add-js +
@@ -794,8 +798,9 @@ block question
             .panel
                 p Террасная доска по длине<br><br>
 block filter 
-    .filter 
-        .filter__title Подбор по параметрам
+    .filter.filter-js
+        .filter__title.filter__title-js Подбор по параметрам
+        .filter__back-btn.filter__back-btn-js Подбор по параметрам
         form(action="")
             .filter__price
                 p Ценовой диапазон
@@ -831,7 +836,8 @@ block filter
             .filter__other 
                 +checkbox('Распродажа', 'sale')
                 +checkbox('Новинки', 'Новинки')
-            
+            .filter__button 
+                button(type="submit") Подобрать
 block menu
     menu.menu.aside-menu-js
         li 

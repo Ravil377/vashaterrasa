@@ -1,7 +1,7 @@
 import Swiper, { Pagination, Navigation } from "swiper";
 Swiper.use([Pagination, Navigation]);
 
-const article = '.article-js ';
+const article = '.article-js';
 
 if(document.querySelector(article)) {
     const articleSlider = new Swiper(article, {
