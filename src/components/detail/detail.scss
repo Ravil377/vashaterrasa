@@ -1,9 +1,15 @@
 .detail__container {
     padding-top: 35px;
-    display: grid;
-    grid-template-columns: 556px 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 50px;
+    @media(min-width: 1200px) {
+        display: grid;
+        grid-template-columns: 556px 1fr;
+    }
     .detail__info {
+        width: 100%;
         .breadcrumbs {
             margin-top: 0;
         }
@@ -123,17 +129,42 @@
     }
     .card__price {
         margin-top: 14px;
+        .card__price-new {
+            @media(max-width: 7688px) {
+                font-size: 30px;
+                div:first-child {
+                    font-size: 30px;
+                }
+                div:last-child {
+                    font-size: 18px;
+                }
+            }
+        }
+        .card__price-old {
+            @media(max-width: 7688px) {
+                font-size: 16px;
+                div:first-child {
+                    font-size: 16px;
+                }
+                div:last-child {
+                    font-size: 12px;
+                }
+            }
+        }
     }
     & > p {
-        position: absolute;
-        right: 0;
-        bottom: 20px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 120%;
-        color: #5F5F61;
-        display: flex;
-        align-items: center;
+        display: none;
+        @media(min-width: 768px) {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 120%;
+            color: #5F5F61;
+        }
         span {
             transform: translateY(1px);
             padding: 0 3px;
@@ -141,15 +172,27 @@
     }
 }   
 .detail__buttons {
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    // flex-wrap: wrap;
     margin-top: 35px;
+    gap: 20px;
+    flex-direction: column;
+    @media(min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
     .card__calc {
+        @media(max-width: 768px) {
+            position: absolute;
+            right: 0;
+            bottom: 125px;
+        }
         button {
-            width: 43px;
+            min-width: 43px;
             height: 43px;
-            font-size: 14px;   
+            font-size: 14px;
         }
         p {
             font-size: 18px;
@@ -161,8 +204,16 @@
         margin-top: 0;
         flex-direction: row-reverse;
         gap: 15px;
+        flex-direction: column;
+        @media(min-width: 768px) {
+            flex-direction: row;
+        }
         button.btn {
-            max-width: 247px;
+            width: 100%;
+            max-width: 100%;
+            @media(min-width: 768px) {
+                max-width: 247px;
+            }
         }
         button:not(.btn) {
             display: flex;
@@ -170,17 +221,39 @@
             font-size: 16px;
             line-height: 16px;
             color: #FFFFFF;
-            max-width: 337px;
+            width: 100%;
+            max-width: 100%;
+
+            @media(min-width: 768px) {
+                max-width: 337px;
+            }
+            div {
+                margin-left: 18px;
+                @media(min-width: 1200px) {
+                    display: none;
+                }
+                @media(min-width: 1300px) {
+                    display: flex;
+                }
+            }
+            
         }
     }
 }
 
 .detail__slider {
+    width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     // gap: 37px;
+    
+    height: 100%;
+    @media(max-width: 768px) {
+        gap: 20px;
+    }
     position: relative;
+    max-width: 557px;
     .navigation__button {
         z-index: 3;
         background: white;
@@ -188,9 +261,12 @@
         width: 48px;
         height: 48px;
         border-radius: 50%;
-        display: flex;
+        display: none;
         justify-content: center;
         transition: .4s;
+        @media(min-width: 1200px) {
+            display: flex;
+        }
         &:hover {
             background: $blue;
             svg {
@@ -213,24 +289,40 @@
 .detail__slide {
     img {
         width: 100%;
-        height: 435px;
-        object-fit: cover;
+        // height: auto;
+        height: 248px;
+        object-fit: contain;
+        @media(min-width: 768px) {
+            height: 435px;
+        }
     }
 }
 
 .detail__thumbnail {
     margin-top: auto;
+    .swiper-wrapper {
+        width: fit-content;
+        margin: 0 auto;
+    }
     .swiper-slide {
         border: 1.5px solid #E8E8E8;
         border-radius: 5px;
         overflow: hidden;
+        @media(max-width: 768px) {
+            width: 72px;
+            height: auto;
+        }
         &.swiper-slide-thumb-active {
             border: 1.5px solid #0042A4;
         }
         img {
             width: 100%;
-            height: 100px;
-            object-fit: cover;
+            
+            object-fit: contain;
+            @media(min-width: 768px) {
+                object-fit: cover;
+                height: 100px;
+            }
         }
     }
 }
@@ -238,20 +330,33 @@
 .detailtabs {
     & > ul {
         display: flex;
-        gap: 70px;
+        // gap: 70px;
+        max-width: 778px;
+        width: 100%;
+        justify-content: space-between;
         border-bottom: 1px solid #E8E8E8;
+        flex-direction: column;
+        @media(min-width: 768px) {
+            flex-direction: row;
+        }
         li {
             display: flex;
             flex-direction: column;
             font-weight: 600;
-            font-size: 24px;
+            font-size: 18px;
             line-height: 16px;
             padding-bottom: 28px;
             transition: .4s;
+            @media(min-width: 768px) {
+                font-size: 24px;
+            }
             cursor: pointer;
             &._active-tab {
                 color: $blue;
-                border-bottom: 1px solid #0042A4;
+                @media(min-width: 768px) {
+                    border-bottom: 1px solid #0042A4;
+                }
+                
             }
         }
     }
@@ -259,15 +364,26 @@
 .detailtabs__gallery {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    img {
+        width: 100%;
+    }
+    @media(min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 .detailtabs__row {
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 50px;
+    @media(min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 50px;
+    }
     ul {
-        list-style:disc;
-        
+        display: none;
+        @media(min-width: 768px) {
+            list-style:disc;
+            display: block;
+        }
         li {
             font-weight: 400;
             font-size: 18px;
@@ -310,6 +426,8 @@
             }
             a {
                 display: flex;
+                justify-content: space-between;
+                width: 100%;
                 gap: 14px;
                 color: #000000;
                 transition: .4s;
@@ -358,65 +476,100 @@
     }
     h2 {
         font-weight: 600;
-        font-size: 24px;
+        font-size: 18px;
         line-height: 130%;
+        @media(min-width: 768px) {
+            font-size: 24px;
+        }
     }
     p {
         font-weight: 400;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 130%;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        @media(min-width: 768px) {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
         strong {
             font-weight: 600;
-            font-size: 24px;
+            font-size: 18px;
             line-height: 130%;
+            @media(min-width: 768px) {
+                font-size: 24px;
+            }
         }
         span {
             font-weight: 400;
-            font-size: 14px;
+            font-size: 12px;
             line-height: 130%;
             color: #5F5F61;
+            @media(min-width: 768px) {
+                font-size: 14px;
+            }
         }
     }
 
 }
 
 .detailtabs__info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    
     align-items: start;
+    gap: 20px;
+    @media(min-width: 1200px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
     .detailtabs__delivery {
         & > svg {
-            width: 117px;
-            height: 117px;
+            min-width: 87px;
+            height: 87px;
+            @media(min-width: 768px) {
+                min-width: 117px;
+                height: 117px;
+            }
         }
     }
     .detailtabs__payment {
         & > svg {
-            width: 192px;
-            height: 117px;
+            min-width: 86px;
+            height: 75px;
+            @media(min-width: 768px) {
+                min-width: 120px;
+                height: 117px; 
+            }
         }
     }
     .detailtabs__delivery, .detailtabs__payment {
         display: flex;
-        align-items: center;
+        // align-items: center;
         gap: 40px;
-        
+        width: fit-content;
         & > ul {
             li {
                 font-weight: 600;
-                font-size: 16px;
+                font-size: 14px;
                 line-height: 120%;
+                @media(min-width: 768px) {
+                    font-size: 16px;
+                }
                 &:first-child {
                     margin-bottom: 15px;
+                    font-size: 16px;
                 }
                 span {
                     font-weight: 400;
                 }
                 ul {
-                    margin-top: 46px;
-                    display: flex;
-                    gap: 14px;
+                    display: none;
+                    @media(min-width: 768px) {
+                        margin-top: 46px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 14px;
+                    }
                 }
             }
         }

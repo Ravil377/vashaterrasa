@@ -18,10 +18,18 @@ if(document.querySelector(accessories)) {
         },
         breakpoints: {
             768: {
-                slidesPerView: 2,
-                spaceBetween: 40,
+                slidesPerView: 3,
+                spaceBetween: 20,
             },
-            1200: {
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1100: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1300: {
                 slidesPerView: 4,
                 spaceBetween: 20,
             }

@@ -32,6 +32,12 @@ if(document.querySelector(detail)) {
         slidesPerView: 4,
         freeMode: true,
         watchSlidesProgress: true,
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            }
+        },
     });
     const detailSlider = new Swiper(detail, {
         slidesPerView: 1,
