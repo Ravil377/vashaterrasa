@@ -17,9 +17,19 @@ html(lang="ru")
     body(class=pageClass)
         include ../../components/header/header
         block welcome
+        if (pageClass === 'action')
+            .outer(style="margin-top: 32px;")
+                .inner
+                    nav.breadcrumbs
+                        ul.breadcrumbs__list
+                            li
+                                a(href="/") Главная
+                                span.breadcrumbs__divider \
+                            li.is-active #{title}
+        block actual
         block filter-mobil
         block detail
-        if (pageClass !== 'homepage')
+        if (pageClass !== 'homepage' && pageClass !== 'action')
             .outer
                 .inner
                     .wrapper
