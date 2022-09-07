@@ -1,0 +1,28 @@
+.popular-tag {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    li {
+        a {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+            color: #9C9C9C;
+            transition: .4s;
+            &:hover {
+                color: $blue;
+            }
+        }
+        &:first-child {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 120%;  
+        }
+        &:last-child {
+            a {
+                color: #000000;
+            }            
+        }
+    }
+}
