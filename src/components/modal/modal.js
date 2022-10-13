@@ -30,3 +30,15 @@ modalCloseBtns.forEach(btn=>btn.addEventListener('click', closeModal));
 document.addEventListener('keydown', (e) => checkKeyPress(e));
 modal && modal.addEventListener("click", e => checkPressOverlay(e));
 modalOpenBtns.forEach(btn => btn.addEventListener('click', openModal));
+
+const loc = document.querySelector('.location');
+const location = loc.querySelector('.location__title-js');
+const locationCloseBtn = document.querySelector('.location__close-js');
+
+
+location && location.addEventListener('click', () => {
+    loc.classList.toggle('_active');
+})
+locationCloseBtn && locationCloseBtn.addEventListener('click', () => {
+    loc.classList.remove('_active');
+})

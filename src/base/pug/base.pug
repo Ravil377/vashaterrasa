@@ -26,6 +26,8 @@ html(lang="ru")
                                 a(href="/") Главная
                                 span.breadcrumbs__divider \
                             li.is-active #{title}
+        block single 
+        block cart
         block actual
         block blog 
         block filter-mobil
@@ -64,16 +66,12 @@ html(lang="ru")
                 block category
                 block advantages
                 block links
-                block hit
-                block article
-                block company
-                block form
-                block feedback
-                block useful
-                block banner 
+                block aboutdpk
+                block ourwork
+                block videomessage
         //- Include footer
-        include ../../components/footer/footer
-        include ../../components/modal/modal
+        //- include ../../components/footer/footer
+        //- include ../../components/modal/modal
         .top__social 
             a(href="#" target="_blank")
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">

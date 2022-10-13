@@ -1,0 +1,165 @@
+.videomessage {
+
+}
+.videomessage__container {
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    gap: 100px;
+    & > a {
+        width: 100%;
+        height: 100%;
+        max-height: 737px;
+        position: relative;
+        transition: .4s;
+        overflow: hidden;
+        border-radius: 10px;
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+            span {
+                background: #F56308;
+                svg {
+                    fill: #FFFFFF;
+                    stroke: #fff;
+                }                
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            transition: .4s;
+        }
+        span {
+            transition: .4s;
+            position: absolute;
+            right: 44px;
+            bottom: 52px;
+            background: #FFFFFF;
+            box-shadow: 0px 10px 40px rgba(21, 21, 26, 0.25);
+            width: 117px;
+            height: 117px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+                margin: 2px 0 0px 10px;
+                width: 50px;
+                height: 50px;
+                fill: #F56308;
+                stroke: #F56308;
+                transition: .4s;
+            }
+        }
+    }
+}
+.videomessage__content {
+    .title {
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 130%;
+        color: #584C3B;
+    }
+    .videomessage__desc {
+        margin-top: 30px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        color: #000000;
+    }
+    p.text {
+        margin-top: 30px;
+    }    
+}
+.videomessage__blockquote {
+    margin-top: 35px;
+    position: relative;
+    padding-left: 105px;
+    &::after {
+        content: '';
+        position: absolute;
+        background-image: url("data:image/svg+xml,%3Csvg width='61' height='40' viewBox='0 0 61 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.5246 15.0661C55.783 15.8271 57.5898 17.1967 58.9448 19.1751C60.2999 21.0013 60.9774 23.0558 60.9774 25.3385C61.128 27.6213 60.5257 29.904 59.1707 32.1868C57.9662 34.3173 56.0089 36.1435 53.2988 37.6654C48.9325 39.9481 45.0932 40.5569 41.7808 39.4916C38.4685 38.2741 36.1348 36.4479 34.7797 34.013C34.0269 32.7955 33.4247 31.1215 32.973 28.9909C32.6718 26.8604 32.5213 24.6537 32.5213 22.3709C32.6718 19.936 32.973 17.5772 33.4247 15.2944C33.8763 13.0117 34.5539 11.1094 35.4572 9.58755C36.21 8.52226 37.1134 7.38089 38.1673 6.16342C39.0707 5.09814 40.1246 4.03286 41.3291 2.96757C42.6842 1.90229 44.1898 0.9131 45.846 0L53.7505 0.45655C52.6965 1.67402 51.7179 2.81539 50.8145 3.88067C50.0617 4.79377 49.3842 5.63078 48.7819 6.3917C48.1797 7.15262 47.5774 7.83744 46.9752 8.44617C45.9213 9.51146 45.0932 10.5767 44.4909 11.642C43.8887 12.5551 43.3617 13.5443 42.91 14.6096C42.6089 15.6749 42.6089 16.7402 42.91 17.8054C44.8673 15.6749 47.1258 14.6096 49.6853 14.6096C50.8898 14.6096 52.1696 14.7618 53.5246 15.0661ZM22.3584 16.2075C24.4662 17.425 25.9719 19.099 26.8752 21.2296C27.9292 23.208 28.3056 25.3385 28.0044 27.6213C27.7033 29.904 26.7247 32.0346 25.0685 34.013C23.5629 35.9914 21.3045 37.5132 18.2932 38.5785C13.6258 40.1003 9.7865 40.0242 6.77527 38.3502C3.76404 36.524 1.73146 34.3173 0.677527 31.7302C0.225842 30.3606 0 28.6105 0 26.4799C0 24.3493 0.225842 22.1427 0.677527 19.8599C1.12921 17.5772 1.73146 15.3705 2.48427 13.2399C3.23707 11.1094 4.21572 9.35927 5.42021 7.98962C6.32358 6.92434 7.37751 5.93515 8.58201 5.02205C9.63594 4.26113 10.8404 3.42412 12.1955 2.51102C13.7011 1.59792 15.3573 0.760917 17.164 0L25.0685 2.05447C23.864 3.11976 22.7348 4.03286 21.6809 4.79377C20.7775 5.55469 19.9494 6.23952 19.1966 6.84825C18.4438 7.45698 17.691 8.06571 16.9382 8.67445C15.8842 9.58755 14.9809 10.5006 14.2281 11.4137C13.4753 12.1747 12.7977 13.0878 12.1955 14.153C11.5932 15.0661 11.3674 16.0553 11.518 17.1206C12.7224 16.2075 13.9269 15.6749 15.1314 15.5227C16.4865 15.2183 17.691 15.1422 18.7449 15.2944C19.9494 15.4466 21.1539 15.751 22.3584 16.2075Z' fill='%23F56308'/%3E%3C/svg%3E%0A");
+        width: 61px;
+        height: 40px;
+        left: 20px;
+        top: 0;
+    }
+    cite {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: -105px;
+        font-style: normal;
+        .videomessage__author {
+            display: flex;
+            align-items: center;
+            gap: 19px;
+            max-width: 300px;
+            width: 100%;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 150%;
+            color: #555557;
+            img {
+                min-width: 60px;
+                height: 60px;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+        }
+        .videomessage__btns {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            height: 55px;
+            a {
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #AEB0B0;
+                border: 1px solid #AEB0B0;
+                border-radius: 5px;
+                width: 259px;
+                height: 100%;
+                transition: .4s;
+                &:hover {
+                    color: #000;
+                    border: 1px solid #000;
+                }
+            }
+            button {
+                border: 1px solid #555557;
+                border-radius: 5px;
+                height: 100%;
+                background: unset;
+                width: 160px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: .4s;
+                &:hover {
+                    background: #F56308;
+                    border: 1px solid #F56308;
+                    color: #fff;
+                    svg {
+                        fill: #fff;
+                    }
+                }
+                svg {
+                    transition: .4s;
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 10px;
+                    fill: black;
+                }
+            }
+        }
+    }
+}

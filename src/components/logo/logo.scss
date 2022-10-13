@@ -1,26 +1,25 @@
 .logo {
     display: flex;
     align-items: center;
+    column-gap: 40px;
+    width: fit-content;
     p {
         display: none;
         font-weight: 400;
-        font-size: 12px;
-        line-height: 110%;
-        color: #3F4042;
-        max-width: 210px;
+        font-size: 13px;
+        line-height: 130%;
+        color: #555557;
+        max-width: 275px;
         @media (min-width: 1300px) {
             display: block;
         }
     }
     svg {
-        width: 175px;
-        height: 26px;
-        @media (min-width: 576px) {
-            width: 252px;
-            height: 37px;
-        }
-        @media (min-width: 1300px) {
-            margin-right: 29px;    
+        width: 220px;
+        height: 40px;
+        @media(min-width: 992px) {
+            width: 277px;
+            height: 50px;
         }
     }
 }

@@ -29,7 +29,7 @@ const clickHandler = event => {
 	}
 }
 
-enquire.register('screen and (max-width: 1300px)', {
+enquire.register('screen and (max-width: 1400px)', {
 	// deferSetup: true,
 	match() {
 		$hamburger.addEventListener('click', clickHandler)
