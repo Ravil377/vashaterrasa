@@ -3,7 +3,7 @@
 }
 .videomessage__container {
     display: grid;
-    grid-template-columns: 1fr 440px;
+    grid-template-columns: 1fr minmax(440px, 1fr);
     gap: 100px;
     & > a {
         width: 100%;
@@ -93,6 +93,9 @@
         justify-content: space-between;
         margin-left: -105px;
         font-style: normal;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
         .videomessage__author {
             display: flex;
             align-items: center;

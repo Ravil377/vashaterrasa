@@ -1,5 +1,8 @@
 import './go-top/go-top'
 
+// Pretty Photo
+// import './pretty-photo/prettyPhoto'
+
 // Magnific Popup
 // import './magnific-popup/init'
 
