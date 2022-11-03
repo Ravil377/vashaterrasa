@@ -1,5 +1,8 @@
 import './go-top/go-top'
 
+// Beer Slider
+import './beerslider/beerslider'
+
 // Pretty Photo
 // import './pretty-photo/prettyPhoto'
 

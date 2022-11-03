@@ -32,3 +32,12 @@
     justify-content: space-between;
     align-items: center;
 }
+.subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #000000;
+    @media (min-width: 768px) {
+        font-size: 20px;
+    }
+}

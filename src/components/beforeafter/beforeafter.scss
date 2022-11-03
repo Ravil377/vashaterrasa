@@ -1,0 +1,74 @@
+.beforeafter {
+    margin-top: 70px;
+}
+.beforeafter__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @media (min-width: 1200px) {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        gap: 60px;
+    }
+}
+
+.beforeafter__left {
+    .text, .subtitle {
+        margin-top: 10px;
+        @media (min-width: 768px) {
+            margin-top: 30px;
+        }
+    }
+}
+.beforeafter__right {
+    position: relative;
+    width: 100%;
+    max-height: 482px;
+
+    .beer-reveal > img:first-child {
+        height: 100%;
+    }
+    .beer-reveal > :first-child {
+        width: unset;
+    }
+    .beer-slider {
+        width: 100%;
+    }
+    .beer-slider[data-beer-label]:after {
+        content: 'После';
+        right: 183px;
+    }
+
+    .beer-reveal[data-beer-label]:after {
+        content: 'До';
+        left: 211px;
+    }
+    .beer-reveal[data-beer-label]:after,
+    .beer-slider[data-beer-label]:after {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        background: #FFFFFF;
+        border-radius: 5px;
+        padding: 7px 13.5px;
+        color: #000000;
+        bottom: 33px;
+        top: unset;
+    }
+    .beer-reveal {
+        border-radius: 5px;
+        border-right: 2px solid #FFFFFF;
+    }
+    .beer-handle {
+        background: #FFFFFF;
+        box-shadow: 0px 10px 40px rgba(21, 21, 26, 0.25);
+        border-radius: 50%;
+        width: 52px;
+        height: 52px;
+        z-index: 3;
+    }
+    .beer-slider > img {
+        width: 100%;
+    }
+    
+}
