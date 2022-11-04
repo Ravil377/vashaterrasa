@@ -10,5 +10,7 @@ import './overlay/overlay'
 import './welcome/welcome'
 import './outwork/outwork'
 import './beforeafter/beforeafter'
+import './articles/articles'
+import './modal/modal'
 
 // import './header/header'

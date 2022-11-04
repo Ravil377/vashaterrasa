@@ -1,31 +1,30 @@
 .top__social {
     display: none;
-    @media (min-width: 1450px) {
+    @media (min-width: 992px) {
         box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
         background: white;
         border-radius: 20px 0 0 20px;
         position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
+        bottom: 100px;
         right: 0;
-        padding: 16px;
+        padding: 15px;
         z-index: 5;
         display: flex;
         flex-direction: column;
-        gap: 19px;
+        gap: 21px;
     }
     a {
         // width: 28px;
         // height: 28px;
         svg {
-            width: 28px;
-            height: 28px;
-            fill: black;
+            width: 30px;
+            height: 30px;
+            fill: #F56308;
             transition: .4s;
         }
         &:hover {
             svg {
-                fill: $blue;
+                fill: black;
             }
             
         }

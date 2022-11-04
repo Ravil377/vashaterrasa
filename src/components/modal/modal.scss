@@ -9,7 +9,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(10, 12, 38, 0.2);
+    background: linear-gradient(89.77deg, #0B0F10 -31.11%, rgba(27, 30, 56, 0) 85.54%);
     transition: .4s, height 0s 0.5s;
     padding: 20px;
 }
@@ -25,11 +25,12 @@
     z-index: 5;
     flex-direction: column;
     background: #FFFFFF;
-    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
-    border-radius: 40px;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5);
+    background: #FFFFFF;
+    border-radius: 20px;
     position: relative;
     margin: auto;
-    max-width: 683px;
+    max-width: 685px;
     width: 100%;
 }
 .modal__content {
@@ -38,30 +39,30 @@
     flex-direction: column;
     padding: 40px 20px;
     @media (min-width: 672px) {
-        padding: 66px 122px 81px;
+        padding: 43px 123px 58px;
     }
 }
 .modal__close-button {
     z-index: 5;
     border: none;
     position: absolute;
-    top: 32px;
-    right: 43px;
-    width: 41px;
-    height: 41px;
+    top: 41px;
+    right: 63px;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
     transition: .7s;
-    background: #E9E9E9;
-    border-radius: 50%;
     &:hover {
-        background: #000;  
+        &::after, &::before {
+            background: black;    
+        }
     }
     &::after {
         content: '';
-        background: #fff;
+        background: #AEB0B0;
         top: 50%;
-        left: 8px;
-        width: 25px;
+        left: 0;
+        width: 24px;
         height: 2px;
         transition: all .3s ease 0s;
         position: absolute;
@@ -69,10 +70,10 @@
     }
     &::before {
         content: '';
-        background: #fff;
+        background: #AEB0B0;
         top: 50%;
-        left: 8px;
-        width: 25px;
+        left: 0;
+        width: 24px;
         height: 2px;
         transition: all .3s ease 0s;
         position: absolute;
@@ -82,21 +83,14 @@
 
 .modal__title{
     font-weight: 600;
-    font-size: 18px;
-    line-height: 100%;
-    margin-top: 28px;
-    @media (min-width: 672px) {
-        font-size: 36px;
-    }
+    font-size: 2.19rem;
 }
 .modal__desc {
-    font-weight: 400;
-    font-size: 14px;
+    font-weight: 300;
+    font-size: .87rem;
     line-height: 130%;
-    margin-top: 17px;
-    @media (min-width: 672px) {
-        font-size: 18px;
-    }
+    margin-top: 14px;
+    max-width: 358px;
 }
 
 .modal__content {
@@ -113,11 +107,11 @@
             margin-top: 25px;
         }
         & > p {
-            margin-top: 8px;
+            margin-top: 7px;
             font-weight: 400;
-            font-size: 12px;
+            font-size: .75rem;
             line-height: 110%;
-            color: #9C9C9C;
+            color: #AEB0B0;
             margin-bottom: 25px;
         }
         .form__checkbox {
@@ -127,19 +121,22 @@
         }
         button {
             margin-top: 15px;
-            background: #0042A4;
+            background: #F56308;
             border-radius: 5px;
             width: 100%;
-            padding: 17.5px;
+            padding: 21px;
             border: none;
-            font-weight: 700;
-            font-size: 16px;
+            font-weight: 600;
+            font-size: 1.12rem;
             line-height: 100%;
             color: #FFF;
             margin-bottom: 22px;
-            @media (min-width: 992px) {
-                margin-top: 20px;
-                font-size: 20px;
+            transition: .4s ease-out;
+            border: 1px solid transparent;
+            &:hover {
+                background: white;
+                color: #F56308;
+                border: 1px solid #F56308;
             }
         }
     }

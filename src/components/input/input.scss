@@ -14,11 +14,11 @@
     line-height: 100%;
     color: #000000;
     padding-top: 20px;
-    padding-left: 30px;
+    padding-left: 0;
     padding-right: 30px;
     min-height: 60px;
     box-sizing: border-box;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 // .form__placeholder-container.form__placeholder-container_active input {
 //     border: 1px solid #FF0606;
@@ -41,16 +41,16 @@
 }
 .form__placeholder-container label {
     width: fit-content;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
+    font-weight: 500;
+    font-size: .87rem;
+    line-height: 100%;
     color: #0B2349;
     pointer-events: none;
     position: absolute;
     transition: all 200ms;
     top: 50%;
     transform: translateY(-50%);
-    left: 19px;
+    left: 0;
     span {
         font-size: 12px;
         color: #A4A4A4;
@@ -140,18 +140,18 @@
         }
     }
 }
-label[for="phone"] {
-    padding-left: 26px;
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 5px;
-        width: 16px;
-        height: 16px;
-        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.46753H15V6.49003H1V3.46753Z' fill='white'/%3E%3Cpath d='M1 9.51001H15V12.5325H1V9.51001Z' fill='%23D52B1E'/%3E%3Cpath d='M1 6.48999H15V9.51249H1V6.48999Z' fill='%230039A6'/%3E%3C/svg%3E%0A");
-    }
-}
+// label[for="phone"] {
+//     padding-left: 26px;
+//     &::before {
+//         content: '';
+//         position: absolute;
+//         left: 0;
+//         top: 5px;
+//         width: 16px;
+//         height: 16px;
+//         background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.46753H15V6.49003H1V3.46753Z' fill='white'/%3E%3Cpath d='M1 9.51001H15V12.5325H1V9.51001Z' fill='%23D52B1E'/%3E%3Cpath d='M1 6.48999H15V9.51249H1V6.48999Z' fill='%230039A6'/%3E%3C/svg%3E%0A");
+//     }
+// }
 // input[type="checkbox"].checkbox__switch{
 // 	font-size: 30px;
 // 	-webkit-appearance: none;

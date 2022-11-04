@@ -178,9 +178,19 @@
         font-size: 12px;
         line-height: 130%;
         color: #555557;
-        .icon {
+        transition: .4s ease-out;
+        svg {
+            fill: black;
+            transition: .4s ease-out;
             width: 27px;
             height: 27px;
+        }
+        &:hover {
+            color: #F56308;
+            svg {
+                fill: #F56308;
+            }
+            
         }
     }
 }
@@ -201,6 +211,10 @@
             font-size: 20px;
             line-height: 120%;
             color: #000000;
+            transition: .4s ease-out;
+            &:hover {
+                color: #F56308;
+            }
         }
         span {
             font-weight: 400;
