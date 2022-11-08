@@ -8,7 +8,7 @@ ol.listnumber {
         @media (min-width: 992px) {
             gap: 31px;
         }
-        li {
+        & > li {
             padding-left: 80px;
             &::after {
                 top: 10px;
@@ -16,7 +16,7 @@ ol.listnumber {
         }
     }
     &.listnumber_vertical {
-        li {
+        & > li {
             padding-left: 50px;
             padding-top: 0;
             @media (min-width: 768px) {
@@ -25,13 +25,21 @@ ol.listnumber {
             }
         }
     }
-    li {
-        font-weight: 300;
+    & > li {
+        font-weight: 400;
         font-size: 12px;
         line-height: 150%;
         color: #000000;
         counter-increment: my-counter;
         position: relative;
+        & > ul {
+            margin-top: 20px;
+            list-style: disc;
+            padding-left: 20px;
+            li {
+                font-weight: 300;
+            }
+        }
         @media (min-width: 768px) {
             font-size: 16px;
         }
