@@ -1,0 +1,112 @@
+.vdohnovites__tab {
+    margin-top: 33px;
+    display: flex;
+    column-gap: 44px;
+    width: 100%;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #E0E0E0;
+    margin-bottom: 29px;
+    button {
+        background: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        color: #AEB0B0;
+        border: none;
+        position: relative;
+        &._active {
+            color: #F56308;
+            font-weight: 600;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -25px;
+                width: 100%;
+                left: 0;
+                height: 1px;
+                z-index: 2;
+                background: #F56308;
+            }
+        }
+    }
+}
+.vdohnovites__content {
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    @media (min-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.vdohnovites__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 100%;
+    & > a {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 16px;
+        color: #000000;
+        display: flex;
+        align-items: center;
+        transition: .4s ease-out;
+        padding-right: 20px;
+        &:hover {
+            color: #F56308;
+            svg {
+                fill: #F56308;
+                transform: translateX(20px);
+            }
+        }
+        svg {
+            transition: .4s ease-out;
+            margin-left: 9px;
+            width: 38px;
+            fill: black;
+            @media (min-width: 768px) {
+                margin-left: 19px;
+            }
+        }
+    }
+    .vdohnovites__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+        flex-direction: column;
+        @media (min-width: 768px) {
+            max-width: 560px;
+            gap: 30px;    
+            flex-direction: row;
+        }
+        button {
+            width: 100%;
+            @media (min-width: 768px) {
+                max-width: 311px;
+            }
+        }
+        a {
+            width: 100%;
+            @media (min-width: 768px) {
+                max-width: 214px;
+            }
+        }
+    }
+}

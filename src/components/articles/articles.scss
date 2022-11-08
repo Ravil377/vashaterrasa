@@ -15,7 +15,9 @@
 }
 .article {
     height: auto !important;
-    max-width: 440px;
+    @media (min-width: 576px) {
+        max-width: 440px;
+    }
     &.swiper-slide-next, &.swiper-slide-prev {
         transition: .4s ease-out;
         @media (max-width: 576px) {

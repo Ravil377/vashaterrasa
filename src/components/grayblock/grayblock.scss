@@ -1,0 +1,117 @@
+.grayblock__container {
+    padding: 20px 0;
+    background: #F4F4F4;
+    border-radius: 10px;
+    @media (min-width: 992px) {
+        padding: 60px 0 69px;
+    }
+    .title {
+        padding: 0 10px;
+        @media (min-width: 992px) {
+            padding: 0 80px;
+        }
+    }
+    ul.grayblock__list {
+        margin-top: 19px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-bottom: 1px solid #E3E3E3;
+        padding: 0 10px;
+        padding-bottom: 24px;
+        @media (min-width: 576px) {
+            margin-top: 49px;
+            display: grid;
+            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            padding-bottom: 54px;
+        }
+        @media (min-width: 992px) {            
+            padding: 0 80px;
+            padding-bottom: 54px;
+        }
+        li {
+            figure {
+                margin: 0;
+                img {
+                    -webkit-box-shadow: -1px 14px 19px -12px rgba(0,0,0,0.48);
+                    -moz-box-shadow: -1px 14px 19px -12px rgba(0,0,0,0.48);
+                    box-shadow: -1px 14px 19px -12px rgba(0,0,0,0.48);
+                    border-radius: 10px;
+                    overflow: hidden;
+                    height: 229px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                
+            }
+            
+            figcaption {
+                line-height: 130%;
+                color: #000000;
+                margin-top: 12px;
+                padding-left: 16px;
+                @media (min-width: 768px) {
+                    margin-top: 22px;
+                }
+            }
+        }
+    }
+}
+.grayblock__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 10px;
+    padding-top: 26px;
+    @media (min-width: 992px) {
+        gap: 40px;
+        padding: 0 80px;
+        padding-top: 56px;
+    }
+    .grayblock__bottom-title {
+        line-height: 130%;
+        color: #000000;
+        position: relative;
+        padding-left: 48px;
+        display: flex;
+        align-items:baseline;
+        max-width: 300px;
+        .icon {
+            width: 30px;
+            height: 26px;
+            position: absolute;
+            left: 0;
+        }
+    }
+    .grayblock__bottom-desc {
+        line-height: 150%;
+        color: #000000;
+        max-width: 409px;
+    }
+    .grayblock__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+        max-width: 450px;
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+        @media (min-width: 576px) {
+            flex-direction: row;
+        }
+        button {
+            @media (min-width: 576px) {
+                max-width: 234px;
+            }
+            width: 100%;
+        }
+        a {
+            width: 100%;
+            @media (min-width: 576px) {
+                max-width: 199px;
+            }
+        }
+    }
+}

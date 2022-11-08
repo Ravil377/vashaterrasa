@@ -1,0 +1,55 @@
+ol.listnumber {
+    list-style: none;
+    counter-reset: my-counter;
+    &.listnumber_horizontal {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        @media (min-width: 992px) {
+            gap: 31px;
+        }
+        li {
+            padding-left: 80px;
+            &::after {
+                top: 10px;
+            }
+        }
+    }
+    &.listnumber_vertical {
+        li {
+            padding-left: 50px;
+            padding-top: 0;
+            @media (min-width: 768px) {
+                padding-top: 50px;
+                padding-left: 0;
+            }
+        }
+    }
+    li {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 150%;
+        color: #000000;
+        counter-increment: my-counter;
+        position: relative;
+        @media (min-width: 768px) {
+            font-size: 16px;
+        }
+        span {
+            font-weight: 500;
+        }
+        &::after {
+            content: "0" counter(my-counter) ".";
+            position: absolute;
+            left: 0;
+            top: 3px;
+            font-weight: 400;
+            font-size: 24px;
+            color: #F56308;
+            @media (min-width: 768px) {
+                top: 0;
+                font-size: 40px;
+            }
+        }
+    }
+}

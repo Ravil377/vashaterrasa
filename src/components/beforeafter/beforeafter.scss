@@ -26,51 +26,44 @@
     
     @media (min-width: 1200px) {
         max-height: 482px;
-    }
-    .beer-reveal > img:first-child {
-        height: 100%;
-    }
-    .beer-reveal > :first-child {
-        width: unset;
-    }
-    .beer-slider {
-        width: 100%;
-    }
-    .beer-slider[data-beer-label]:after {
-        content: 'После';
-        right: 183px;
-    }
+    }   
+}
 
-    .beer-reveal[data-beer-label]:after {
-        content: 'До';
-        left: 211px;
-    }
-    .beer-reveal[data-beer-label]:after,
-    .beer-slider[data-beer-label]:after {
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 16px;
-        background: #FFFFFF;
-        border-radius: 5px;
-        padding: 7px 13.5px;
-        color: #000000;
-        bottom: 33px;
-        top: unset;
-    }
-    .beer-reveal {
-        border-radius: 5px;
-        border-right: 2px solid #FFFFFF;
-    }
-    .beer-handle {
-        background: #FFFFFF;
-        box-shadow: 0px 10px 40px rgba(21, 21, 26, 0.25);
-        border-radius: 50%;
-        width: 52px;
-        height: 52px;
-        z-index: 3;
-    }
-    .beer-slider > img {
-        width: 100%;
-    }
-    
+.beer-reveal > img:first-child {
+    height: 100% !important;
+}
+.beer-reveal > :first-child {
+    width: unset !important;
+}
+.beer-slider {
+    width: 100% !important;
+}
+
+.beer-reveal[data-beer-label]:after,
+.beer-slider[data-beer-label]:after {
+    height: fit-content !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    background: #FFFFFF !important;
+    border-radius: 5px !important;
+    padding: 7px 13.5px !important;
+    color: #000000 !important;
+    bottom: 33px !important;
+    top: unset !important;
+}
+.beer-reveal {
+    border-radius: 5px !important;
+    border-right: 2px solid #FFFFFF;
+}
+.beer-handle {
+    background: #FFFFFF !important;
+    box-shadow: 0px 10px 40px rgba(21, 21, 26, 0.25) !important;
+    border-radius: 50% !important;
+    width: 52px !important;
+    height: 52px !important;
+    z-index: 3 !important;
+}
+.beer-slider > img {
+    width: 100% !important;
 }

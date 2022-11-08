@@ -1,67 +1,70 @@
 .accordion {
-    background: #fff;
+    padding: 0;
     padding-bottom: 20px;
-    padding-top: 20px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 130%;
-    color: #000000;
+    padding-top: 17px;
     cursor: pointer;
     width: 100%;
     text-align: left;
+    background: transparent;
     border: none;
     outline: none;
-    // transition: 0.4s;
-    border-bottom: 1px solid #E8E8E8;
+    transition: 0.4s ease-out;
     display: flex;
     align-items: center;
+    position: relative;
+    padding-right: 50px;
     @media(min-width: 768px) {
-        font-size: 24px;
-        padding-bottom: 22px;
-        padding-top: 22px;
+        padding-bottom: 28px;
+        padding-top: 20px;
     }
     div {
-        min-width: 27px;
-        height: 27px;
+        position: absolute;
+        right: 0;
+        min-width: 20px;
+        height: 20px;
         border-radius: 50%;
-        border: 1px solid #000000;
+        border: 1px solid #555557;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 9px;
         transition: .4s;
         @media(min-width: 768px) {
-            min-width: 33px;
-            height: 33px;
-            margin-right: 17px;
+            min-width: 40px;
+            height: 40px;
         }
         &::after {
             content: '+';
             display: flex;
             align-items: center;
-            font-weight: 700;
-            font-size: 14px;
+            font-weight: 600;
+            font-size: 9px;
+            @media(min-width: 768px) {
+                font-size: 15px;
+            }
         }
         &::before {
             content: '-';
             display: none;
-            font-weight: 700;
-            font-size: 14px;
+            font-weight: 600;
+            font-size: 9px;
+            @media(min-width: 768px) {
+                font-size: 15px;
+            }
         }
     }
 }
 
 .accordion._active, .accordion:hover {
-    font-weight: 600;
+    color: #F56308;
     div {
-        background: $blue;
+        background:#F56308;
         color: white;
-        border: 1px solid $blue;
+        border: 1px solid #F56308;
     }
 }
 .accordion.active {
     border-bottom: unset;
-
+    color: #F56308;
     div {
         &::after {
             display: none;
@@ -69,25 +72,14 @@
         &::before {
             display: flex;
             align-items: center;
-            // padding-bottom: 4px;
         }
     }
 }
 
 .panel {
-    padding-left: 43px;
-    // padding-right: 13px;
-    background-color: white;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 130%;
+    line-height: 150%;
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.4s ease-out;
     border-bottom: 1px solid #E8E8E8;
-    @media(min-width: 768px) {
-        font-size: 18px;
-        padding-right: 13px;
-        padding-left: 57px;
-    }
 }

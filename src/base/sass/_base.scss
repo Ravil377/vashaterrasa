@@ -54,7 +54,11 @@ body {
 	}
 }
 	
-
+main {
+	gap: 70px;
+	display: flex;
+	flex-direction: column;
+}
 // body.category {
 // 	.wrapper {
 // 		width: 100%;

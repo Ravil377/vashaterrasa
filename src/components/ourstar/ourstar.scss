@@ -1,0 +1,92 @@
+.ourstar {
+    overflow: hidden;
+}
+.ourstar__slider {
+    margin-top: 30px;
+    
+    @media (min-width: 576px) {
+        overflow: hidden;
+    }
+}
+.ourstar__slide {
+    background: #F4F4F4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: .8s;
+    @media (max-width: 576px) {
+        &.swiper-slide-prev,
+        &.swiper-slide-next {
+            opacity: .2;
+        }    
+    }    
+
+    @media (min-width: 992px) {
+        gap: 42px;
+        display: grid;
+        grid-template-columns: 440px 1fr;
+    }
+    & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .ourstar__content {
+        padding: 20px;
+        @media (min-width: 992px) {
+            padding: 37px 37px 37px 0;
+        }
+        .ourstar__author {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                object-fit: cover;
+                overflow: hidden;
+            }
+            p {
+                span {
+                    margin: 0;
+                    display: block;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #F56308;
+                }
+            }
+        }
+        p {
+            margin-top: 30px;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 150%;
+        }
+        a {
+            display: block;
+            margin-top: 41px;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 16px;
+            transition: .4s ease-out;
+            color: black;
+            &:hover {
+                color: #F56308;
+                svg {
+                    fill: #F56308;
+                    transform: translateX(20px);
+                }
+            }
+            svg {
+                fill: black;
+                width: 38px;
+                margin-left: 18px;
+                transition: .4s ease-out;
+            }
+        }
+    }
+}
