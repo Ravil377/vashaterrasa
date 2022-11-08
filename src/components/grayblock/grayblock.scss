@@ -19,6 +19,11 @@
         border-bottom: 1px solid #E3E3E3;
         padding: 0 10px;
         padding-bottom: 24px;
+        &.grayblock__list_4 {
+            @media (min-width: 576px) {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
         @media (min-width: 576px) {
             margin-top: 49px;
             display: grid;
