@@ -104,7 +104,6 @@ catalog && catalog.addEventListener('click', (e) => {
             }
         }
         if(prod.querySelector('.product__image-slider-js')) {
-            // console.log(targ.closest('.product__color').querySelector('div'));
             detailSlider.slideTo(targ.closest('.product__color').querySelector('div').dataset.image);
         }
         isColor.querySelector('._active').classList.remove('_active');

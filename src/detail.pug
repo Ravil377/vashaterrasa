@@ -115,15 +115,6 @@ block top
                                     if(theEvent.preventDefault) theEvent.preventDefault();
                                 } 
                             }
-block filter 
-    .filter.filter__container.filter-js 
-        button(style="padding-right: 10px;").accordion.t16.w600.filter
-            | Террасная доска из ДПК
-            <svg width="6" height="3" viewBox="0 0 6 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.132069 2.88528C0.216659 2.95874 0.331371 3 0.450981 3C0.57059 3 0.685303 2.95874 0.769892 2.88528L3.00272 0.945771L5.23555 2.88528C5.32063 2.95665 5.43457 2.99615 5.55284 2.99525C5.67111 2.99436 5.78425 2.95315 5.86788 2.88051C5.95152 2.80786 5.99896 2.70959 5.99998 2.60685C6.00101 2.50412 5.95554 2.40514 5.87338 2.33125L3.32163 0.11472C3.23705 0.0412648 3.12233 0 3.00272 0C2.88311 0 2.7684 0.0412648 2.68381 0.11472L0.132069 2.33125C0.0475054 2.40472 0 2.50437 0 2.60826C0 2.71216 0.0475054 2.8118 0.132069 2.88528Z"/>
-            </svg>
-        div(style="border-bottom: unset;").panel
-            p.t16.w300 Lorem ipsum...<br><br>
 block asideform
     .asideform
         .asideform__title.w400.t16 Получите предварительный расчет вашей террасы 
@@ -153,7 +144,125 @@ block asideform
                 }
                 input[0].files = dt.files;  
             }
+block tabs 
+    .detailtabs.detailtabs-js
+        ul
+            li(data-tab="1").t18.w400 Описание
+            li(data-tab="2").t18.w400 Документация
+            li(data-tab="3").t18.w400 Комплектующие
+            li(data-tab="4").t18.w400._active-tab Оплата и доставка
+        .detailtabs__content(data-content="1")
+            h2.t24.w600 Доска из ДПК Ваша Терраса
+            .detailtabs__row
+                .detailtabs__col
+                    p.t20.w400 Мы безоговорочно соблюдаем все гарантийные сроки. 
+                    p.t16.w300 Будь то гарантия на использованную при строительстве террасную доску (от 3 до 25 лет в зависимости от производителя), или гарантии на работу наших монтажных бригад - 2 года.
+                    p.t16.w300 Для чего служит террасная доска? Декинг позволяет выполнить качественную и долговечную обшивку бассейнов и уличных террас, дорожек и беседок. 
 
+                .detailtabs__col
+                    ul 
+                        li Размер 150х20 мм
+                        li Производитель Terradeck (Россия)
+                        li Расход на 1 кв.м. 6.45 п.м.
+                        li Эксплуатационная нагрузка 	
+                        li Материал	ДПК
+
+        .detailtabs__content(data-content="2")
+            h2.t24.w600 Документация
+            ul.details__document 
+                li 
+                    +icon('pdf')
+                    a(href="#" target="_blank" download)
+                        p.t16.w400 Инструкция по монтажу террасной доски Terraca
+                            span Размер файла pdf 7.24 МБ
+                li 
+                    +icon('pdf')
+                    a(href="#" target="_blank" download)
+                        p.t16.w400 Террасная доска (декинг) — натуральный качественный материал
+                            span Размер файла pdf 7.24 МБ
+
+        .detailtabs__content(data-content="3")
+            h2.t24.w600 Комплектующие
+            p.t16.w300 Для монтажа террасы потребуются дополнительно:
+            ul.detailtabs__compl
+                li 
+                    img(src='./images/compl/ugolok.jpg' alt="Торцевые элементы для окантовки края настила")
+                    p.t16.w400 Торцевые элементы для окантовки края настила
+                li 
+                    img(src='./images/compl/clema.jpg' alt="Клеммы для крепления террасной доски")
+                    p.t16.w400 Клеммы для крепления террасной доски
+                li 
+                    img(src='./images/compl/opora.jpg' alt="Регулируемые опоры для монтажа террасы на твердое основание")
+                    p.t16.w400 Регулируемые опоры для монтажа террасы на твердое основание
+                li 
+                    img(src='./images/compl/svai.jpg' alt="Винтовые сваи для создания основания террасы для последующего монтажа на любой вид фундамента")
+                    p.t16.w400 Винтовые сваи для создания основания террасы для последующего монтажа на любой вид фундамента
+                li 
+                    img(src='./images/compl/ogragdenie.jpg' alt="Ограждения  и ступени для террасы")
+                    p.t16.w400 Ограждения  и ступени для террасы
+                li 
+                    img(src='./images/compl/dop.jpg' alt="Дополнительные элементы: кровля, крыша из поликарбоната, подсветка, мягкие окна или рольставни")
+                    p.t16.w400 Дополнительные элементы: кровля, крыша из поликарбоната, подсветка, мягкие окна или рольставни
+            .detailtabs__buttons
+                ul
+                    li.t20.w600 
+                        +icon('chat') 
+                        | Не хочется вникать в нюансы?
+                    li.t16.w400 Закажите строительство террасы “под ключ”
+                    li 
+                        button(data-id="callme").btn.btn_calc Получить консультацию
+                    li
+                        a(data-id="whatsapp" href="#").btn
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 0C5.8175 0 0 5.8175 0 13C0 15.86 0.91 18.4925 2.47 20.6375L0.6825 25.35L5.85 23.855C7.8975 25.22 10.3675 26 13 26C20.1825 26 26 20.1825 26 13C26 5.8175 20.1825 0 13 0ZM19.9225 18.395L18.525 19.76C17.0625 21.2225 13.195 19.63 9.7825 16.185C6.37 12.7725 4.8425 8.905 6.2075 7.475L7.605 6.0775C8.125 5.5575 9.0025 5.5575 9.555 6.0775L11.6025 8.125C12.3175 8.84 12.025 10.075 11.0825 10.3675C10.4325 10.595 9.9775 11.31 10.205 11.96C10.5625 13.4875 12.545 15.3725 14.0075 15.73C14.6575 15.8925 15.405 15.5025 15.6 14.8525C15.8925 13.91 17.1275 13.6175 17.8425 14.3325L19.89 16.38C20.41 16.9325 20.41 17.81 19.9225 18.395Z" />
+                            </svg>
+                            | В Whatsapp
+        .detailtabs__content(data-content="4")._active
+            h2 Оплата и доставка
+            .detailtabs__info 
+                .detailtabs__delivery
+                    +icon('delivery')
+                    ul 
+                        li.w600.t16 Доставка:
+                        li.w400.t16 Москва: 1-2 дня 
+                        li.w400.t16 Санкт-Петербург: 5-7 дней 
+                        li.w400.t16 Регионы: 5-7 дней
+
+                .detailtabs__payment
+                    +icon('wallet')
+                    ul
+                        li.w600.t16 Оплата
+                        li.w400.t16 Наличными, банковской картой, банковский перевод и электронные деньги
+                        li  
+                            ul
+                                li 
+                                    +icon('mir')
+                                li
+                                    +icon('halva')
+                                li
+                                    +icon('mastercard')
+                                li
+                                    +icon('svoboda')
+                                li
+                                    +icon('dolyami')
+                                li
+                                    +icon('visa')
+block portfolio 
+    .portfolio
+        h2.t24.w600 Наши террасы, созданные с использованием доски Ваша Терраса
+        .portfolio__container.portfolio__container_mini 
+            a(href="#") 
+                img(src="./images/portfolio/zab1.jpg" alt="Портфолио")
+            a(href="#") 
+                img(src="./images/portfolio/zab2.jpg" alt="Портфолио")
+            a(href="#") 
+                img(src="./images/portfolio/zab3.jpg" alt="Портфолио")
+            a(href="#") 
+                img(src="./images/portfolio/zab4.jpg" alt="Портфолио")
+            a(href="#") 
+                img(src="./images/portfolio/zab5.jpg" alt="Портфолио")
+            a(href="#") 
+                img(src="./images/portfolio/zab6.jpg" alt="Портфолио") 
 block difficult
     section.difficult
         .difficult__container
