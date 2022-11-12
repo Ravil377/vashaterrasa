@@ -78,23 +78,24 @@ block asideform
             }
 block catalog 
     .catalog 
-        .product
+        .product.product-js
             .product__image
                 a(href="#")
-                    img(src="./images/catalog/product.jpg" alt="Товар")
+                    img(src="./images/catalog/product.jpg" alt="Товар").product__image-js
                     .product__label Хит продаж
-                .product__colors
+                .product__colors.product__colors-js
                     div.product__color._active
-                        div(style="background: #927E62;")
+                        div(style="background: #573322;" data-img="./images/catalog/product.jpg" data-color="Коричневый")
                     div.product__color
-                        div(style="background: #E0E3E8;")
+                        div(style="background: #000000;" data-img="./images/catalog/product1.jpg" data-color="Черный")
                     div.product__color
-                        div(style="background: #D5817B;")
+                        div(style="background: #8b705b;" data-img="./images/catalog/product3.jpg" data-color="Светло-коричневый")
                     div.product__color
-                        div(style="background: #E4D4CA;")
+                        div(style="background: #838582;" data-img="./images/catalog/product2.jpg" data-color="Серый")
             .product__content 
                 a(href="#")
-                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
+                    .product__name.product__name-js.t18.w500 Террасная доска из ДПК Ваша Терраса 
+                        span.product__name-color-js Орех
                     ul.product__for
                         li 
                             +icon('home')
@@ -104,36 +105,49 @@ block catalog
                             | Для бассейнов и пирсов
                     .product__size Размер: 150х25 мм
                 .product__length Длина доски
-                ul.product__length-list 
-                    li._active 3м
-                    li 4м
-                    li 5м
-                    li 6м
-                .product__price 4 500₽ 
+                ul.product__length-list.product__length-list-js
+                    li(data-color="Коричневый" data-pricenew="4500" data-priceold="5500" data-id="1")._active 3м
+                    li(data-color="Коричневый" data-pricenew="5000" data-priceold="6000" data-id="2") 4м
+                    li(data-color="Коричневый" data-pricenew="5500" data-priceold="6500" data-id="3") 5м
+                    li(data-color="Коричневый" data-pricenew="6000" data-priceold="7000" data-id="4") 6м
+                    li(data-color="Черный" data-pricenew="4500" data-priceold="5500" data-id="5")._none 3м
+                    li(data-color="Черный" data-pricenew="5000" data-priceold="6000" data-id="6")._none 4м
+                    li(data-color="Черный" data-pricenew="5500" data-priceold="6500" data-id="7")._none 5м
+                    li(data-color="Черный" data-pricenew="6000" data-priceold="7000" data-id="8")._none 6м
+                    li(data-color="Светло-коричневый" data-pricenew="4500" data-priceold="5500" data-id="9")._none 3м
+                    li(data-color="Светло-коричневый" data-pricenew="5000" data-priceold="6000" data-id="10")._none 4м
+                    li(data-color="Светло-коричневый" data-pricenew="5500" data-priceold="6500" data-id="11")._none 5м
+                    li(data-color="Светло-коричневый" data-pricenew="6000" data-priceold="7000" data-id="12")._none 6м
+                    li(data-color="Серый" data-pricenew="4500" data-priceold="5500" data-id="13")._none 3м
+                    li(data-color="Серый" data-pricenew="5000" data-priceold="6000" data-id="14")._none 4м
+                    li(data-color="Серый" data-pricenew="5500" data-priceold="6500" data-id="15")._none 5м
+                    li(data-color="Серый" data-pricenew="6000" data-priceold="7004" data-id="16")._none 6м
+                .product__price.product__price-js 4 500₽ 
                     span 5 990₽
                 .product__buttons 
-                    .product__amount
-                        button -
+                    .product__amount.product__amount-js
+                        button.product__amount-minus-js -
                         input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
-                        button +
-                    a(href="#").product__buy-btn купить +
-        .product
+                        button.product__amount-plus-js +
+                    a(href="#" data-quantity="1" value="" data-product_id="1814" data-product_sku="").product__buy-btn.product__buy-btn-js.ajax_add_to_cart.add_to_cart_button купить +
+        .product.product-js
             .product__image
                 a(href="#")
-                    img(src="./images/catalog/product.jpg" alt="Товар")
+                    img(src="./images/catalog/product.jpg" alt="Товар").product__image-js
                     .product__label Хит продаж
-                .product__colors
+                .product__colors.product__colors-js
                     div.product__color._active
-                        div(style="background: #927E62;")
+                        div(style="background: #573322;" data-img="./images/catalog/product.jpg" data-color="Коричневый")
                     div.product__color
-                        div(style="background: #E0E3E8;")
+                        div(style="background: #000000;" data-img="./images/catalog/product1.jpg" data-color="Черный")
                     div.product__color
-                        div(style="background: #D5817B;")
+                        div(style="background: #8b705b;" data-img="./images/catalog/product3.jpg" data-color="Светло-коричневый")
                     div.product__color
-                        div(style="background: #E4D4CA;")
+                        div(style="background: #838582;" data-img="./images/catalog/product2.jpg" data-color="Серый")
             .product__content 
                 a(href="#")
-                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
+                    .product__name.product__name-js.t18.w500 Террасная доска из ДПК Ваша Терраса 
+                        span.product__name-color-js Орех
                     ul.product__for
                         li 
                             +icon('home')
@@ -143,36 +157,49 @@ block catalog
                             | Для бассейнов и пирсов
                     .product__size Размер: 150х25 мм
                 .product__length Длина доски
-                ul.product__length-list 
-                    li._active 3м
-                    li 4м
-                    li 5м
-                    li 6м
-                .product__price 4 500₽ 
+                ul.product__length-list.product__length-list-js
+                    li(data-color="Коричневый" data-pricenew="4500" data-priceold="5500")._active 3м
+                    li(data-color="Коричневый" data-pricenew="5000" data-priceold="6000") 4м
+                    li(data-color="Коричневый" data-pricenew="5500" data-priceold="6500") 5м
+                    li(data-color="Коричневый" data-pricenew="6000" data-priceold="7000") 6м
+                    li(data-color="Черный" data-pricenew="4500" data-priceold="5500")._none 3м
+                    li(data-color="Черный" data-pricenew="5000" data-priceold="6000")._none 4м
+                    li(data-color="Черный" data-pricenew="5500" data-priceold="6500")._none 5м
+                    li(data-color="Черный" data-pricenew="6000" data-priceold="7000")._none 6м
+                    li(data-color="Светло-коричневый" data-pricenew="4500" data-priceold="5500")._none 3м
+                    li(data-color="Светло-коричневый" data-pricenew="5000" data-priceold="6000")._none 4м
+                    li(data-color="Светло-коричневый" data-pricenew="5500" data-priceold="6500")._none 5м
+                    li(data-color="Светло-коричневый" data-pricenew="6000" data-priceold="7000")._none 6м
+                    li(data-color="Серый" data-pricenew="4500" data-priceold="5500")._none 3м
+                    li(data-color="Серый" data-pricenew="5000" data-priceold="6000")._none 4м
+                    li(data-color="Серый" data-pricenew="5500" data-priceold="6500")._none 5м
+                    li(data-color="Серый" data-pricenew="6000" data-priceold="7004")._none 6м
+                .product__price.product__price-js 4 500₽ 
                     span 5 990₽
                 .product__buttons 
-                    .product__amount
-                        button -
+                    .product__amount.product__amount-js
+                        button.product__amount-minus-js -
                         input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
-                        button +
-                    a(href="#").product__buy-btn купить +
-        .product
+                        button.product__amount-plus-js +
+                    a(href="#" data-quantity="1" value="" data-product_id="1814" data-product_sku="").product__buy-btn.product__buy-btn-js.ajax_add_to_cart.add_to_cart_button купить +
+        .product.product-js
             .product__image
                 a(href="#")
-                    img(src="./images/catalog/product.jpg" alt="Товар")
+                    img(src="./images/catalog/product.jpg" alt="Товар").product__image-js
                     .product__label Хит продаж
-                .product__colors
+                .product__colors.product__colors-js
                     div.product__color._active
-                        div(style="background: #927E62;")
+                        div(style="background: #573322;" data-img="./images/catalog/product.jpg" data-color="Коричневый")
                     div.product__color
-                        div(style="background: #E0E3E8;")
+                        div(style="background: #000000;" data-img="./images/catalog/product1.jpg" data-color="Черный")
                     div.product__color
-                        div(style="background: #D5817B;")
+                        div(style="background: #8b705b;" data-img="./images/catalog/product3.jpg" data-color="Светло-коричневый")
                     div.product__color
-                        div(style="background: #E4D4CA;")
+                        div(style="background: #838582;" data-img="./images/catalog/product2.jpg" data-color="Серый")
             .product__content 
                 a(href="#")
-                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
+                    .product__name.product__name-js.t18.w500 Террасная доска из ДПК Ваша Терраса 
+                        span.product__name-color-js Орех
                     ul.product__for
                         li 
                             +icon('home')
@@ -182,36 +209,49 @@ block catalog
                             | Для бассейнов и пирсов
                     .product__size Размер: 150х25 мм
                 .product__length Длина доски
-                ul.product__length-list 
-                    li._active 3м
-                    li 4м
-                    li 5м
-                    li 6м
-                .product__price 4 500₽ 
+                ul.product__length-list.product__length-list-js
+                    li(data-color="Коричневый" data-pricenew="4500" data-priceold="5500")._active 3м
+                    li(data-color="Коричневый" data-pricenew="5000" data-priceold="6000") 4м
+                    li(data-color="Коричневый" data-pricenew="5500" data-priceold="6500") 5м
+                    li(data-color="Коричневый" data-pricenew="6000" data-priceold="7000") 6м
+                    li(data-color="Черный" data-pricenew="4500" data-priceold="5500")._none 3м
+                    li(data-color="Черный" data-pricenew="5000" data-priceold="6000")._none 4м
+                    li(data-color="Черный" data-pricenew="5500" data-priceold="6500")._none 5м
+                    li(data-color="Черный" data-pricenew="6000" data-priceold="7000")._none 6м
+                    li(data-color="Светло-коричневый" data-pricenew="4500" data-priceold="5500")._none 3м
+                    li(data-color="Светло-коричневый" data-pricenew="5000" data-priceold="6000")._none 4м
+                    li(data-color="Светло-коричневый" data-pricenew="5500" data-priceold="6500")._none 5м
+                    li(data-color="Светло-коричневый" data-pricenew="6000" data-priceold="7000")._none 6м
+                    li(data-color="Серый" data-pricenew="4500" data-priceold="5500")._none 3м
+                    li(data-color="Серый" data-pricenew="5000" data-priceold="6000")._none 4м
+                    li(data-color="Серый" data-pricenew="5500" data-priceold="6500")._none 5м
+                    li(data-color="Серый" data-pricenew="6000" data-priceold="7004")._none 6м
+                .product__price.product__price-js 4 500₽ 
                     span 5 990₽
                 .product__buttons 
-                    .product__amount
-                        button -
+                    .product__amount.product__amount-js
+                        button.product__amount-minus-js -
                         input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
-                        button +
-                    a(href="#").product__buy-btn купить +
-        .product
+                        button.product__amount-plus-js +
+                    a(href="#" data-quantity="1" value="" data-product_id="1814" data-product_sku="").product__buy-btn.product__buy-btn-js.ajax_add_to_cart.add_to_cart_button купить +
+        .product.product-js
             .product__image
                 a(href="#")
-                    img(src="./images/catalog/product.jpg" alt="Товар")
+                    img(src="./images/catalog/product.jpg" alt="Товар").product__image-js
                     .product__label Хит продаж
-                .product__colors
+                .product__colors.product__colors-js
                     div.product__color._active
-                        div(style="background: #927E62;")
+                        div(style="background: #573322;" data-img="./images/catalog/product.jpg" data-color="Коричневый")
                     div.product__color
-                        div(style="background: #E0E3E8;")
+                        div(style="background: #000000;" data-img="./images/catalog/product1.jpg" data-color="Черный")
                     div.product__color
-                        div(style="background: #D5817B;")
+                        div(style="background: #8b705b;" data-img="./images/catalog/product3.jpg" data-color="Светло-коричневый")
                     div.product__color
-                        div(style="background: #E4D4CA;")
+                        div(style="background: #838582;" data-img="./images/catalog/product2.jpg" data-color="Серый")
             .product__content 
                 a(href="#")
-                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
+                    .product__name.product__name-js.t18.w500 Террасная доска из ДПК Ваша Терраса 
+                        span.product__name-color-js Орех
                     ul.product__for
                         li 
                             +icon('home')
@@ -221,224 +261,63 @@ block catalog
                             | Для бассейнов и пирсов
                     .product__size Размер: 150х25 мм
                 .product__length Длина доски
-                ul.product__length-list 
-                    li._active 3м
-                    li 4м
-                    li 5м
-                    li 6м
-                .product__price 4 500₽ 
+                ul.product__length-list.product__length-list-js
+                    li(data-color="Коричневый" data-pricenew="4500" data-priceold="5500")._active 3м
+                    li(data-color="Коричневый" data-pricenew="5000" data-priceold="6000") 4м
+                    li(data-color="Коричневый" data-pricenew="5500" data-priceold="6500") 5м
+                    li(data-color="Коричневый" data-pricenew="6000" data-priceold="7000") 6м
+                    li(data-color="Черный" data-pricenew="4500" data-priceold="5500")._none 3м
+                    li(data-color="Черный" data-pricenew="5000" data-priceold="6000")._none 4м
+                    li(data-color="Черный" data-pricenew="5500" data-priceold="6500")._none 5м
+                    li(data-color="Черный" data-pricenew="6000" data-priceold="7000")._none 6м
+                    li(data-color="Светло-коричневый" data-pricenew="4500" data-priceold="5500")._none 3м
+                    li(data-color="Светло-коричневый" data-pricenew="5000" data-priceold="6000")._none 4м
+                    li(data-color="Светло-коричневый" data-pricenew="5500" data-priceold="6500")._none 5м
+                    li(data-color="Светло-коричневый" data-pricenew="6000" data-priceold="7000")._none 6м
+                    li(data-color="Серый" data-pricenew="4500" data-priceold="5500")._none 3м
+                    li(data-color="Серый" data-pricenew="5000" data-priceold="6000")._none 4м
+                    li(data-color="Серый" data-pricenew="5500" data-priceold="6500")._none 5м
+                    li(data-color="Серый" data-pricenew="6000" data-priceold="7004")._none 6м
+                .product__price.product__price-js 4 500₽ 
                     span 5 990₽
                 .product__buttons 
-                    .product__amount
-                        button -
+                    .product__amount.product__amount-js
+                        button.product__amount-minus-js -
                         input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
-                        button +
-                    a(href="#").product__buy-btn купить +
-        .product
-            .product__image
-                a(href="#")
-                    img(src="./images/catalog/product.jpg" alt="Товар")
-                    .product__label Хит продаж
-                .product__colors
-                    div.product__color._active
-                        div(style="background: #927E62;")
-                    div.product__color
-                        div(style="background: #E0E3E8;")
-                    div.product__color
-                        div(style="background: #D5817B;")
-                    div.product__color
-                        div(style="background: #E4D4CA;")
-            .product__content 
-                a(href="#")
-                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
-                    ul.product__for
-                        li 
-                            +icon('home')
-                            | Для дома и дачи
-                        li 
-                            +icon('swim')
-                            | Для бассейнов и пирсов
-                    .product__size Размер: 150х25 мм
-                .product__length Длина доски
-                ul.product__length-list 
-                    li._active 3м
-                    li 4м
-                    li 5м
-                    li 6м
-                .product__price 4 500₽ 
-                    span 5 990₽
-                .product__buttons 
-                    .product__amount
-                        button -
-                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
-                        button +
-                    a(href="#").product__buy-btn купить +
-        .product
-            .product__image
-                a(href="#")
-                    img(src="./images/catalog/product.jpg" alt="Товар")
-                    .product__label Хит продаж
-                .product__colors
-                    div.product__color._active
-                        div(style="background: #927E62;")
-                    div.product__color
-                        div(style="background: #E0E3E8;")
-                    div.product__color
-                        div(style="background: #D5817B;")
-                    div.product__color
-                        div(style="background: #E4D4CA;")
-            .product__content 
-                a(href="#")
-                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
-                    ul.product__for
-                        li 
-                            +icon('home')
-                            | Для дома и дачи
-                        li 
-                            +icon('swim')
-                            | Для бассейнов и пирсов
-                    .product__size Размер: 150х25 мм
-                .product__length Длина доски
-                ul.product__length-list 
-                    li._active 3м
-                    li 4м
-                    li 5м
-                    li 6м
-                .product__price 4 500₽ 
-                    span 5 990₽
-                .product__buttons 
-                    .product__amount
-                        button -
-                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
-                        button +
-                    a(href="#").product__buy-btn купить +
-        .product
-            .product__image
-                a(href="#")
-                    img(src="./images/catalog/product.jpg" alt="Товар")
-                    .product__label Хит продаж
-                .product__colors
-                    div.product__color._active
-                        div(style="background: #927E62;")
-                    div.product__color
-                        div(style="background: #E0E3E8;")
-                    div.product__color
-                        div(style="background: #D5817B;")
-                    div.product__color
-                        div(style="background: #E4D4CA;")
-            .product__content 
-                a(href="#")
-                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
-                    ul.product__for
-                        li 
-                            +icon('home')
-                            | Для дома и дачи
-                        li 
-                            +icon('swim')
-                            | Для бассейнов и пирсов
-                    .product__size Размер: 150х25 мм
-                .product__length Длина доски
-                ul.product__length-list 
-                    li._active 3м
-                    li 4м
-                    li 5м
-                    li 6м
-                .product__price 4 500₽ 
-                    span 5 990₽
-                .product__buttons 
-                    .product__amount
-                        button -
-                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
-                        button +
-                    a(href="#").product__buy-btn купить +
-        .product
-            .product__image
-                a(href="#")
-                    img(src="./images/catalog/product.jpg" alt="Товар")
-                    .product__label Хит продаж
-                .product__colors
-                    div.product__color._active
-                        div(style="background: #927E62;")
-                    div.product__color
-                        div(style="background: #E0E3E8;")
-                    div.product__color
-                        div(style="background: #D5817B;")
-                    div.product__color
-                        div(style="background: #E4D4CA;")
-            .product__content 
-                a(href="#")
-                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
-                    ul.product__for
-                        li 
-                            +icon('home')
-                            | Для дома и дачи
-                        li 
-                            +icon('swim')
-                            | Для бассейнов и пирсов
-                    .product__size Размер: 150х25 мм
-                .product__length Длина доски
-                ul.product__length-list 
-                    li._active 3м
-                    li 4м
-                    li 5м
-                    li 6м
-                .product__price 4 500₽ 
-                    span 5 990₽
-                .product__buttons 
-                    .product__amount
-                        button -
-                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
-                        button +
-                    a(href="#").product__buy-btn купить +
-        .product
-            .product__image
-                a(href="#")
-                    img(src="./images/catalog/product.jpg" alt="Товар")
-                    .product__label Хит продаж
-                .product__colors
-                    div.product__color._active
-                        div(style="background: #927E62;")
-                    div.product__color
-                        div(style="background: #E0E3E8;")
-                    div.product__color
-                        div(style="background: #D5817B;")
-                    div.product__color
-                        div(style="background: #E4D4CA;")
-            .product__content 
-                a(href="#")
-                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
-                    ul.product__for
-                        li 
-                            +icon('home')
-                            | Для дома и дачи
-                        li 
-                            +icon('swim')
-                            | Для бассейнов и пирсов
-                    .product__size Размер: 150х25 мм
-                .product__length Длина доски
-                ul.product__length-list 
-                    li._active 3м
-                    li 4м
-                    li 5м
-                    li 6м
-                .product__price 4 500₽ 
-                    span 5 990₽
-                .product__buttons 
-                    .product__amount
-                        button -
-                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
-                        button +
-                    a(href="#").product__buy-btn купить +
+                        button.product__amount-plus-js +
+                    a(href="#" data-quantity="1" value="" data-product_id="1814" data-product_sku="").product__buy-btn.product__buy-btn-js.ajax_add_to_cart.add_to_cart_button купить +
     script.
+        function isNol(evt) {
+            var regex = /[^0-9]|^0{1}/g;
+            console.log(evt.value);
+            if (regex.test(evt.value)) {
+                
+                evt.value = evt.value.replace(/./g, '');
+            }
+        }
         function validate(evt) {
             var theEvent = evt || window.event;
             var key = theEvent.keyCode || theEvent.which;
             key = String.fromCharCode( key );
             var regex = /[0-9]|\./;
-            if( !regex.test(key) ) {
+            var regex1 = /[^0-9]|^0{1}/g;
+
+            if (evt.target.value.match(/[^0-9]|^0{1}/g)) {
+                evt.target.value = Number(evt.target.value).toString();
+                //- evt.target.value = evt.target.value.replace(/./g, '');
+            }
+
+            if(!regex.test(key)) {
+                console.log('dfdf');
                 theEvent.returnValue = false;
                 if(theEvent.preventDefault) theEvent.preventDefault();
-            }
+            } 
+            
+            //- if(evt.value.match(/[^0-9]|^0{1}/g)) {
+            //-         theEvent.returnValue = false;
+            //-     if(theEvent.preventDefault) theEvent.preventDefault();
+            //-     }
+            //- }
         }
 block difficult
     section.difficult
