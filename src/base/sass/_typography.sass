@@ -43,10 +43,19 @@ h6, .h6
 
 .t20
     /* 12px - 20px */
-    @include responsive-tlt(12px, 20px)
+    font-size: 14px
+    @media (min-width: 576px)
+        font-size: 20px
 .t16
     /* 9px - 16px */
-    @include responsive-tlt(9px, 16px)
+    font-size: 12px
+    @media (min-width: 576px)
+        font-size: 16px
+.t13
+    /* 7px - 13px */
+    font-size: 7px
+    @media (min-width: 576px)
+        font-size: 13px
 .w700
     font-weight: 700
 .w600

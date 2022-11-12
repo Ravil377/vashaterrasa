@@ -7,6 +7,9 @@
     fill: currentColor;
 }
 
+.icon-acc {
+    width: math.div(6, 3) * 1em;
+}
 .icon-arr {
     width: math.div(6, 10) * 1em;
 }
@@ -43,6 +46,12 @@
 .icon-gal {
     width: math.div(12, 12) * 1em;
 }
+.icon-home {
+    width: math.div(11, 12) * 1em;
+}
+.icon-info {
+    width: math.div(19, 19) * 1em;
+}
 .icon-instagram {
     width: math.div(27, 27) * 1em;
 }
@@ -55,8 +64,14 @@
 .icon-play {
     width: math.div(10, 12) * 1em;
 }
+.icon-play-circle {
+    width: math.div(27, 27) * 1em;
+}
 .icon-play_triangle {
     width: math.div(48, 55) * 1em;
+}
+.icon-qwestion {
+    width: math.div(23, 22) * 1em;
 }
 .icon-runner {
     width: math.div(27, 28) * 1em;
@@ -75,6 +90,9 @@
 }
 .icon-sun {
     width: math.div(30, 30) * 1em;
+}
+.icon-swim {
+    width: math.div(13, 14) * 1em;
 }
 .icon-up {
     width: math.div(25, 24) * 1em;

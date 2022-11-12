@@ -1,0 +1,490 @@
+extends base/pug/base
+//- include ./components/slider/slider
+//- include ./components/links/links
+
+append variables
+    - var title = 'Главная страница сайта'
+    - var pageClass = 'category'
+    - var notBreadcrumbs = 'true'
+    - var menuHref = '/'
+
+block top
+    section.top 
+        .outer 
+            .inner
+                h1.title Каталог террасной доски из ДПК
+                .top__content 
+                    p.t18.w300 За 8 лет строительства террас мы на практике изучили свойства и характеристики террасных досок из ДПК, представленных на рынке, и заранее знаем, как поведет себя та или иная доска спустя год или два в процессе эксплуатации. 
+                    a(href="#")
+                        p.t16.w500 Как выбрать террасную доску, учесть все технические нюансы и смонтировать террасу, так, чтобы она прослужила долгие годы?
+                        +icon('play-circle')
+                ul
+                    li 
+                        +icon('secure')
+                        | Прочный и износостойкий
+                    li
+                        +icon('sun')
+                        | Не выцветает на солнце
+                    li
+                        +icon('runner')
+                        | Не скользити не ставляет заноз
+                    li
+                        +icon('brush')
+                        | Не требует пропитки и специального ухода
+                    li
+                        +icon('clean')
+                        | Не гниет и не рассыхается
+                    li
+                        +icon('eco')
+                        | 100% экологичен и безопасен
+
+block filter 
+    .filter.filter__container.filter-js 
+        button(style="padding-right: 10px;").accordion.t16.w600.filter
+            | Террасная доска из ДПК
+            <svg width="6" height="3" viewBox="0 0 6 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.132069 2.88528C0.216659 2.95874 0.331371 3 0.450981 3C0.57059 3 0.685303 2.95874 0.769892 2.88528L3.00272 0.945771L5.23555 2.88528C5.32063 2.95665 5.43457 2.99615 5.55284 2.99525C5.67111 2.99436 5.78425 2.95315 5.86788 2.88051C5.95152 2.80786 5.99896 2.70959 5.99998 2.60685C6.00101 2.50412 5.95554 2.40514 5.87338 2.33125L3.32163 0.11472C3.23705 0.0412648 3.12233 0 3.00272 0C2.88311 0 2.7684 0.0412648 2.68381 0.11472L0.132069 2.33125C0.0475054 2.40472 0 2.50437 0 2.60826C0 2.71216 0.0475054 2.8118 0.132069 2.88528Z"/>
+            </svg>
+        div(style="border-bottom: unset;").panel
+            p.t16.w300 Lorem ipsum...<br><br>
+block asideform
+    .asideform
+        .asideform__title.w400.t16 Получите предварительный расчет вашей террасы 
+            span.w600 уже через 15 минут
+        .asideform__desc.w400.t13 заполните пожалуйста форму
+        form
+            +input('Email','email','email')
+            +input('Ваш телефон','tel','tel')
+            p.w400 Ваш номер телефона
+            .input-file-row
+                label.input-file
+                    input(type="file" name="file[]" multiple)
+                    span прикрепить файл
+                .input-file-list
+            button(type="submit") Отправить заявку
+            p(style="font-size: 11px; text-align: center; margin: 0;").w400 Отправляя запрос Вы соглашаетесь на обработку персональных данных
+        script. 
+            var dt = new DataTransfer();          
+            function removeFilesItem(target){
+                let name = $(target).prev().text();
+                let input = $(target).closest('.input-file-row').find('input[type=file]');	
+                $(target).closest('.input-file-list-item').remove();	
+                for(let i = 0; i < dt.items.length; i++){
+                    if(name === dt.items[i].getAsFile().name){
+                        dt.items.remove(i);
+                    }
+                }
+                input[0].files = dt.files;  
+            }
+block catalog 
+    .catalog 
+        .product
+            .product__image
+                a(href="#")
+                    img(src="./images/catalog/product.jpg" alt="Товар")
+                    .product__label Хит продаж
+                .product__colors
+                    div.product__color._active
+                        div(style="background: #927E62;")
+                    div.product__color
+                        div(style="background: #E0E3E8;")
+                    div.product__color
+                        div(style="background: #D5817B;")
+                    div.product__color
+                        div(style="background: #E4D4CA;")
+            .product__content 
+                a(href="#")
+                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
+                    ul.product__for
+                        li 
+                            +icon('home')
+                            | Для дома и дачи
+                        li 
+                            +icon('swim')
+                            | Для бассейнов и пирсов
+                    .product__size Размер: 150х25 мм
+                .product__length Длина доски
+                ul.product__length-list 
+                    li._active 3м
+                    li 4м
+                    li 5м
+                    li 6м
+                .product__price 4 500₽ 
+                    span 5 990₽
+                .product__buttons 
+                    .product__amount
+                        button -
+                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
+                        button +
+                    a(href="#").product__buy-btn купить +
+        .product
+            .product__image
+                a(href="#")
+                    img(src="./images/catalog/product.jpg" alt="Товар")
+                    .product__label Хит продаж
+                .product__colors
+                    div.product__color._active
+                        div(style="background: #927E62;")
+                    div.product__color
+                        div(style="background: #E0E3E8;")
+                    div.product__color
+                        div(style="background: #D5817B;")
+                    div.product__color
+                        div(style="background: #E4D4CA;")
+            .product__content 
+                a(href="#")
+                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
+                    ul.product__for
+                        li 
+                            +icon('home')
+                            | Для дома и дачи
+                        li 
+                            +icon('swim')
+                            | Для бассейнов и пирсов
+                    .product__size Размер: 150х25 мм
+                .product__length Длина доски
+                ul.product__length-list 
+                    li._active 3м
+                    li 4м
+                    li 5м
+                    li 6м
+                .product__price 4 500₽ 
+                    span 5 990₽
+                .product__buttons 
+                    .product__amount
+                        button -
+                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
+                        button +
+                    a(href="#").product__buy-btn купить +
+        .product
+            .product__image
+                a(href="#")
+                    img(src="./images/catalog/product.jpg" alt="Товар")
+                    .product__label Хит продаж
+                .product__colors
+                    div.product__color._active
+                        div(style="background: #927E62;")
+                    div.product__color
+                        div(style="background: #E0E3E8;")
+                    div.product__color
+                        div(style="background: #D5817B;")
+                    div.product__color
+                        div(style="background: #E4D4CA;")
+            .product__content 
+                a(href="#")
+                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
+                    ul.product__for
+                        li 
+                            +icon('home')
+                            | Для дома и дачи
+                        li 
+                            +icon('swim')
+                            | Для бассейнов и пирсов
+                    .product__size Размер: 150х25 мм
+                .product__length Длина доски
+                ul.product__length-list 
+                    li._active 3м
+                    li 4м
+                    li 5м
+                    li 6м
+                .product__price 4 500₽ 
+                    span 5 990₽
+                .product__buttons 
+                    .product__amount
+                        button -
+                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
+                        button +
+                    a(href="#").product__buy-btn купить +
+        .product
+            .product__image
+                a(href="#")
+                    img(src="./images/catalog/product.jpg" alt="Товар")
+                    .product__label Хит продаж
+                .product__colors
+                    div.product__color._active
+                        div(style="background: #927E62;")
+                    div.product__color
+                        div(style="background: #E0E3E8;")
+                    div.product__color
+                        div(style="background: #D5817B;")
+                    div.product__color
+                        div(style="background: #E4D4CA;")
+            .product__content 
+                a(href="#")
+                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
+                    ul.product__for
+                        li 
+                            +icon('home')
+                            | Для дома и дачи
+                        li 
+                            +icon('swim')
+                            | Для бассейнов и пирсов
+                    .product__size Размер: 150х25 мм
+                .product__length Длина доски
+                ul.product__length-list 
+                    li._active 3м
+                    li 4м
+                    li 5м
+                    li 6м
+                .product__price 4 500₽ 
+                    span 5 990₽
+                .product__buttons 
+                    .product__amount
+                        button -
+                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
+                        button +
+                    a(href="#").product__buy-btn купить +
+        .product
+            .product__image
+                a(href="#")
+                    img(src="./images/catalog/product.jpg" alt="Товар")
+                    .product__label Хит продаж
+                .product__colors
+                    div.product__color._active
+                        div(style="background: #927E62;")
+                    div.product__color
+                        div(style="background: #E0E3E8;")
+                    div.product__color
+                        div(style="background: #D5817B;")
+                    div.product__color
+                        div(style="background: #E4D4CA;")
+            .product__content 
+                a(href="#")
+                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
+                    ul.product__for
+                        li 
+                            +icon('home')
+                            | Для дома и дачи
+                        li 
+                            +icon('swim')
+                            | Для бассейнов и пирсов
+                    .product__size Размер: 150х25 мм
+                .product__length Длина доски
+                ul.product__length-list 
+                    li._active 3м
+                    li 4м
+                    li 5м
+                    li 6м
+                .product__price 4 500₽ 
+                    span 5 990₽
+                .product__buttons 
+                    .product__amount
+                        button -
+                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
+                        button +
+                    a(href="#").product__buy-btn купить +
+        .product
+            .product__image
+                a(href="#")
+                    img(src="./images/catalog/product.jpg" alt="Товар")
+                    .product__label Хит продаж
+                .product__colors
+                    div.product__color._active
+                        div(style="background: #927E62;")
+                    div.product__color
+                        div(style="background: #E0E3E8;")
+                    div.product__color
+                        div(style="background: #D5817B;")
+                    div.product__color
+                        div(style="background: #E4D4CA;")
+            .product__content 
+                a(href="#")
+                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
+                    ul.product__for
+                        li 
+                            +icon('home')
+                            | Для дома и дачи
+                        li 
+                            +icon('swim')
+                            | Для бассейнов и пирсов
+                    .product__size Размер: 150х25 мм
+                .product__length Длина доски
+                ul.product__length-list 
+                    li._active 3м
+                    li 4м
+                    li 5м
+                    li 6м
+                .product__price 4 500₽ 
+                    span 5 990₽
+                .product__buttons 
+                    .product__amount
+                        button -
+                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
+                        button +
+                    a(href="#").product__buy-btn купить +
+        .product
+            .product__image
+                a(href="#")
+                    img(src="./images/catalog/product.jpg" alt="Товар")
+                    .product__label Хит продаж
+                .product__colors
+                    div.product__color._active
+                        div(style="background: #927E62;")
+                    div.product__color
+                        div(style="background: #E0E3E8;")
+                    div.product__color
+                        div(style="background: #D5817B;")
+                    div.product__color
+                        div(style="background: #E4D4CA;")
+            .product__content 
+                a(href="#")
+                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
+                    ul.product__for
+                        li 
+                            +icon('home')
+                            | Для дома и дачи
+                        li 
+                            +icon('swim')
+                            | Для бассейнов и пирсов
+                    .product__size Размер: 150х25 мм
+                .product__length Длина доски
+                ul.product__length-list 
+                    li._active 3м
+                    li 4м
+                    li 5м
+                    li 6м
+                .product__price 4 500₽ 
+                    span 5 990₽
+                .product__buttons 
+                    .product__amount
+                        button -
+                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
+                        button +
+                    a(href="#").product__buy-btn купить +
+        .product
+            .product__image
+                a(href="#")
+                    img(src="./images/catalog/product.jpg" alt="Товар")
+                    .product__label Хит продаж
+                .product__colors
+                    div.product__color._active
+                        div(style="background: #927E62;")
+                    div.product__color
+                        div(style="background: #E0E3E8;")
+                    div.product__color
+                        div(style="background: #D5817B;")
+                    div.product__color
+                        div(style="background: #E4D4CA;")
+            .product__content 
+                a(href="#")
+                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
+                    ul.product__for
+                        li 
+                            +icon('home')
+                            | Для дома и дачи
+                        li 
+                            +icon('swim')
+                            | Для бассейнов и пирсов
+                    .product__size Размер: 150х25 мм
+                .product__length Длина доски
+                ul.product__length-list 
+                    li._active 3м
+                    li 4м
+                    li 5м
+                    li 6м
+                .product__price 4 500₽ 
+                    span 5 990₽
+                .product__buttons 
+                    .product__amount
+                        button -
+                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
+                        button +
+                    a(href="#").product__buy-btn купить +
+        .product
+            .product__image
+                a(href="#")
+                    img(src="./images/catalog/product.jpg" alt="Товар")
+                    .product__label Хит продаж
+                .product__colors
+                    div.product__color._active
+                        div(style="background: #927E62;")
+                    div.product__color
+                        div(style="background: #E0E3E8;")
+                    div.product__color
+                        div(style="background: #D5817B;")
+                    div.product__color
+                        div(style="background: #E4D4CA;")
+            .product__content 
+                a(href="#")
+                    .product__name.t18.w500 Террасная доска из ДПК Ваша Терраса  Орех
+                    ul.product__for
+                        li 
+                            +icon('home')
+                            | Для дома и дачи
+                        li 
+                            +icon('swim')
+                            | Для бассейнов и пирсов
+                    .product__size Размер: 150х25 мм
+                .product__length Длина доски
+                ul.product__length-list 
+                    li._active 3м
+                    li 4м
+                    li 5м
+                    li 6м
+                .product__price 4 500₽ 
+                    span 5 990₽
+                .product__buttons 
+                    .product__amount
+                        button -
+                        input(type="number" value="1" placeholder="" data-autosize-input='{ "space": 10 }' max="999" min="1" onchange='validate(event)')
+                        button +
+                    a(href="#").product__buy-btn купить +
+    script.
+        function validate(evt) {
+            var theEvent = evt || window.event;
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode( key );
+            var regex = /[0-9]|\./;
+            if( !regex.test(key) ) {
+                theEvent.returnValue = false;
+                if(theEvent.preventDefault) theEvent.preventDefault();
+            }
+        }
+block difficult
+    section.difficult
+        .difficult__container
+            .difficult__content
+                h2.title Сложно определиться с террасной доской  или рассчитать итоговую стоимость? 
+                p.t16.w300 
+                    span.w500 Заполните форму ниже или напишите в WhatsApp 
+                    | и мы рассчитаем примерную стоимость строительства террасы “под ключ” или просто поможем с выбором террасной доски для вашей террасы.
+            .difficult__image 
+                img(src="./images/difficult/img.jpg" alt="Картинка")
+        .difficult__btns
+            button(data-id="callme").btn.btn_calc Получить консультацию
+            a(data-id="whatsapp" href="#").btn
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 0C5.8175 0 0 5.8175 0 13C0 15.86 0.91 18.4925 2.47 20.6375L0.6825 25.35L5.85 23.855C7.8975 25.22 10.3675 26 13 26C20.1825 26 26 20.1825 26 13C26 5.8175 20.1825 0 13 0ZM19.9225 18.395L18.525 19.76C17.0625 21.2225 13.195 19.63 9.7825 16.185C6.37 12.7725 4.8425 8.905 6.2075 7.475L7.605 6.0775C8.125 5.5575 9.0025 5.5575 9.555 6.0775L11.6025 8.125C12.3175 8.84 12.025 10.075 11.0825 10.3675C10.4325 10.595 9.9775 11.31 10.205 11.96C10.5625 13.4875 12.545 15.3725 14.0075 15.73C14.6575 15.8925 15.405 15.5025 15.6 14.8525C15.8925 13.91 17.1275 13.6175 17.8425 14.3325L19.89 16.38C20.41 16.9325 20.41 17.81 19.9225 18.395Z" />
+                </svg>
+                | В Whatsapp
+        p 
+            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.93555 0.46875C4.96533 0.46875 0.935547 4.49999 0.935547 9.46875C0.935547 14.4404 4.96533 18.4688 9.93555 18.4688C14.9058 18.4688 18.9355 14.4404 18.9355 9.46875C18.9355 4.49999 14.9058 0.46875 9.93555 0.46875ZM9.93555 4.46069C10.7773 4.46069 11.4597 5.14309 11.4597 5.98488C11.4597 6.82667 10.7773 7.50907 9.93555 7.50907C9.09376 7.50907 8.41135 6.82667 8.41135 5.98488C8.41135 5.14309 9.09376 4.46069 9.93555 4.46069ZM11.9678 13.6784C11.9678 13.9189 11.7728 14.1139 11.5323 14.1139H8.33877C8.09828 14.1139 7.90329 13.9189 7.90329 13.6784V12.8075C7.90329 12.567 8.09828 12.372 8.33877 12.372H8.77426V10.0494H8.33877C8.09828 10.0494 7.90329 9.85441 7.90329 9.61391V8.74294C7.90329 8.50245 8.09828 8.30746 8.33877 8.30746H10.6614C10.9018 8.30746 11.0968 8.50245 11.0968 8.74294V12.372H11.5323C11.7728 12.372 11.9678 12.567 11.9678 12.8075V13.6784Z" fill="#AEB0B0"/>
+            </svg>
+            | Мы свяжемся с вами в рабочее время в течение 15 минут.
+
+block question 
+    section.question
+        h2(style="max-width: 700px;").title Частые вопрос про террасную доску ДПК
+        .question__content 
+            button.accordion.t18.w500 
+                | Терраса, в архитектуре — открытый настил на подготовленном основании (как правило, опорах)
+                div
+            .panel
+                p.t16.w300 Lorem ipsum...<br><br>
+            button.accordion.t18.w500 
+                | Основанное на заливке разноуровневых площадок земли.
+                div
+            .panel
+                p.t16.w300 Терраса в парках и садах — горизонтальная площадка естественного или искусственного происхождения, образующая уступ на склоне местности.<br><br>
+            button.accordion.t18.w500 
+                | Терраса, в архитектуре — открытый настил на подготовленном основании (как правило, опорах)
+                div
+            .panel
+                p.t16.w300 Lorem ipsum...<br><br>
+            button.accordion.t18.w500 
+                | Основанное на заливке разноуровневых площадок земли.
+                div
+            .panel
+                p.t16.w300 Lorem ipsum...<br><br>
+

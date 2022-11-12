@@ -42,6 +42,8 @@ enquire.register('screen and (max-width: 1400px)', {
 	},
 	unmatch() {
 		$hamburger.removeEventListener('click', clickHandler)
+		overlayRemove();
+		hideMenu();
 		// $closeBtn.removeEventListener('click', hideMenu)
 	}
 })

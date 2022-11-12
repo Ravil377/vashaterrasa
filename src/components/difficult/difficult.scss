@@ -1,0 +1,71 @@
+.difficult {
+    & > p {
+        svg {
+            margin-right: 10px;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+        position: relative;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 150%;
+        color: #AEB0B0;
+        margin-top: 20px;
+        max-width: 253px;
+        padding-left: 22px;
+    }
+}
+.difficult__container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    @media (min-width: 576px) {
+        gap: 50px;
+    }
+    @media (min-width: 1200px) {
+        display: grid;
+        grid-template-columns: 1fr minmax(300px, 480px);
+        justify-content: space-between;        
+    }
+}
+.difficult__content {
+    padding-bottom: 40px;
+    .title {
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+        }
+    }
+}
+.difficult__image {
+    width: 100%;
+    height: auto;
+    
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+}
+.difficult__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    @media (min-width: 576px) {
+        gap: 34px;
+    }
+    button {
+        width: 100%;
+        @media (min-width: 576px) {
+            max-width: 312px;
+        }
+    }
+    a {
+        width: 100%;
+        @media (min-width: 576px) {
+            max-width: 214px;
+        }
+    }
+}

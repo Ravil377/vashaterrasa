@@ -119,26 +119,6 @@
             bottom: 0;
             left: 0;
         }
-        button {
-            margin-top: 15px;
-            background: #F56308;
-            border-radius: 5px;
-            width: 100%;
-            padding: 21px;
-            border: none;
-            font-weight: 600;
-            font-size: 1.12rem;
-            line-height: 100%;
-            color: #FFF;
-            margin-bottom: 22px;
-            transition: .4s ease-out;
-            border: 1px solid transparent;
-            &:hover {
-                background: white;
-                color: #F56308;
-                border: 1px solid #F56308;
-            }
-        }
     }
     
 }
