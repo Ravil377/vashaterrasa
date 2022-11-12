@@ -56,14 +56,14 @@
     height: 28px;
     border-radius: 50%;
     position: relative;
+    border: 1px solid transparent; 
     div {
         position: absolute;
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 3px;
+        left: 3px;
         cursor: pointer;
     }
     &._active {
@@ -188,7 +188,10 @@ ul.product__length-list {
             width: 44px;
             min-width: 44px;
             max-width: 80px;
-            transition: width 0.25s;    
+            transition: width 0.25s;
+            &._detail {
+                max-width: 60px;
+            }  
         }
         
     }
@@ -204,6 +207,8 @@ ul.product__length-list {
     color: #FFFFFF;
     padding: 9.5px 28.5px;
     transition: .4s ease-out;
+    display: flex;
+    justify-content: center;
     &:hover {
         background: white;
         color: #F56308;

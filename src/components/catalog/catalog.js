@@ -1,4 +1,36 @@
-const catalog = document.querySelector('.catalog');
+import Swiper, { Navigation, Thumbs } from "swiper";
+Swiper.use([Navigation, Thumbs]);
+var detailSlider;
+const detail = '.detail__slider-js';
+const catalog = document.querySelector('.catalog-js');
+
+if(document.querySelector(detail)) {
+    const detailThumbs= new Swiper(".detail__thumbnail-js", {
+        spaceBetween: 20,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+        direction: 'vertical',
+        // breakpoints: {
+        //     768: {
+        //         slidesPerView: 4,
+        //         spaceBetween: 20,
+        //     }
+        // },
+    });
+    detailSlider = new Swiper(detail, {
+        slidesPerView: 1,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true
+        },
+        thumbs: {
+            swiper: detailThumbs,
+        },
+    })
+}
+
+
 catalog && catalog.addEventListener('click', (e) => {
     const targ = e.target;
     const prod = targ.closest('.product-js');
@@ -59,20 +91,28 @@ catalog && catalog.addEventListener('click', (e) => {
     }
 
     const changeColor = () => {
+        if(prod.querySelector('.product__image-js')) {
+            prod.querySelector('.product__image-js').src="http://localhost:3000/images/loading.gif";
+            prod.querySelector('.product__image-js').classList.add('_loader');
+            let img = document.createElement('img');
+            img.src = targ.dataset.img;
+            img.onload = function () {
+                setTimeout(function () {
+                    prod.querySelector('.product__image-js').src=img.src;
+                    prod.querySelector('.product__image-js').classList.remove('_loader');
+                }, 500);
+            }
+        }
+        if(prod.querySelector('.product__image-slider-js')) {
+            // console.log(targ.closest('.product__color').querySelector('div'));
+            detailSlider.slideTo(targ.closest('.product__color').querySelector('div').dataset.image);
+        }
         isColor.querySelector('._active').classList.remove('_active');
-        targ.closest('.product__color').classList.add('_active');        
-        prod.querySelector('.product__image-js').src="http://localhost:3000/images/loading.gif";
-        prod.querySelector('.product__image-js').classList.add('_loader');
+        targ.closest('.product__color').classList.add('_active');
+        
         const textColor = prod.querySelector('.product__name-color-js');
         textColor.textContent = targ.dataset.color;
-        let img = document.createElement('img');
-        img.src = targ.dataset.img;
-        img.onload = function () {
-            setTimeout(function () {
-                prod.querySelector('.product__image-js').src=img.src;
-                prod.querySelector('.product__image-js').classList.remove('_loader');
-            }, 500);
-        }
+        
         activeLengthBtn(targ.dataset.color);
     }
 

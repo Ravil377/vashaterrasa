@@ -54,7 +54,7 @@ block asideform
         .asideform__desc.w400.t13 заполните пожалуйста форму
         form
             +input('Email','email','email')
-            +input('Ваш телефон','tel','tel')
+            +input('Ваш телефон','tel','tel').phone-mask--js
             p.w400 Ваш номер телефона
             .input-file-row
                 label.input-file
@@ -77,7 +77,7 @@ block asideform
                 input[0].files = dt.files;  
             }
 block catalog 
-    .catalog 
+    .catalog.catalog-js 
         .product.product-js
             .product__image
                 a(href="#")
@@ -287,37 +287,20 @@ block catalog
                         button.product__amount-plus-js +
                     a(href="#" data-quantity="1" value="" data-product_id="1814" data-product_sku="").product__buy-btn.product__buy-btn-js.ajax_add_to_cart.add_to_cart_button купить +
     script.
-        function isNol(evt) {
-            var regex = /[^0-9]|^0{1}/g;
-            console.log(evt.value);
-            if (regex.test(evt.value)) {
-                
-                evt.value = evt.value.replace(/./g, '');
-            }
-        }
         function validate(evt) {
             var theEvent = evt || window.event;
             var key = theEvent.keyCode || theEvent.which;
             key = String.fromCharCode( key );
             var regex = /[0-9]|\./;
-            var regex1 = /[^0-9]|^0{1}/g;
 
             if (evt.target.value.match(/[^0-9]|^0{1}/g)) {
                 evt.target.value = Number(evt.target.value).toString();
-                //- evt.target.value = evt.target.value.replace(/./g, '');
             }
 
             if(!regex.test(key)) {
-                console.log('dfdf');
                 theEvent.returnValue = false;
                 if(theEvent.preventDefault) theEvent.preventDefault();
             } 
-            
-            //- if(evt.value.match(/[^0-9]|^0{1}/g)) {
-            //-         theEvent.returnValue = false;
-            //-     if(theEvent.preventDefault) theEvent.preventDefault();
-            //-     }
-            //- }
         }
 block difficult
     section.difficult

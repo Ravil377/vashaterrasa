@@ -81,3 +81,13 @@ a[data-id="whatsapp"].btn {
         width: 38px;
     }
 }
+.btn_order {
+    border: 1px solid #555557;
+    font-size: 14px;
+    width: 100%;
+    &:hover {
+        color: white;
+        background: #555557;
+    }
+// border-radius: 5px;
+}
