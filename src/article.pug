@@ -1,0 +1,95 @@
+extends base/pug/base
+//- include ./components/slider/slider
+//- include ./components/links/links
+
+append variables
+    - var title = 'Главная страница сайта'
+    - var pageClass = 'homepage'
+    - var menuHref = '/'
+
+block useful-articles
+    .outer
+        .inner(style="padding-top: 27px; border-top: 1px solid #584C3B;")
+            nav.breadcrumbs
+                ul.breadcrumbs__list
+                    li
+                        a(href="/") Главная
+                        span.breadcrumbs__divider \
+                    li.is-active #{title}
+    section.useful-articles 
+        .outer 
+            .inner 
+                h1.title Полезные статьи и новости
+                form(method="GET" class="form-js" id="filterPosts")
+                    ul 
+                        li
+                            input(type="radio" name="term[]" id="all" value="" checked)
+                            label(for="all") Все
+                        li
+                            input(type="radio" name="term[]" id="1" value="")
+                            label(for="1") Полезные статьи
+                        li
+                            input(type="radio" name="term[]" id="2" value="")
+                            label(for="2") Новости
+                .useful-articles__top 
+                    a(href="#").useful-articles__top-link
+                        .useful-articles__top-overlay
+                        img(src='./images/article/art1.jpg' alt="Статья")
+                        .useful-articles__top-label.t15.w600 Популярное
+                        .useful-articles__top-tag Полезные статьи
+                        h2.useful-articles__top-title Где лучше всего использовать декинг?
+                        p.t16.w300 
+                            span Бесплатно приедем 
+                            | к вам на участок и осуществим все необходимые замеры для точного расчета строительства будущей террасы.
+                    .asideform
+                        .asideform__title.w400.t16 Подпишитесь на нашу рассылку и будьте в курсе актуальных акций и распродаж
+                        .asideform__desc.w400.t13 Мы часто публикуем очень полезные советы
+                        form
+                            +input('Email','email','email')
+                            p Пожалуйста укажите корректно
+                            button(type="submit") Подписаться
+                            p(style="font-size: 12px; text-align: center; margin: 0; margin-top: 10px;").w400 Подписку можно отменить в любой момент
+                .useful-articles__list 
+                    a(href="#").useful-articles__card
+                        .useful-articles__card-img
+                            img(src="./images/article/art2.jpg" alt="Статья")
+                            p новое
+                        h2.t20.w600 Лестница для крыльца из ДПК своими руками
+                        .useful-articles__card-tag Полезная статья
+                        p.t16.w300 Подбираем для Вашего объекта оптимальную по соотношению цена/качество доску из ДПК, а также рассчитываем наиболее долговечный вариант основания будущей террасы.
+                    a(href="#").useful-articles__card
+                        .useful-articles__card-img
+                            img(src="./images/article/art3.jpg" alt="Статья")
+                        h2.t20.w600 Терраса к дому "под ключ"
+                        .useful-articles__card-tag Полезная статья
+                        p.t16.w300 Создали входную группу, ступени с подсветкой переходящие в настил, отдельная терраса с ограждениями в виде шпалер.
+                    a(href="#").useful-articles__card
+                        .useful-articles__card-img
+                            img(src="./images/article/art4.jpg" alt="Статья")
+                        h2.t20.w600 Входная группа со ступенями с продсветкой
+                        .useful-articles__card-tag Новости
+                        p.t16.w300 Терраса с крышей из монолитного поликарбоната и металлочерепицей
+                    a(href="#").useful-articles__card
+                        .useful-articles__card-img
+                            img(src="./images/article/art5.jpg" alt="Статья")
+                        h2.t20.w600 Лестница для крыльца из ДПК своими руками
+                        .useful-articles__card-tag Полезная статья
+                        p.t16.w300 Подбираем для Вашего объекта оптимальную по соотношению цена/качество доску из ДПК, а также рассчитываем наиболее долговечный вариант основания будущей террасы.
+                    a(href="#").useful-articles__card
+                        .useful-articles__card-img
+                            img(src="./images/article/art6.jpg" alt="Статья")
+                        h2.t20.w600 Терраса с ограждениями, рольставнями и крышей из монолитного поликарбоната
+                        .useful-articles__card-tag Полезная статья
+                        p.t16.w300 Ступени с подсветкой переходящие в настил, отдельная терраса с ограждениями в виде шпалер.
+                    a(href="#").useful-articles__card
+                        .useful-articles__card-img
+                            img(src="./images/article/art7.jpg" alt="Статья")
+                        h2.t20.w600 Лестница для крыльца из ДПК своими руками
+                        .useful-articles__card-tag Полезная статья
+                        p.t16.w300 Подбираем для Вашего объекта оптимальную по соотношению цена/качество доску из ДПК, а также рассчитываем наиболее долговечный вариант основания будущей террасы.
+                        
+                        
+
+
+
+

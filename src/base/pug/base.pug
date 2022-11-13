@@ -26,6 +26,7 @@ html(lang="ru")
                                 a(href="/") Главная
                                 span.breadcrumbs__divider \
                             li.is-active #{title}
+        block useful-articles
         block single
         block about 
         block cart
@@ -67,6 +68,7 @@ html(lang="ru")
         else
             main
                 //- block category
+                 
                 block advantages
                 block underwelcome
                 block look 
