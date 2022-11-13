@@ -9,12 +9,12 @@
     box-sizing: border-box;
     outline: none;
     width: 100%;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 14px;
     line-height: 100%;
     color: #000000;
     padding-top: 20px;
-    padding-left: 0;
+    padding-left: 10px;
     padding-right: 30px;
     min-height: 60px;
     box-sizing: border-box;
@@ -30,12 +30,12 @@
     border: none;
     font-weight: 600;
     font-size: 16px;
-    color: #0B2349;
-    background: #F4F3F8;
+    color: #000000;
+    background: transparent;
     padding-top: 19px;
     padding-left: 21px;
     min-height: 60px;
-    border: 2px solid #F4F3F8;
+    border-bottom: 1px solid #5F5F61;
     box-sizing: border-box;
     padding-bottom: 19px;
 }
@@ -44,7 +44,7 @@
     font-weight: 500;
     font-size: .87rem;
     line-height: 100%;
-    color: #0B2349;
+    color: #000000;
     pointer-events: none;
     position: absolute;
     transition: all 200ms;
@@ -64,12 +64,12 @@
 // .form__placeholder-container input:not(:placeholder-shown) {
 //     border: 2px solid #8010D6;
 // }
-// .form__placeholder-container textarea:focus + label,
-// .form__placeholder-container textarea:not(:placeholder-shown) + label {
-//     top: -10px;
-//     left: 0;
-//     // font-size: 11px;
-// }
+.form__placeholder-container textarea:focus + label,
+.form__placeholder-container textarea:not(:placeholder-shown) + label {
+    top: 5px;
+    left: 0;
+    // font-size: 11px;
+}
 .form__placeholder-container input:focus + label,
 .form__placeholder-container input:not(:placeholder-shown) + label {
     top: 5px;
@@ -84,13 +84,16 @@
     label {
         cursor: pointer;
         font-weight: 400;
-        font-size: 12px;
-        line-height: 110%;
-        color: #9FA2A7;
+        font-size: 14px;
+        line-height: 120%;
+        color: #000000;
         // white-space: nowrap;
         position: relative;
         padding-left: 33px;
         z-index: 2;
+        span {
+            color: #AEB0B0;
+        }
         a {
             color: $purple;
             transition: .4s;
@@ -126,16 +129,19 @@
     input {
         display: none;
         &:checked {
+            & ~ label {
+                font-weight: 500;
+            }
             & ~ label::before {
-                // background: #8010D6;
+                border-color: #F56308;
             }
             & ~ label::after {
                 transform: rotate(-45deg);
                 left: 6px;
                 top: 5px;
                 z-index: 1;
-                border-left: 2px solid #9FA2A7;
-                border-bottom: 2px solid #9FA2A7;
+                border-left: 2px solid #F56308;
+                border-bottom: 2px solid #F56308;
             }
         }
     }
@@ -285,4 +291,16 @@ button[type="submit"] {
         color: #F56308;
         border: 1px solid #F56308;
     }
+}
+
+.form__checkbox_size {
+    position: absolute;
+    bottom: 0;
+    label {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 110%;
+        color: #AEB0B0;
+    }
+
 }

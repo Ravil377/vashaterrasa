@@ -1,0 +1,88 @@
+.team {
+    overflow: hidden; 
+    h2.title {
+        margin-bottom: 0;
+    }
+    .title__container {
+        margin-bottom: 20px;
+        @media (min-width: 576px) {
+            margin-bottom: 40px;
+        }
+    }
+}
+.team__slider {
+    // margin-top: 40px;
+    
+    @media (min-width: 576px) {
+        overflow: hidden;    
+    }
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        transition: .4s ease-out;
+        @media (max-width: 576px) {
+            &.swiper-slide-prev, &.swiper-slide-next {
+                opacity: .2;
+            }    
+        }        
+        a {
+            border-radius: 10px;
+            width: 100%;
+            max-height: 531px;
+            overflow: hidden;
+            @media (min-width: 576px) {
+                height: 382px;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+            img {
+                transition: .4s ease-out;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+        
+        .team__info {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 17px;
+            p {
+                span {
+                    display: block;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 110%;
+                    color: #555557;
+                }
+            }
+            a{
+                display: flex;
+                border: 1px solid #AEB0B0;
+                border-radius: 5px;
+                width: 33px;
+                height: 38px;
+                transition: .4s ease-out;
+                &:hover {
+                    border-color: #F56308;
+                    svg {
+                        fill: #F56308;
+                    }
+                }
+                svg {
+                    transition: .4s ease-out;
+                    margin: auto;
+                    fill: #555557;
+                    width: 13px;
+                    height: 13px;
+                    ;
+                }
+            }
+        }
+    }
+}

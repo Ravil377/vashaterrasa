@@ -26,7 +26,8 @@ html(lang="ru")
                                 a(href="/") Главная
                                 span.breadcrumbs__divider \
                             li.is-active #{title}
-        block single 
+        block single
+        block about 
         block cart
         block actual
         block blog 
@@ -84,7 +85,7 @@ html(lang="ru")
                 block fourstep
                 block beforeafter
                 block articles
-
+                block commands
         //- Include footer
         include ../../components/footer/footer
         include ../../components/modal/modal

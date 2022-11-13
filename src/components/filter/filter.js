@@ -36,7 +36,7 @@ function hideFilter() {
 enquire.register('screen and (max-width: 992px)', {
 	// deferSetup: true,
 	match() {
-		filterMobilBtn.addEventListener('click', clickHandler)
+		filterMobilBtn && filterMobilBtn.addEventListener('click', clickHandler)
 		document.addEventListener('click', event => {
 			if (event.target.dataset.backdrop === 'overlay') {
 				hideFilter()
@@ -45,7 +45,7 @@ enquire.register('screen and (max-width: 992px)', {
 		// $closeBtn.addEventListener('click', hideMenu)
 	},
 	unmatch() {
-		filterMobilBtn.removeEventListener('click', clickHandler)
+		filterMobilBtn && filterMobilBtn.removeEventListener('click', clickHandler)
 		// $closeBtn.removeEventListener('click', hideMenu)
 	}
 })
