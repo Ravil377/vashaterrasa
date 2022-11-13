@@ -426,6 +426,7 @@ ul.detailtabs__compl {
     border-radius: 10px;
     margin-top: 50px;
     ul {
+        flex-wrap: wrap;
         display: flex;
         gap: 15px;
         li {
@@ -441,6 +442,8 @@ ul.detailtabs__compl {
             }
             &:nth-child(2) {
                 max-width: 226px;
+            }
+            &:nth-child(3) {
                 margin-left: auto;
             }
         }

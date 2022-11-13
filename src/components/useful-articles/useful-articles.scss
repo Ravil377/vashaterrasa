@@ -2,8 +2,10 @@
     form {
         ul {
             display: flex;
-            gap: 40px;
+            flex-wrap: wrap;
+            column-gap: 40px;
             padding-bottom: 6px;
+            row-gap: 15px;
             li {
                 input {
                     display: none;
